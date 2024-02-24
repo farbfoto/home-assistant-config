@@ -1,0 +1,6042 @@
+- id: '1631357337765'
+  name: 'Homeoffice: Light Night Work (red)'
+  entities:
+    light.schreibtisch_links:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch links
+      supported_features: 40
+      color_mode: brightness
+      brightness: 13
+      state: 'on'
+    light.schreibtisch_rechts:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch rechts
+      supported_features: 40
+      color_mode: brightness
+      brightness: 13
+      state: 'on'
+    light.hue_p_schreibtisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch Rechts
+      supported_features: 40
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 11.557
+      - 95.686
+      rgb_color:
+      - 255
+      - 58
+      - 11
+      xy_color:
+      - 0.681
+      - 0.314
+      state: 'on'
+    light.hue_p_schreibtisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch links
+      supported_features: 40
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 11.557
+      - 95.686
+      rgb_color:
+      - 255
+      - 58
+      - 11
+      xy_color:
+      - 0.681
+      - 0.314
+      state: 'on'
+    button.identify:
+      device_class: identify
+      friendly_name: Elgato Key Light Air Identifizieren
+      state: unknown
+    light.elgato_key_light_air:
+      min_color_temp_kelvin: 2906
+      max_color_temp_kelvin: 6993
+      min_mireds: 143
+      max_mireds: 344
+      supported_color_modes:
+      - color_temp
+      friendly_name: Elgato Key Light Air
+      supported_features: 0
+      state: 'off'
+    light.glide_hexa_homeoffice:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9009
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      rate_limit_total: 100
+      rate_limit_remaining: -13979
+      rate_limit_reset_seconds: -1693128785.51
+      rate_limit_reset: '1970-01-01T01:00:00'
+      rate_limit_on: 5
+      manufacturer: Govee
+      model: H6061
+      friendly_name: Glide Hexa Homeoffice
+      supported_features: 19
+      color_mode: hs
+      brightness: 158
+      hs_color:
+      - 345.176
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 63
+      xy_color:
+      - 0.667
+      - 0.284
+      state: 'on'
+    light.homeoffice_osram_surface_decke_light:
+      min_color_temp_kelvin: 2702
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 370
+      supported_color_modes:
+      - color_temp
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Homeoffice Osram Surface Decke Light
+      supported_features: 40
+      color_mode: color_temp
+      brightness: 102
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      state: 'on'
+  metadata: {}
+- id: '1631368986901'
+  name: Garten Party
+  entities:
+    light.hue_outdoor_spot_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Garten Spot Treppe
+      supported_features: 44
+      color_mode: xy
+      brightness: 128
+      hs_color:
+      - 135.342
+      - 85.882
+      rgb_color:
+      - 36
+      - 255
+      - 92
+      xy_color:
+      - 0.176
+      - 0.654
+      effect: None
+      state: 'on'
+    light.garten_zentral:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Garten Zentral
+      supported_features: 40
+      color_mode: xy
+      brightness: 240
+      hs_color:
+      - 354.34
+      - 83.137
+      rgb_color:
+      - 255
+      - 43
+      - 63
+      xy_color:
+      - 0.6621
+      - 0.2941
+      state: 'on'
+    light.gartenteich:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Gartenteich
+      supported_features: 40
+      color_mode: xy
+      brightness: 171
+      hs_color:
+      - 195
+      - 84.706
+      rgb_color:
+      - 39
+      - 201
+      - 255
+      xy_color:
+      - 0.152
+      - 0.254
+      state: 'on'
+    light.theke:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Theke
+      supported_features: 40
+      color_mode: xy
+      brightness: 138
+      hs_color:
+      - 59.672
+      - 71.765
+      rgb_color:
+      - 255
+      - 254
+      - 72
+      xy_color:
+      - 0.432
+      - 0.497
+      state: 'on'
+    light.hue_outdoor_spot_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Garten Spot rechts
+      supported_features: 44
+      color_mode: xy
+      brightness: 224
+      hs_color:
+      - 219.588
+      - 76.078
+      rgb_color:
+      - 61
+      - 127
+      - 255
+      xy_color:
+      - 0.1555
+      - 0.1366
+      effect: None
+      state: 'on'
+    switch.ledvance_outdoor_plug_blume_garten_switch:
+      friendly_name: LEDVANCE Outdoor Plug (Blume Garten) Switch
+      icon: mdi:alarm-light
+      state: 'on'
+    light.ledvance_outdoor_plug_blume_garten_switch:
+      supported_color_modes:
+      - onoff
+      friendly_name: LEDVANCE Outdoor Plug (Blume Garten) Switch
+      supported_features: 0
+      color_mode: onoff
+      state: 'on'
+  icon: mdi:party-popper
+  metadata: {}
+- id: '1631369310836'
+  name: Garten Licht aus
+  entities:
+    light.hue_outdoor_spot_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Garten Spot Treppe
+      supported_features: 44
+      state: 'off'
+    light.garten_zentral:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Garten Zentral
+      supported_features: 40
+      state: 'off'
+    light.gartenteich:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Gartenteich
+      supported_features: 40
+      state: 'off'
+    light.theke:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Theke
+      supported_features: 40
+      state: 'off'
+    light.hue_outdoor_spot_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Garten Spot rechts
+      supported_features: 44
+      state: 'off'
+    switch.ledvance_outdoor_plug_blume_garten_switch:
+      friendly_name: LEDVANCE Outdoor Plug (Blume Garten) Switch
+      icon: mdi:alarm-light
+      state: 'off'
+    light.ledvance_outdoor_plug_blume_garten_switch:
+      supported_color_modes:
+      - onoff
+      friendly_name: LEDVANCE Outdoor Plug (Blume Garten) Switch
+      supported_features: 0
+      state: 'off'
+  metadata: {}
+- id: '1633270055911'
+  name: 'Homeoffice: Energizer'
+  entities:
+    light.schreibtisch_links:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch links
+      supported_features: 40
+      color_mode: brightness
+      brightness: 255
+      state: 'on'
+    light.schreibtisch_rechts:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch rechts
+      supported_features: 40
+      color_mode: brightness
+      brightness: 255
+      state: 'on'
+    light.hue_p_schreibtisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch links
+      supported_features: 40
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6410
+      color_temp: 156
+      hs_color:
+      - 41.14
+      - 2.841
+      rgb_color:
+      - 255
+      - 252
+      - 247
+      xy_color:
+      - 0.329
+      - 0.334
+      state: 'on'
+    light.hue_p_schreibtisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch Rechts
+      supported_features: 40
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      state: 'on'
+    light.glide_hexa_homeoffice:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9009
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      rate_limit_total: 100
+      rate_limit_remaining: -3291
+      rate_limit_reset_seconds: -1697433728.33
+      rate_limit_reset: '1970-01-01T01:00:00'
+      rate_limit_on: 5
+      manufacturer: Govee
+      model: H6061
+      friendly_name: Glide Hexa Homeoffice
+      supported_features: 19
+      color_mode: hs
+      brightness: 255
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      state: 'on'
+    light.homeoffice_osram_surface_decke_light:
+      min_color_temp_kelvin: 2702
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 370
+      supported_color_modes:
+      - color_temp
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Homeoffice Osram Surface Decke Light
+      supported_features: 40
+      color_mode: color_temp
+      brightness: 254
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      state: 'on'
+  metadata: {}
+- id: '1633270142640'
+  name: 'Homoffice: Licht aus'
+  entities:
+    light.hue_p_schreibtisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch Rechts
+      supported_features: 40
+      state: 'off'
+    light.hue_p_schreibtisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch links
+      supported_features: 40
+      state: 'off'
+    light.schreibtisch_links:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch links
+      supported_features: 40
+      state: 'off'
+    light.schreibtisch_rechts:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch rechts
+      supported_features: 40
+      state: 'off'
+    light.glide_hexa_homeoffice:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9009
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      rate_limit_total: 100
+      rate_limit_remaining: -13982
+      rate_limit_reset_seconds: -1693128815.39
+      rate_limit_reset: '1970-01-01T01:00:00'
+      rate_limit_on: 5
+      manufacturer: Govee
+      model: H6061
+      friendly_name: Glide Hexa Homeoffice
+      supported_features: 19
+      state: 'off'
+    light.schreibtischlampe:
+      restored: true
+      min_color_temp_kelvin: 2500
+      max_color_temp_kelvin: 20000
+      min_mireds: 50
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      friendly_name: Schreibtischlampe
+      supported_features: 0
+      state: unavailable
+    light.homeoffice_osram_surface_decke_light:
+      min_color_temp_kelvin: 2702
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 370
+      supported_color_modes:
+      - color_temp
+      off_with_transition: false
+      off_brightness: 102
+      friendly_name: Homeoffice Osram Surface Decke Light
+      supported_features: 40
+      state: 'off'
+  metadata: {}
+  icon: mdi:ceiling-light-multiple
+- id: '1635061282071'
+  name: Ankleide aus
+  entities:
+    light.ankleide_vorne_1:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      supported_color_modes:
+      - color_temp
+      - hs
+      friendly_name: Ankleide  vorne 1
+      supported_features: 63
+      state: 'off'
+    light.ankleide_vorne_2:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      supported_color_modes:
+      - color_temp
+      - hs
+      friendly_name: Ankleide Vorne 2
+      supported_features: 63
+      state: 'off'
+    light.ankleide_hinten_1:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      supported_color_modes:
+      - color_temp
+      - hs
+      friendly_name: Ankleide hinten 1
+      supported_features: 63
+      state: 'off'
+    light.ankleide_hinten_2:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      supported_color_modes:
+      - color_temp
+      - hs
+      friendly_name: Ankleide hinten 2
+      supported_features: 63
+      state: 'off'
+- id: '1636124247558'
+  name: EG alle Rolläden oben
+  entities:
+    cover.homeoffice_left_shutter:
+      current_position: 100
+      friendly_name: Homeoffice left shutter
+      supported_features: 127
+      state: open
+    cover.homeoffice_right_shutter:
+      current_position: 100
+      friendly_name: Homeoffice right shutter
+      supported_features: 127
+      state: open
+    cover.toilette_eg_shutter:
+      current_position: 100
+      friendly_name: Toilette EG shutter
+      supported_features: 127
+      state: open
+    cover.kuche_links:
+      current_position: 100
+      friendly_name: Küche links
+      supported_features: 127
+      state: open
+    cover.kuche_rechts:
+      current_position: 100
+      friendly_name: Küche rechts
+      supported_features: 127
+      state: open
+  icon: mdi:window-shutter-open
+- id: '1639062375572'
+  name: 'Media: Lichter und Technik aus'
+  entities:
+    light.media_fitness_gu_10_1:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      linkquality: 34
+      power_on_behavior:
+      update:
+        state: idle
+      update_available: false
+      friendly_name: Media Fitness GU 10 1
+      supported_features: 45
+      state: 'off'
+    light.media_fitness_gu_10_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      linkquality: 39
+      power_on_behavior:
+      update:
+        state: idle
+      update_available: false
+      friendly_name: Media Fitness GU 10 2
+      supported_features: 45
+      state: 'off'
+    light.media_fitness_gu_10_3:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      linkquality: 39
+      power_on_behavior:
+      update:
+        state: idle
+      update_available: false
+      friendly_name: Media Fitness GU 10 3
+      supported_features: 45
+      state: 'off'
+    light.0x588e81fffe411783:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      linkquality: 39
+      power_on_behavior:
+      update:
+        state: idle
+      update_available: false
+      friendly_name: Media Fitness GU 10 4
+      supported_features: 45
+      state: 'off'
+  icon: mdi:lightbulb
+- id: '1642268145864'
+  name: 'Homeoffice: Zoom Call'
+  entities:
+    button.identify:
+      icon: mdi:help
+      friendly_name: Identify
+      state: unknown
+    light.elgato_key_light_air:
+      min_mireds: 143
+      max_mireds: 344
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 76
+      color_temp: 227
+      hs_color:
+      - 26.721
+      - 27.991
+      rgb_color:
+      - 255
+      - 215
+      - 183
+      xy_color:
+      - 0.399
+      - 0.358
+      friendly_name: Elgato Key Light Air
+      supported_features: 0
+      state: 'on'
+    light.hue_p_schreibtisch_rechts:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 317
+      hs_color:
+      - 27.589
+      - 52.866
+      rgb_color:
+      - 255
+      - 182
+      - 120
+      xy_color:
+      - 0.482
+      - 0.38
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch Rechts
+      supported_features: 40
+      state: 'on'
+    light.hue_p_schreibtisch_links:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 308
+      hs_color:
+      - 27.464
+      - 50.594
+      rgb_color:
+      - 255
+      - 185
+      - 125
+      xy_color:
+      - 0.475
+      - 0.38
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch links
+      supported_features: 40
+      state: 'on'
+  icon: mdi:camera
+- id: '1642268610035'
+  name: 'Homeoffice: Meditation (HA)'
+  entities:
+    light.hue_p_schreibtisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch Rechts
+      supported_features: 40
+      color_mode: xy
+      brightness: 145
+      hs_color:
+      - 38.634
+      - 80.392
+      rgb_color:
+      - 255
+      - 182
+      - 50
+      xy_color:
+      - 0.5283
+      - 0.4265
+      state: 'on'
+    light.hue_p_schreibtisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch links
+      supported_features: 40
+      color_mode: xy
+      brightness: 145
+      hs_color:
+      - 334.872
+      - 45.882
+      rgb_color:
+      - 255
+      - 138
+      - 187
+      xy_color:
+      - 0.4439
+      - 0.2689
+      state: 'on'
+    button.identify:
+      device_class: identify
+      friendly_name: Elgato Key Light Air Identifizieren
+      state: unknown
+    light.elgato_key_light_air:
+      min_color_temp_kelvin: 2906
+      max_color_temp_kelvin: 6993
+      min_mireds: 143
+      max_mireds: 344
+      supported_color_modes:
+      - color_temp
+      friendly_name: Elgato Key Light Air
+      supported_features: 0
+      state: 'off'
+    light.schreibtisch_links:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch links
+      supported_features: 40
+      color_mode: brightness
+      brightness: 14
+      state: 'on'
+    light.schreibtisch_rechts:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch rechts
+      supported_features: 40
+      color_mode: brightness
+      brightness: 14
+      state: 'on'
+    light.homeoffice_osram_surface_decke_light:
+      min_color_temp_kelvin: 2702
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 370
+      supported_color_modes:
+      - color_temp
+      off_with_transition: false
+      off_brightness: 254
+      friendly_name: Homeoffice Osram Surface Decke Light
+      supported_features: 40
+      state: 'off'
+  metadata: {}
+- id: '1650304793626'
+  name: Arbeiten spät
+  entities:
+    light.schreibtischlampe:
+      min_mireds: 50
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      friendly_name: Schreibtischlampe
+      supported_features: 0
+      color_mode: color_temp
+      brightness: 255
+      color_temp: 323
+      hs_color:
+      - 27.676
+      - 54.374
+      rgb_color:
+      - 255
+      - 180
+      - 116
+      xy_color:
+      - 0.487
+      - 0.381
+      state: 'on'
+    light.hue_p_schreibtisch_rechts:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch Rechts
+      supported_features: 40
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 135.529
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 66
+      xy_color:
+      - 0.17
+      - 0.7
+      state: 'on'
+    light.hue_p_schreibtisch_links:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch links
+      supported_features: 40
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 135.529
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 66
+      xy_color:
+      - 0.17
+      - 0.7
+      state: 'on'
+    light.glide_hexa_homeoffice:
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      friendly_name: Glide Hexa Homeoffice
+      supported_features: 19
+      color_mode: hs
+      brightness: 150
+      hs_color:
+      - 135.082
+      - 71.765
+      rgb_color:
+      - 71
+      - 255
+      - 117
+      xy_color:
+      - 0.193
+      - 0.595
+      rate_limit_total: 100
+      rate_limit_remaining: -225
+      rate_limit_reset_seconds: -1665851082.2
+      rate_limit_reset: '1970-01-01T01:00:00'
+      rate_limit_on: 5
+      manufacturer: Govee
+      model: H6061
+      state: 'on'
+  icon: mdi:lightbulb-group
+  metadata: {}
+- id: '1650304827827'
+  name: Arbeiten aus
+  entities:
+    light.schreibtischlampe:
+      min_mireds: 50
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      friendly_name: Schreibtischlampe
+      supported_features: 0
+      state: 'off'
+    light.hue_p_schreibtisch_rechts:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch Rechts
+      supported_features: 40
+      state: 'off'
+    light.hue_p_schreibtisch_links:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch links
+      supported_features: 40
+      state: 'off'
+    light.glide_hexa_homeoffice:
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      rate_limit_total: 100
+      rate_limit_remaining: -417
+      rate_limit_reset_seconds: -1664203013.7
+      rate_limit_reset: '1970-01-01T01:00:00'
+      rate_limit_on: 5
+      manufacturer: Govee
+      model: H6061
+      friendly_name: Glide Hexa Homeoffice
+      supported_features: 19
+      assumed_state: true
+      state: 'off'
+  icon: mdi:lightbulb-group
+  metadata: {}
+- id: '1652600430773'
+  name: Beschattung OG
+  entities:
+    cover.kuche_links:
+      device_class: blind
+      friendly_name: Küche links
+      supported_features: 127
+      current_position: 74
+      state: closing
+    cover.kuche_rechts:
+      device_class: blind
+      friendly_name: Küche rechts
+      supported_features: 127
+      current_position: 74
+      state: closing
+    cover.wohnzimmer_left_shutter:
+      device_class: blind
+      friendly_name: Wohnzimmer left shutter
+      supported_features: 127
+      current_position: 100
+      state: open
+    cover.wohnzimmer_right_shutter:
+      device_class: blind
+      friendly_name: Wohnzimmer right shutter
+      supported_features: 127
+      current_position: 88
+      state: closing
+    cover.homeoffice_left_shutter:
+      device_class: blind
+      friendly_name: Homeoffice left shutter
+      supported_features: 127
+      current_position: 88
+      state: closing
+    cover.homeoffice_right_shutter:
+      device_class: blind
+      friendly_name: Homeoffice right shutter
+      supported_features: 127
+      current_position: 88
+      state: closing
+    cover.toilette_eg_shutter:
+      device_class: blind
+      friendly_name: Toilette EG shutter
+      supported_features: 127
+      current_position: 68
+      state: closing
+  icon: mdi:blinds
+- id: '1652602577384'
+  name: Beschattung OG öffnen
+  entities:
+    cover.kuche_links:
+      device_class: blind
+      friendly_name: Küche links
+      supported_features: 127
+      current_position: 100
+      state: open
+    cover.kuche_rechts:
+      device_class: blind
+      friendly_name: Küche rechts
+      supported_features: 127
+      current_position: 100
+      state: open
+    cover.wohnzimmer_left_shutter:
+      device_class: blind
+      friendly_name: Wohnzimmer left shutter
+      supported_features: 127
+      current_position: 100
+      state: open
+    cover.wohnzimmer_right_shutter:
+      device_class: blind
+      friendly_name: Wohnzimmer right shutter
+      supported_features: 127
+      current_position: 100
+      state: open
+    cover.homeoffice_left_shutter:
+      device_class: blind
+      friendly_name: Homeoffice left shutter
+      supported_features: 127
+      current_position: 100
+      state: open
+    cover.homeoffice_right_shutter:
+      device_class: blind
+      friendly_name: Homeoffice right shutter
+      supported_features: 127
+      current_position: 100
+      state: open
+    cover.toilette_eg_shutter:
+      device_class: blind
+      friendly_name: Toilette EG shutter
+      supported_features: 127
+      current_position: 100
+      state: open
+  icon: mdi:blinds
+- id: '1655641106268'
+  name: Schlaflicht 2
+  entities:
+    light.hue_lightstrip_plus_2:
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Schlafzimmer Bett
+      supported_features: 40
+      state: 'off'
+    light.aura:
+      supported_color_modes:
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Aura
+      supported_features: 40
+      state: 'off'
+  icon: mdi:bed
+  metadata:
+    light.aura:
+      entity_only: false
+    light.hue_lightstrip_plus_2:
+      entity_only: false
+- id: '1657471934682'
+  name: Sommer TV
+  entities:
+    cover.wohnzimmer_right_shutter:
+      device_class: blind
+      friendly_name: Wohnzimmer rechts
+      supported_features: 127
+      current_position: 50
+      state: open
+    cover.wohnzimmer_left_shutter:
+      device_class: blind
+      friendly_name: Wohnzimmer links
+      supported_features: 127
+      current_position: 50
+      state: open
+    cover.kuche_links:
+      device_class: blind
+      friendly_name: Küche links
+      supported_features: 127
+      current_position: 0
+      state: closed
+    cover.kuche_rechts:
+      device_class: blind
+      friendly_name: Küche rechts
+      supported_features: 127
+      current_position: 0
+      state: closed
+    cover.homeoffice_left_shutter:
+      device_class: blind
+      friendly_name: Homeoffice left shutter
+      supported_features: 127
+      current_position: 50
+      state: open
+    cover.homeoffice_right_shutter:
+      device_class: blind
+      friendly_name: Homeoffice right shutter
+      supported_features: 127
+      current_position: 50
+      state: open
+  icon: mdi:window-shutter-alert
+  metadata:
+    cover.wohnzimmer_right_shutter:
+      entity_only: true
+    cover.wohnzimmer_left_shutter:
+      entity_only: true
+    cover.kuche_links:
+      entity_only: true
+    cover.kuche_rechts:
+      entity_only: true
+    cover.homeoffice_left_shutter:
+      entity_only: true
+    cover.homeoffice_right_shutter:
+      entity_only: true
+- id: '1657472159275'
+  name: Alles auf
+  entities:
+    cover.wohnzimmer_right_shutter:
+      device_class: blind
+      friendly_name: Wohnzimmer rechts
+      supported_features: 127
+      current_position: 100
+      state: open
+    cover.wohnzimmer_left_shutter:
+      device_class: blind
+      friendly_name: Wohnzimmer links
+      supported_features: 127
+      current_position: 100
+      state: open
+    cover.kuche_links:
+      current_position: 100
+      device_class: blind
+      friendly_name: Küche links
+      supported_features: 127
+      state: open
+    cover.kuche_rechts:
+      current_position: 100
+      device_class: blind
+      friendly_name: Küche rechts
+      supported_features: 127
+      state: open
+  icon: mdi:window-shutter-alert
+  metadata:
+    cover.wohnzimmer_right_shutter:
+      entity_only: true
+    cover.wohnzimmer_left_shutter:
+      entity_only: true
+    cover.kuche_links:
+      entity_only: true
+    cover.kuche_rechts:
+      entity_only: true
+- id: '1668869560560'
+  name: 'Wohnzimmer: easy lightning'
+  entities:
+    light.hue_beyond_up_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      friendly_name: Hue beyond up 1
+      supported_features: 40
+      mode: normal
+      dynamics: none
+      color_mode: color_temp
+      brightness: 191
+      color_temp_kelvin: 2298
+      color_temp: 435
+      hs_color:
+      - 29.464
+      - 80.379
+      rgb_color:
+      - 255
+      - 150
+      - 50
+      xy_color:
+      - 0.569
+      - 0.388
+      state: 'on'
+  icon: mdi:ceiling-light-outline
+  metadata: {}
+- id: '1670002303140'
+  name: Night Work HO (RED)
+  entities:
+    light.hue_p_schreibtisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 10.118
+      - 100
+      rgb_color:
+      - 255
+      - 43
+      - 0
+      xy_color:
+      - 0.6915
+      - 0.3083
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch Rechts
+      supported_features: 40
+      state: 'on'
+    light.hue_p_schreibtisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 10.118
+      - 100
+      rgb_color:
+      - 255
+      - 43
+      - 0
+      xy_color:
+      - 0.6915
+      - 0.3083
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch links
+      supported_features: 40
+      state: 'on'
+    light.schreibtisch_links:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 10
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch links
+      supported_features: 40
+      state: 'on'
+    light.schreibtisch_rechts:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 13
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch rechts
+      supported_features: 40
+      state: 'on'
+    light.glide_hexa_homeoffice:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9009
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 194
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      rate_limit_total: 100
+      rate_limit_remaining: -45519
+      rate_limit_reset_seconds: -1670002522.15
+      rate_limit_reset: '1970-01-01T01:00:00'
+      rate_limit_on: 5
+      manufacturer: Govee
+      model: H6061
+      friendly_name: Glide Hexa Homeoffice
+      supported_features: 19
+      state: 'on'
+  icon: mdi:globe-light
+  metadata: {}
+- id: '1670066301829'
+  name: Schlafzimmer Licht aus
+  entities:
+    light.aura:
+      supported_color_modes:
+      - xy
+      color_mode:
+      brightness:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Aura
+      supported_features: 40
+      state: 'off'
+    light.hue_lightstrip_plus_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Schlafzimmer Bett
+      supported_features: 44
+      state: 'off'
+    fan.bedroom_fan:
+      preset_modes:
+      percentage: 0
+      percentage_step: 33.333333333333336
+      preset_mode:
+      friendly_name: Bedroom_Fan
+      supported_features: 1
+      state: 'off'
+    light.bedroom_fan:
+      supported_color_modes:
+      - onoff
+      color_mode:
+      friendly_name: Bedroom_Fan
+      supported_features: 0
+      state: 'off'
+    light.bad_strahler_dusche_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 54
+      friendly_name: Bad Strahler Dusche Licht
+      supported_features: 40
+      state: 'off'
+    light.bad_strahler_eingang_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 51
+      friendly_name: Bad Strahler Eingang Licht
+      supported_features: 40
+      state: 'off'
+  icon: mdi:alarm-light-off-outline
+  metadata: {}
+- id: '1670066391594'
+  name: Schlafzimmer Nachtlicht rot
+  entities:
+    light.aura:
+      supported_color_modes:
+      - xy
+      color_mode: xy
+      brightness: 13
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      mode: normal
+      dynamics: none
+      friendly_name: Aura
+      supported_features: 40
+      state: 'on'
+    light.hue_lightstrip_plus_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 13
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 0
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 0
+      xy_color:
+      - 0.701
+      - 0.299
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Schlafzimmer Bett
+      supported_features: 44
+      state: 'on'
+  icon: mdi:alarm-light
+  metadata: {}
+- id: '1670066524642'
+  name: Schlafzimmer Nachtlicht rot (Duplizieren)
+  entities:
+    light.aura:
+      supported_color_modes:
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Aura
+      supported_features: 40
+      color_mode: xy
+      brightness: 13
+      hs_color:
+      - 120
+      - 0.392
+      rgb_color:
+      - 254
+      - 255
+      - 254
+      xy_color:
+      - 0.3219
+      - 0.3293
+      state: 'on'
+    light.hue_lightstrip_plus_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Schlafzimmer Bett
+      supported_features: 44
+      color_mode: xy
+      brightness: 13
+      hs_color:
+      - 0
+      - 0.392
+      rgb_color:
+      - 255
+      - 254
+      - 254
+      xy_color:
+      - 0.323
+      - 0.329
+      effect: fire
+      state: 'on'
+  icon: mdi:alarm-light
+  metadata: {}
+- id: '1674408020010'
+  name: Saunaabend
+  entities:
+    light.hue_argenta_color_spot_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 1
+      supported_features: 44
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 10.118
+      - 100
+      rgb_color:
+      - 255
+      - 43
+      - 0
+      xy_color:
+      - 0.6915
+      - 0.3083
+      effect: None
+      state: 'on'
+    light.hue_argenta_color_spot_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 2
+      supported_features: 44
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 241.523
+      - 77.255
+      rgb_color:
+      - 63
+      - 58
+      - 255
+      xy_color:
+      - 0.1536
+      - 0.0646
+      effect: None
+      state: 'on'
+    light.hue_argenta_color_spot_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 1
+      supported_features: 44
+      color_mode: xy
+      brightness: 181
+      hs_color:
+      - 26.725
+      - 89.804
+      rgb_color:
+      - 255
+      - 128
+      - 26
+      xy_color:
+      - 0.6091
+      - 0.3702
+      effect: None
+      state: 'on'
+    light.hue_argenta_color_spot_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 2
+      supported_features: 44
+      color_mode: xy
+      brightness: 217
+      hs_color:
+      - 318.028
+      - 83.529
+      rgb_color:
+      - 255
+      - 42
+      - 191
+      xy_color:
+      - 0.4737
+      - 0.2028
+      effect: None
+      state: 'on'
+    light.aura:
+      supported_color_modes:
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Aura
+      supported_features: 40
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 15.178
+      - 99.216
+      rgb_color:
+      - 255
+      - 66
+      - 2
+      xy_color:
+      - 0.677
+      - 0.319
+      state: 'on'
+  icon: mdi:bathtub-outline
+  metadata: {}
+- id: '1674408305643'
+  name: Ankleide und Bad weiss
+  entities:
+    light.hue_argenta_color_spot_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 1
+      supported_features: 44
+      color_mode: color_temp
+      brightness: 255
+      hs_color:
+      - 26.721
+      - 28.311
+      rgb_color:
+      - 255
+      - 214
+      - 182
+      xy_color:
+      - 0.4
+      - 0.358
+      effect: None
+      color_temp_kelvin: 4385
+      color_temp: 228
+      state: 'on'
+    light.hue_argenta_color_spot_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 2
+      supported_features: 44
+      color_mode: color_temp
+      brightness: 255
+      hs_color:
+      - 26.721
+      - 28.311
+      rgb_color:
+      - 255
+      - 214
+      - 182
+      xy_color:
+      - 0.4
+      - 0.358
+      effect: None
+      color_temp_kelvin: 4385
+      color_temp: 228
+      state: 'on'
+    light.hue_argenta_color_spot_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 1
+      supported_features: 44
+      color_mode: color_temp
+      brightness: 255
+      hs_color:
+      - 26.721
+      - 28.617
+      rgb_color:
+      - 255
+      - 214
+      - 182
+      xy_color:
+      - 0.4
+      - 0.358
+      effect: None
+      color_temp_kelvin: 4366
+      color_temp: 229
+      state: 'on'
+    light.hue_argenta_color_spot_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 2
+      supported_features: 44
+      color_mode: color_temp
+      brightness: 217
+      hs_color:
+      - 26.723
+      - 29.217
+      rgb_color:
+      - 255
+      - 213
+      - 180
+      xy_color:
+      - 0.403
+      - 0.359
+      effect: None
+      color_temp_kelvin: 4329
+      color_temp: 231
+      state: 'on'
+    light.aura:
+      supported_color_modes:
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Aura
+      supported_features: 40
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 0
+      - 0.392
+      rgb_color:
+      - 255
+      - 254
+      - 254
+      xy_color:
+      - 0.323
+      - 0.329
+      state: 'on'
+  icon: mdi:bathtub-outline
+  metadata: {}
+- id: '1677435189943'
+  name: Homeoffice Morgen Licht Arbeiten
+  entities:
+    light.schreibtisch_links:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch links
+      supported_features: 40
+      color_mode: brightness
+      brightness: 255
+      state: 'on'
+    light.schreibtisch_rechts:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch rechts
+      supported_features: 40
+      color_mode: brightness
+      brightness: 255
+      state: 'on'
+    light.elgato_key_light_air:
+      min_color_temp_kelvin: 2906
+      max_color_temp_kelvin: 6993
+      min_mireds: 143
+      max_mireds: 344
+      supported_color_modes:
+      - color_temp
+      friendly_name: Elgato Key Light Air
+      supported_features: 0
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6993
+      color_temp: 143
+      hs_color:
+      - 242.702
+      - 4.994
+      rgb_color:
+      - 242
+      - 242
+      - 255
+      xy_color:
+      - 0.314
+      - 0.315
+      state: 'on'
+    light.homeoffice_osram_surface_decke_light:
+      min_color_temp_kelvin: 2702
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 370
+      supported_color_modes:
+      - color_temp
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Homeoffice Osram Surface Decke Light
+      supported_features: 40
+      color_mode: color_temp
+      brightness: 254
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      state: 'on'
+  icon: mdi:ceiling-light-multiple-outline
+  metadata: {}
+- id: '1677435285748'
+  name: 'Homeoffice 2. Phase Licht Arbeiten '
+  entities:
+    light.schreibtisch_links:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch links
+      supported_features: 40
+      color_mode: brightness
+      brightness: 255
+      state: 'on'
+    light.schreibtisch_rechts:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch rechts
+      supported_features: 40
+      color_mode: brightness
+      brightness: 255
+      state: 'on'
+    light.elgato_key_light_air:
+      min_color_temp_kelvin: 2906
+      max_color_temp_kelvin: 6993
+      min_mireds: 143
+      max_mireds: 344
+      supported_color_modes:
+      - color_temp
+      friendly_name: Elgato Key Light Air
+      supported_features: 0
+      color_mode: color_temp
+      brightness: 3
+      color_temp_kelvin: 4830
+      color_temp: 207
+      hs_color:
+      - 26.857
+      - 21.602
+      rgb_color:
+      - 255
+      - 224
+      - 199
+      xy_color:
+      - 0.379
+      - 0.352
+      state: 'on'
+    light.schreibtischlampe:
+      restored: true
+      min_color_temp_kelvin: 2500
+      max_color_temp_kelvin: 20000
+      min_mireds: 50
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      friendly_name: Schreibtischlampe
+      supported_features: 0
+      state: unavailable
+    light.homeoffice_osram_surface_decke_light:
+      min_color_temp_kelvin: 2702
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 370
+      supported_color_modes:
+      - color_temp
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Homeoffice Osram Surface Decke Light
+      supported_features: 40
+      color_mode: color_temp
+      brightness: 204
+      color_temp_kelvin: 2702
+      color_temp: 370
+      hs_color:
+      - 28.391
+      - 65.659
+      rgb_color:
+      - 255
+      - 166
+      - 87
+      xy_color:
+      - 0.526
+      - 0.387
+      state: 'on'
+  icon: mdi:ceiling-light-multiple-outline
+  metadata: {}
+- id: '1677435301243'
+  name: 'Homeoffice Abend Licht Arbeiten '
+  entities:
+    light.schreibtisch_links:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch links
+      supported_features: 40
+      color_mode: brightness
+      brightness: 140
+      state: 'on'
+    light.schreibtisch_rechts:
+      supported_color_modes:
+      - brightness
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch rechts
+      supported_features: 40
+      color_mode: brightness
+      brightness: 128
+      state: 'on'
+    light.elgato_key_light_air:
+      min_color_temp_kelvin: 2906
+      max_color_temp_kelvin: 6993
+      min_mireds: 143
+      max_mireds: 344
+      supported_color_modes:
+      - color_temp
+      friendly_name: Elgato Key Light Air
+      supported_features: 0
+      color_mode: color_temp
+      brightness: 3
+      color_temp_kelvin: 4830
+      color_temp: 207
+      hs_color:
+      - 26.857
+      - 21.602
+      rgb_color:
+      - 255
+      - 224
+      - 199
+      xy_color:
+      - 0.379
+      - 0.352
+      state: 'on'
+    light.schreibtischlampe:
+      restored: true
+      min_color_temp_kelvin: 2500
+      max_color_temp_kelvin: 20000
+      min_mireds: 50
+      max_mireds: 400
+      supported_color_modes:
+      - color_temp
+      friendly_name: Schreibtischlampe
+      supported_features: 0
+      state: unavailable
+    light.homeoffice_osram_surface_decke_light:
+      min_color_temp_kelvin: 2702
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 370
+      supported_color_modes:
+      - color_temp
+      off_with_transition: false
+      off_brightness: 3
+      friendly_name: Homeoffice Osram Surface Decke Light
+      supported_features: 40
+      state: 'off'
+  icon: mdi:ceiling-light-multiple-outline
+  metadata: {}
+- id: '1677443701523'
+  name: Schlafzimmer Morgen Beleuchtung
+  entities:
+    light.hue_argenta_color_spot_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 2
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 2
+      supported_features: 44
+      state: 'on'
+    light.aura:
+      supported_color_modes:
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Aura
+      supported_features: 40
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 200
+      - 1.176
+      rgb_color:
+      - 252
+      - 254
+      - 255
+      xy_color:
+      - 0.3198
+      - 0.329
+      state: 'on'
+  icon: mdi:ceiling-light-multiple-outline
+  metadata: {}
+- id: '1677443821765'
+  name: 'Schlafzimmer Abend Beleuchtung '
+  entities:
+    light.hue_argenta_color_spot_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 2
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 178
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 178
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 2
+      supported_features: 44
+      state: 'on'
+    light.aura:
+      supported_color_modes:
+      - xy
+      mode: normal
+      dynamics: none
+      friendly_name: Aura
+      supported_features: 40
+      color_mode: xy
+      brightness: 135
+      hs_color:
+      - 45.882
+      - 100
+      rgb_color:
+      - 255
+      - 195
+      - 0
+      xy_color:
+      - 0.5266
+      - 0.4569
+      state: 'on'
+  icon: mdi:ceiling-light-multiple-outline
+  metadata: {}
+- id: '1691939660175'
+  name: Ankleide und Bad aus
+  entities:
+    light.hue_argenta_color_spot_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 1
+      supported_features: 44
+      state: 'off'
+    light.hue_argenta_color_spot_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 2
+      supported_features: 44
+      state: 'off'
+    light.hue_argenta_color_spot_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 1
+      supported_features: 44
+      state: 'off'
+    light.hue_argenta_color_spot_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 2
+      supported_features: 44
+      state: 'off'
+    light.aura:
+      supported_color_modes:
+      - xy
+      color_mode:
+      brightness:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Aura
+      supported_features: 40
+      state: 'off'
+    light.bad_strahler_dusche_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 54
+      friendly_name: Bad Strahler Dusche Licht
+      supported_features: 40
+      state: 'off'
+    light.bad_strahler_eingang_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 51
+      friendly_name: Bad Strahler Eingang Licht
+      supported_features: 40
+      state: 'off'
+  icon: mdi:bathtub-outline
+  metadata: {}
+- id: '1691951111708'
+  name: 'Schlafzimmer: Romance'
+  entities:
+    light.hue_lightstrip_plus_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Schlafzimmer Bett
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 153
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 14.758
+      - 97.255
+      rgb_color:
+      - 255
+      - 68
+      - 7
+      xy_color:
+      - 0.675
+      - 0.32
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 2
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 308.125
+      - 37.647
+      rgb_color:
+      - 255
+      - 159
+      - 242
+      xy_color:
+      - 0.371
+      - 0.239
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 2
+      supported_features: 44
+      state: 'on'
+    light.aura:
+      supported_color_modes:
+      - xy
+      color_mode: xy
+      brightness: 255
+      hs_color:
+      - 277.358
+      - 41.569
+      rgb_color:
+      - 215
+      - 149
+      - 255
+      xy_color:
+      - 0.3131
+      - 0.2081
+      mode: normal
+      dynamics: none
+      friendly_name: Aura
+      supported_features: 40
+      state: 'on'
+    light.bad_strahler_dusche_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 51
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Bad Strahler Dusche Licht
+      supported_features: 40
+      state: 'on'
+    light.bad_strahler_eingang_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 51
+      friendly_name: Bad Strahler Eingang Licht
+      supported_features: 40
+      state: 'off'
+  icon: mdi:ceiling-light-multiple
+  metadata: {}
+- id: '1692548590813'
+  name: Sonnenschutz Hauptfront 100% (offen)
+  entities:
+    cover.homeoffice_left_shutter:
+      current_position: 100
+      device_class: blind
+      friendly_name: Homeoffice left shutter
+      supported_features: 127
+      state: open
+    cover.homeoffice_right_shutter:
+      current_position: 100
+      device_class: blind
+      friendly_name: Homeoffice right shutter
+      supported_features: 127
+      state: open
+    cover.wohnzimmer_right_shutter:
+      current_position: 100
+      device_class: blind
+      friendly_name: Wohnzimmer rechts
+      supported_features: 127
+      state: open
+    cover.wohnzimmer_left_shutter:
+      current_position: 71
+      device_class: blind
+      friendly_name: Wohnzimmer links
+      supported_features: 127
+      state: open
+  icon: mdi:window-shutter
+  metadata:
+    cover.homeoffice_left_shutter:
+      entity_only: true
+    cover.homeoffice_right_shutter:
+      entity_only: true
+    cover.wohnzimmer_right_shutter:
+      entity_only: true
+    cover.wohnzimmer_left_shutter:
+      entity_only: true
+- id: '1692548824123'
+  name: Sonnenschutz Hauptfront 50% (Sonnenschutz)
+  entities:
+    cover.homeoffice_left_shutter:
+      current_position: 50
+      device_class: blind
+      friendly_name: Homeoffice left shutter
+      supported_features: 127
+      state: open
+    cover.homeoffice_right_shutter:
+      current_position: 50
+      device_class: blind
+      friendly_name: Homeoffice right shutter
+      supported_features: 127
+      state: open
+    cover.wohnzimmer_right_shutter:
+      current_position: 50
+      device_class: blind
+      friendly_name: Wohnzimmer rechts
+      supported_features: 127
+      state: open
+    cover.wohnzimmer_left_shutter:
+      current_position: 50
+      device_class: blind
+      friendly_name: Wohnzimmer links
+      supported_features: 127
+      state: open
+  icon: mdi:window-shutter
+  metadata:
+    cover.homeoffice_left_shutter:
+      entity_only: true
+    cover.homeoffice_right_shutter:
+      entity_only: true
+    cover.wohnzimmer_right_shutter:
+      entity_only: true
+    cover.wohnzimmer_left_shutter:
+      entity_only: true
+- id: '1692548950253'
+  name: 'Sonnenschutzt Küchenfront 100% (offen) '
+  entities:
+    cover.kuche_links:
+      current_position: 100
+      device_class: blind
+      friendly_name: Küche links
+      supported_features: 127
+      state: open
+    cover.kuche_rechts:
+      current_position: 100
+      device_class: blind
+      friendly_name: Küche rechts
+      supported_features: 127
+      state: open
+    cover.toilette_eg_shutter:
+      current_position: 100
+      device_class: blind
+      friendly_name: Toilette EG shutter
+      supported_features: 127
+      state: open
+  icon: mdi:window-shutter
+  metadata:
+    cover.kuche_links:
+      entity_only: true
+    cover.kuche_rechts:
+      entity_only: true
+    cover.toilette_eg_shutter:
+      entity_only: true
+- id: '1692549014790'
+  name: 'Sonnenschutzt Küchenfront 0% (Sonnenschutz) '
+  entities:
+    cover.kuche_links:
+      current_position: 0
+      device_class: blind
+      friendly_name: Küche links
+      supported_features: 127
+      state: closed
+    cover.kuche_rechts:
+      current_position: 0
+      device_class: blind
+      friendly_name: Küche rechts
+      supported_features: 127
+      state: closed
+    cover.toilette_eg_shutter:
+      current_position: 50
+      device_class: blind
+      friendly_name: Toilette EG shutter
+      supported_features: 127
+      state: open
+  icon: mdi:window-shutter
+  metadata:
+    cover.kuche_links:
+      entity_only: true
+    cover.kuche_rechts:
+      entity_only: true
+    cover.toilette_eg_shutter:
+      entity_only: true
+- id: '1692549098961'
+  name: 'Sonnenschutzt Schlafzimmer 100% (offen)  '
+  entities:
+    cover.schlafzimmer_shutter:
+      device_class: blind
+      friendly_name: Schlafzimmer Shutter
+      supported_features: 127
+      current_position: 100
+      state: open
+  icon: mdi:window-shutter
+  metadata:
+    cover.schlafzimmer_shutter:
+      entity_only: true
+- id: '1692549213608'
+  name: Sonnenschutzt Schlafzimmer 0% (geschlossen)
+  entities:
+    cover.schlafzimmer_shutter:
+      device_class: blind
+      friendly_name: Schlafzimmer Shutter
+      supported_features: 127
+      current_position: 0
+      state: closed
+  icon: mdi:window-shutter
+  metadata:
+    cover.schlafzimmer_shutter:
+      entity_only: true
+- id: '1702107801682'
+  name: 'Wohnzimmer: Energizer'
+  entities:
+    light.tisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Tisch links
+      supported_features: 44
+      state: 'on'
+    light.tisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Tisch rechts
+      supported_features: 44
+      state: 'on'
+    light.blumenlampe:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Blumenlampe
+      supported_features: 44
+      state: 'on'
+    light.hue_beyond_up_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond up 1
+      supported_features: 40
+      state: 'on'
+    light.hue_beyond_down_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 1
+      supported_features: 40
+      state: 'on'
+    light.hue_beyond_down_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 2
+      supported_features: 40
+      state: 'on'
+    light.eckleuchte:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Eckleuchte
+      supported_features: 44
+      state: 'on'
+    light.prios_strahler_kuche_links_aussen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 252
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Prios Strahler Küche links aussen Licht
+      supported_features: 40
+      state: 'on'
+    light.prios_schiene_kuche_rechts_aussen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 252
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Prios Schiene Küche rechts aussen Licht
+      supported_features: 40
+      state: 'on'
+    light.prios_strahler_kuche_links_innen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 252
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Prios Strahler Küche links innen Licht
+      supported_features: 40
+      state: 'on'
+    light.prios_strahler_kuche_rechts_innen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 252
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Prios Strahler Küche rechts innen Licht
+      supported_features: 40
+      state: 'on'
+    light.hai:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      mode: normal
+      dynamics: none
+      friendly_name: Hai
+      supported_features: 40
+      state: 'on'
+    light.klavier:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      mode: normal
+      dynamics: none
+      friendly_name: Klavier
+      supported_features: 40
+      state: 'on'
+    light.hue_beyond_down_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 3
+      supported_features: 40
+      state: 'on'
+  icon: mdi:sun-snowflake-variant
+  metadata: {}
+- id: '1702107859412'
+  name: 'Wohnzimmer: Aus'
+  entities:
+    light.tisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Tisch links
+      supported_features: 44
+      state: 'off'
+    light.tisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Tisch rechts
+      supported_features: 44
+      state: 'off'
+    light.blumenlampe:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Blumenlampe
+      supported_features: 44
+      state: 'off'
+    light.hue_beyond_up_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond up 1
+      supported_features: 40
+      state: 'off'
+    light.hue_beyond_down_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 1
+      supported_features: 40
+      state: 'off'
+    light.hue_beyond_down_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 2
+      supported_features: 40
+      state: 'off'
+    light.eckleuchte:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Eckleuchte
+      supported_features: 44
+      state: 'off'
+    light.prios_strahler_kuche_links_aussen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: true
+      off_brightness: 252
+      friendly_name: Prios Strahler Küche links aussen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_schiene_kuche_rechts_aussen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: true
+      off_brightness: 1
+      friendly_name: Prios Schiene Küche rechts aussen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_strahler_kuche_links_innen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: true
+      off_brightness: 1
+      friendly_name: Prios Strahler Küche links innen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_strahler_kuche_rechts_innen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: true
+      off_brightness: 252
+      friendly_name: Prios Strahler Küche rechts innen Licht
+      supported_features: 40
+      state: 'off'
+    light.hai:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Hai
+      supported_features: 40
+      state: 'off'
+    light.hue_beyond_down_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 3
+      supported_features: 40
+      state: 'off'
+    light.klavier:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Klavier
+      supported_features: 40
+      state: 'off'
+  icon: mdi:sun-snowflake-variant
+  metadata: {}
+- id: '1702123418905'
+  name: 'Wohnzimmer: Color Mood'
+  entities:
+    light.tisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 219.048
+      - 49.412
+      rgb_color:
+      - 129
+      - 173
+      - 255
+      xy_color:
+      - 0.208
+      - 0.217
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Tisch links
+      supported_features: 44
+      state: 'on'
+    light.tisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 135.529
+      - 100
+      rgb_color:
+      - 0
+      - 255
+      - 66
+      xy_color:
+      - 0.17
+      - 0.7
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Tisch rechts
+      supported_features: 44
+      state: 'on'
+    light.blumenlampe:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 76
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Blumenlampe
+      supported_features: 44
+      state: 'on'
+    light.hue_beyond_up_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 63
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 276.923
+      - 40.784
+      rgb_color:
+      - 215
+      - 151
+      - 255
+      xy_color:
+      - 0.313
+      - 0.21
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond up 1
+      supported_features: 40
+      state: 'on'
+    light.hue_beyond_down_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 245.294
+      - 40
+      rgb_color:
+      - 162
+      - 153
+      - 255
+      xy_color:
+      - 0.2467
+      - 0.1974
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 1
+      supported_features: 40
+      state: 'on'
+    light.hue_beyond_down_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 102
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 2
+      supported_features: 40
+      state: 'on'
+    light.eckleuchte:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 63
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 325.647
+      - 100
+      rgb_color:
+      - 255
+      - 0
+      - 146
+      xy_color:
+      - 0.554
+      - 0.232
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Eckleuchte
+      supported_features: 44
+      state: 'on'
+    light.prios_strahler_kuche_links_aussen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 252
+      friendly_name: Prios Strahler Küche links aussen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_schiene_kuche_rechts_aussen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 252
+      friendly_name: Prios Schiene Küche rechts aussen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_strahler_kuche_links_innen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 252
+      friendly_name: Prios Strahler Küche links innen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_strahler_kuche_rechts_innen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 252
+      friendly_name: Prios Strahler Küche rechts innen Licht
+      supported_features: 40
+      state: 'off'
+    light.hai:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 63
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      mode: normal
+      dynamics: none
+      friendly_name: Hai
+      supported_features: 40
+      state: 'on'
+    light.klavier:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 63
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 245.294
+      - 40
+      rgb_color:
+      - 162
+      - 153
+      - 255
+      xy_color:
+      - 0.2467
+      - 0.1974
+      mode: normal
+      dynamics: none
+      friendly_name: Klavier
+      supported_features: 40
+      state: 'on'
+    light.hue_beyond_down_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 102
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 308.125
+      - 37.647
+      rgb_color:
+      - 255
+      - 159
+      - 242
+      xy_color:
+      - 0.371
+      - 0.239
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 3
+      supported_features: 40
+      state: 'on'
+  icon: mdi:lightbulb-night
+  metadata: {}
+- id: '1702123992017'
+  name: 'Wohnzimmer: Indirekt'
+  entities:
+    light.tisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Tisch links
+      supported_features: 44
+      state: 'off'
+    light.tisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Tisch rechts
+      supported_features: 44
+      state: 'off'
+    light.blumenlampe:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 63
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Blumenlampe
+      supported_features: 44
+      state: 'on'
+    light.hue_beyond_up_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 63
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond up 1
+      supported_features: 40
+      state: 'on'
+    light.hue_beyond_down_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 1
+      supported_features: 40
+      state: 'off'
+    light.hue_beyond_down_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 2
+      supported_features: 40
+      state: 'off'
+    light.eckleuchte:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 63
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Eckleuchte
+      supported_features: 44
+      state: 'on'
+    light.prios_strahler_kuche_links_aussen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: true
+      off_brightness: 252
+      friendly_name: Prios Strahler Küche links aussen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_schiene_kuche_rechts_aussen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Prios Schiene Küche rechts aussen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_strahler_kuche_links_innen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: true
+      off_brightness: 252
+      friendly_name: Prios Strahler Küche links innen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_strahler_kuche_rechts_innen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: true
+      off_brightness: 252
+      friendly_name: Prios Strahler Küche rechts innen Licht
+      supported_features: 40
+      state: 'off'
+    light.hai:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 63
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      mode: normal
+      dynamics: none
+      friendly_name: Hai
+      supported_features: 40
+      state: 'on'
+    light.klavier:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 63
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      mode: normal
+      dynamics: none
+      friendly_name: Klavier
+      supported_features: 40
+      state: 'on'
+    light.hue_beyond_down_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 3
+      supported_features: 40
+      state: 'off'
+  icon: mdi:lightbulb-night
+  metadata: {}
+- id: '1702124197435'
+  name: 'Wohnzimmer: Essen'
+  entities:
+    light.tisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 153
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Tisch links
+      supported_features: 44
+      state: 'on'
+    light.tisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 153
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Tisch rechts
+      supported_features: 44
+      state: 'on'
+    light.blumenlampe:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 166
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Blumenlampe
+      supported_features: 44
+      state: 'on'
+    light.hue_beyond_up_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond up 1
+      supported_features: 40
+      state: 'on'
+    light.hue_beyond_down_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 76
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 1
+      supported_features: 40
+      state: 'on'
+    light.hue_beyond_down_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 76
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 2
+      supported_features: 40
+      state: 'on'
+    light.eckleuchte:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Eckleuchte
+      supported_features: 44
+      state: 'on'
+    light.prios_strahler_kuche_links_aussen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 89
+      friendly_name: Prios Strahler Küche links aussen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_schiene_kuche_rechts_aussen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Prios Schiene Küche rechts aussen Licht
+      supported_features: 40
+      state: 'on'
+    light.prios_strahler_kuche_links_innen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: true
+      off_brightness: 252
+      friendly_name: Prios Strahler Küche links innen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_strahler_kuche_rechts_innen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Prios Strahler Küche rechts innen Licht
+      supported_features: 40
+      state: 'on'
+    light.hai:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      mode: normal
+      dynamics: none
+      friendly_name: Hai
+      supported_features: 40
+      state: 'on'
+    light.klavier:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      mode: normal
+      dynamics: none
+      friendly_name: Klavier
+      supported_features: 40
+      state: 'on'
+    light.hue_beyond_down_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 76
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 3
+      supported_features: 40
+      state: 'on'
+  icon: mdi:table-furniture
+  metadata: {}
+- id: '1702201577236'
+  name: 'Wohnzimmer: Fernsehen'
+  entities:
+    light.tisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Tisch links
+      supported_features: 44
+      state: 'off'
+    light.tisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Tisch rechts
+      supported_features: 44
+      state: 'on'
+    light.blumenlampe:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Blumenlampe
+      supported_features: 44
+      state: 'off'
+    light.hue_beyond_up_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond up 1
+      supported_features: 40
+      state: 'on'
+    light.hue_beyond_down_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 1
+      supported_features: 40
+      state: 'off'
+    light.hue_beyond_down_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 2
+      supported_features: 40
+      state: 'off'
+    light.eckleuchte:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 63
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 308.125
+      - 37.647
+      rgb_color:
+      - 255
+      - 159
+      - 242
+      xy_color:
+      - 0.371
+      - 0.239
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Eckleuchte
+      supported_features: 44
+      state: 'on'
+    light.prios_strahler_kuche_links_aussen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 252
+      friendly_name: Prios Strahler Küche links aussen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_schiene_kuche_rechts_aussen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 128
+      friendly_name: Prios Schiene Küche rechts aussen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_strahler_kuche_links_innen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 252
+      friendly_name: Prios Strahler Küche links innen Licht
+      supported_features: 40
+      state: 'off'
+    light.prios_strahler_kuche_rechts_innen_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 128
+      friendly_name: Prios Strahler Küche rechts innen Licht
+      supported_features: 40
+      state: 'off'
+    light.hai:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 245.294
+      - 40
+      rgb_color:
+      - 162
+      - 153
+      - 255
+      xy_color:
+      - 0.2467
+      - 0.1974
+      mode: normal
+      dynamics: none
+      friendly_name: Hai
+      supported_features: 40
+      state: 'on'
+    light.klavier:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Klavier
+      supported_features: 40
+      state: 'off'
+    light.hue_beyond_down_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 3
+      supported_features: 40
+      state: 'off'
+  icon: mdi:table-furniture
+  metadata: {}
+- id: '1702243741205'
+  name: 'Schlafzimmer: All good'
+  entities:
+    light.bad_strahler_dusche_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 191
+      friendly_name: Bad Strahler Dusche Licht
+      supported_features: 40
+      state: 'off'
+    light.bad_strahler_eingang_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      off_with_transition: false
+      off_brightness: 191
+      friendly_name: Bad Strahler Eingang Licht
+      supported_features: 40
+      state: 'off'
+    light.hue_argenta_color_spot_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 192
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 192
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 2
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 2
+      supported_features: 44
+      state: 'on'
+    fan.bedroom_fan:
+      preset_modes:
+      percentage: 0
+      percentage_step: 33.333333333333336
+      preset_mode:
+      friendly_name: Bedroom_Fan
+      supported_features: 1
+      state: 'off'
+    light.bedroom_fan:
+      supported_color_modes:
+      - onoff
+      color_mode:
+      friendly_name: Bedroom_Fan
+      supported_features: 0
+      state: 'off'
+  icon: mdi:lightbulb-group
+  metadata: {}
+- id: '1702243750274'
+  name: 'Schlafzimmer: All bright'
+  entities:
+    light.bad_strahler_dusche_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 254
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Bad Strahler Dusche Licht
+      supported_features: 40
+      state: 'on'
+    light.bad_strahler_eingang_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 254
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Bad Strahler Eingang Licht
+      supported_features: 40
+      state: 'on'
+    light.hue_argenta_color_spot_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 2
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 2
+      supported_features: 44
+      state: 'on'
+    fan.bedroom_fan:
+      preset_modes:
+      percentage: 0
+      percentage_step: 33.333333333333336
+      preset_mode:
+      friendly_name: Bedroom_Fan
+      supported_features: 1
+      state: 'off'
+    light.bedroom_fan:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      friendly_name: Bedroom_Fan
+      supported_features: 0
+      state: 'on'
+  icon: mdi:lightbulb-group
+  metadata: {}
+- id: '1702243946644'
+  name: 'Schlafzimmer: Minimal'
+  entities:
+    light.bad_strahler_dusche_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 54
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Bad Strahler Dusche Licht
+      supported_features: 40
+      state: 'on'
+    light.bad_strahler_eingang_licht:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 51
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 136
+      - 13
+      xy_color:
+      - 0.599
+      - 0.382
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Bad Strahler Eingang Licht
+      supported_features: 40
+      state: 'on'
+    light.hue_argenta_color_spot_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 1
+      supported_features: 44
+      state: 'off'
+    light.hue_argenta_color_spot_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 2
+      supported_features: 44
+      state: 'off'
+    light.hue_argenta_color_spot_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 51
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 51
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      effect: None
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 2
+      supported_features: 44
+      state: 'on'
+    fan.bedroom_fan:
+      preset_modes:
+      percentage: 0
+      percentage_step: 33.333333333333336
+      preset_mode:
+      friendly_name: Bedroom_Fan
+      supported_features: 1
+      state: 'off'
+    light.bedroom_fan:
+      supported_color_modes:
+      - onoff
+      color_mode:
+      friendly_name: Bedroom_Fan
+      supported_features: 0
+      state: 'off'
+  icon: mdi:lightbulb-group
+  metadata: {}
+- id: '1702362770371'
+  name: Schlafzimmer Nachtlicht aus
+  entities:
+    light.aura:
+      supported_color_modes:
+      - xy
+      color_mode:
+      brightness:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Aura
+      supported_features: 40
+      state: 'off'
+    light.hue_lightstrip_plus_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      effect:
+      mode: normal
+      dynamics: none
+      friendly_name: Schlafzimmer Bett
+      supported_features: 44
+      state: 'off'
+  icon: mdi:alarm-light-off-outline
+  metadata: {}
+- id: '1702828507718'
+  name: 'Homeoffice: Early Evening'
+  entities:
+    light.schreibtisch_links:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 204
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch links
+      supported_features: 40
+      state: 'on'
+    light.schreibtisch_rechts:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 204
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch rechts
+      supported_features: 40
+      state: 'on'
+    light.hue_p_schreibtisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 276.923
+      - 40.784
+      rgb_color:
+      - 215
+      - 151
+      - 255
+      xy_color:
+      - 0.313
+      - 0.21
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch links
+      supported_features: 40
+      state: 'on'
+    light.hue_p_schreibtisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch Rechts
+      supported_features: 40
+      state: 'on'
+    light.homeoffice_osram_surface_decke_light:
+      min_color_temp_kelvin: 2702
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 370
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 3984
+      color_temp: 251
+      hs_color:
+      - 26.819
+      - 35.161
+      rgb_color:
+      - 255
+      - 205
+      - 165
+      xy_color:
+      - 0.421
+      - 0.365
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Homeoffice Osram Surface Decke Licht
+      supported_features: 40
+      state: 'on'
+  metadata: {}
+- id: '1702828644138'
+  name: 'Homeoffice: Late Evening'
+  entities:
+    light.schreibtisch_links:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 128
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch links
+      supported_features: 40
+      state: 'on'
+    light.schreibtisch_rechts:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 128
+      mode: normal
+      dynamics: none
+      friendly_name: Schreibtisch rechts
+      supported_features: 40
+      state: 'on'
+    light.hue_p_schreibtisch_links:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch links
+      supported_features: 40
+      state: 'on'
+    light.hue_p_schreibtisch_rechts:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 219.048
+      - 49.412
+      rgb_color:
+      - 129
+      - 173
+      - 255
+      xy_color:
+      - 0.208
+      - 0.217
+      mode: normal
+      dynamics: none
+      friendly_name: Hue P Schreibtisch Rechts
+      supported_features: 40
+      state: 'on'
+    light.homeoffice_osram_surface_decke_light:
+      min_color_temp_kelvin: 2702
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 370
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 64
+      color_temp_kelvin: 3984
+      color_temp: 251
+      hs_color:
+      - 26.819
+      - 35.161
+      rgb_color:
+      - 255
+      - 205
+      - 165
+      xy_color:
+      - 0.421
+      - 0.365
+      off_with_transition: false
+      off_brightness:
+      friendly_name: Homeoffice Osram Surface Decke Licht
+      supported_features: 40
+      state: 'on'
+  metadata: {}
+- id: '1708250416919'
+  name: 'Homeoffice: Sonnernschutz 50%'
+  entities:
+    cover.homeoffice_left_shutter:
+      current_position: 50
+      device_class: blind
+      friendly_name: Homeoffice left shutter
+      supported_features: 127
+      state: open
+    cover.homeoffice_right_shutter:
+      current_position: 50
+      device_class: blind
+      friendly_name: Homeoffice right shutter
+      supported_features: 127
+      state: open
+  icon: mdi:window-shutter
+  metadata:
+    cover.homeoffice_left_shutter:
+      entity_only: true
+    cover.homeoffice_right_shutter:
+      entity_only: true

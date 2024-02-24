@@ -1,0 +1,540 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+homeassistant:
+  #  allowlist_external_urls:
+  #     - "http://images.com/image1.png"
+  allowlist_external_dirs:
+    #  - "/usr/var/dumping-ground"
+    - /tmp/
+    - /config/tmp/
+    - /config/tmp/videos/
+    - /media/GorkelMedia
+
+  customize:
+    sensor.energyesp32_mt681_zahlerstand_total:
+      unit_of_measurement: kwh
+    sensor.sauna2_ho_indoor_air_quality:
+      unit_of_measurement: ppm
+
+default_config:
+
+folder_watcher:
+  - folder: /media/GorkelMedia/
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+# icloud: !include config_ic3.yaml
+
+# Example configuration.yaml entry
+# Configure a default setup of Home Assistant (frontend, api, etc)
+
+# Recorder config
+
+recorder:
+  purge_keep_days: 60
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+# Trigger etc
+input_boolean:
+  vacation_mode:
+    name: Vacation Mode
+    icon: mdi:beach
+
+input_number:
+  yesterday_rain:
+    name: Yesterday Rain Fall
+    min: 0
+    max: 200
+    unit_of_measurement: "mm"
+    mode: box
+    icon: mdi:water
+  2_days_rain:
+    name: 2 days Before Rain Fall
+    min: 0
+    max: 200
+    unit_of_measurement: "mm"
+    mode: box
+    icon: mdi:water
+
+sensor:
+  - platform: mqtt_room
+    device_id: "irk:0a97917f8cb8a775565f1300efcebe95"
+    name: "AppleWatch Ultra CK ESPresence"
+    state_topic: "espresense/devices/irk:0a97917f8cb8a775565f1300efcebe95"
+    timeout: 10
+    away_timeout: 120
+
+  - platform: history_stats
+    name: "Vacation Kitchen"
+    entity_id: light.wohnzimmer
+    state: "on"
+    type: count
+    start: >
+      {{ as_timestamp(now()) - (7*86400) }}
+    duration: 00:00:10
+
+  - platform: aarlo
+    monitored_conditions:
+      - total_cameras
+      - last_capture
+      - recent_activity
+      - captured_today
+      - battery_level
+      - signal_strength
+
+  - platform: integration
+    source: sensor.power_consumption
+    method: left
+    name: gesamt_leistung_kwh
+    unit_prefix: k
+    round: 2
+
+  - platform: unifigateway
+    host: 192.168.1.1
+    version: UDMP-unifiOS
+    verify_ssl: false
+    username: unifiha
+    password: HomeautoPica555o
+    monitored_conditions:
+      - www
+      - wlan
+      - lan
+      - firmware
+
+  - platform: luxtronik
+    sensors:
+      - group: calculations
+        id: ID_WEB_Temperatur_TVL
+        friendly_name: Temp Vorlauf
+        icon: mdi:thermometer
+
+      - group: calculations
+        id: ID_WEB_Temperatur_TRL
+        friendly_name: Temp Nachlauf
+        icon: mdi:thermometer
+
+      - group: calculations
+        id: ID_WEB_Einst_BWS_akt
+        friendly_name: Temp Warmwasser Soll
+        icon: mdi:thermometer
+
+      - group: calculations
+        id: ID_WEB_Temperatur_TBW
+        friendly_name: Temp Warmwasser Ist
+        icon: mdi:thermometer
+
+  - platform: template
+    sensors:
+      unifi_gateway_cpu:
+        friendly_name: "CPU"
+        value_template: "{{ states.sensor.unifi_gateway_wan.attributes['gw_system-stats']['cpu'] }}"
+        icon_template: mdi:cpu-64-bit
+
+      unifi_gateway_wired_clients:
+        friendly_name: "UDM-Pro Wired Clients"
+        value_template: "{{ states.sensor.unifi_gateway_lan.attributes.num_user }}"
+        icon_template: mdi:lan
+
+      unifi_gateway_wireless_clients:
+        friendly_name: "UDM-Pro Wireless Clients"
+        value_template: "{{ states.sensor.unifi_gateway_wlan.attributes.num_user }}"
+        icon_template: mdi:wifi
+
+      unifi_gateway_www_xput_down:
+        friendly_name: "UDM-Pro Download"
+        unit_of_measurement: Mbps
+        value_template: "{{ states.sensor.unifi_gateway_www.attributes.xput_down }}"
+        icon_template: mdi:download
+
+      unifi_gateway_www_speedtest_ping:
+        friendly_name: "UDM-Pro Ping"
+        unit_of_measurement: ms
+        value_template: "{{ states.sensor.unifi_gateway_www.attributes.speedtest_ping }}"
+        icon_template: mdi:run-fast
+
+      unifi_uptime_templated:
+        icon_template: mdi:av-timer
+        friendly_name: UDM-Pro Uptime
+        value_template: >-
+          {% set time = (states.sensor.unifi_gateway_wan.attributes['gw_system-stats']['uptime'] | int) | int %}
+          {% set minutes = ((time % 3600) / 60) | int %}
+          {% set hours = ((time % 86400) / 3600) | int %}
+          {% set days = (time / 86400) | int %}
+
+          {%- if time < 60 -%}
+            Less than a minute
+            {%- else -%}
+            {%- if days > 0 -%}
+              {{ days }}d
+            {%- endif -%}
+            {%- if hours > 0 -%}
+              {%- if days > 0 -%}
+                {{ ' ' }}
+              {%- endif -%}
+              {{ hours }}h
+          {%- endif -%}
+            {%- if minutes > 0 -%}
+              {%- if days > 0 or hours > 0 -%}
+                {{ ' ' }}
+              {%- endif -%}
+              {{ minutes }}m
+            {%- endif -%}
+          {%- endif -%}
+
+  # - platform: mqtt_room
+  #   name: "Isa_iphone_11_BT"
+  #   state_topic: "espresense/rooms"
+  #   device_id: "apple:1006:10-5"
+  #   timeout: 5
+  #   away_timeout: 120
+
+  # - platform: mqtt_room
+  #   name: "room_presence_iphone_12_pro_ck"
+  #   state_topic: "espresense/rooms"
+  #   device_id: "4D2987C7-B18E-4AAE-B6FB-6E620EF69C73"
+  #   timeout: 5
+  #   away_timeout: 120
+
+  # - platform: mqtt_room
+  #   name: "room_presence_CK_Tile"
+  #   state_topic: "espresense/rooms"
+  #   device_id: "tile:f227e4553601"
+  #   timeout: 5
+  #   away_timeout: 120
+
+  # - platform: mqtt_room
+  #   name: "room_presence_ipad_pro_ck"
+  #   state_topic: "espresense/rooms"
+  #   device_id: "apple:1006:10-12"
+  #   timeout: 5
+  #   away_timeout: 120
+
+  # - platform: mqtt_room
+  #   name: "Test1_BT"
+  #   state_topic: "espresense/rooms"
+  #   device_id: "apple:1005:9"
+  #   timeout: 5
+  #   away_timeout: 120
+
+  # - platform: mqtt_room
+  #   name: "Test2_BT"
+  #   state_topic: "espresense/rooms"
+  #   device_id: "apple:1007:11-6"
+  #   timeout: 5
+  #   away_timeout: 120
+  #   #Fire Tablet
+
+  - platform: rest
+    name: kitchen_fire_tablet
+    json_attributes:
+      - ip4
+      - batteryLevel
+      - isPlugged
+      - plugged
+      - kioskMode
+      - screenBrightness
+      - motionDetectorState
+      - maintenanceMode
+      - appFreeMemory
+      - appUsedMemory
+      - totalFreeMemory
+      - totalUsedMemory
+      - mac
+      - startUrl
+      - currentPage
+      - screenOrientation
+      - screenBrightness
+      - screenLocked
+      - screenOn
+      - batteryTemperature
+
+    resource: !secret kitchen_fire_tablet_url
+    value_template: "{{ value_json.screenOn }}"
+
+  - platform: rest
+    name: Kitchen Tablet Settings
+    json_attributes:
+      - timeToScreenOffV2
+      - screenBrightness
+      - microphoneAccess
+      - motionSensitivity
+      - motionDection
+      - motionDetectionAcoustic
+      - motionSensitivityAcoustic
+      - screenOffInDarkness
+      - darknessLevel
+    resource: !secret kitchen_fire_tablet_settings
+    value_template: "{{ value_json.startURL }}"
+    scan_interval: 10
+
+  # - platform: systemmonitor
+  #   resources:
+  #     - type: disk_use_percent
+  #       arg: /config
+  #     - type: disk_use
+  #     - type: disk_free
+  #     - type: memory_use_percent
+  #     - type: memory_use
+  #     - type: memory_free
+  #     - type: swap_use_percent
+  #     - type: swap_use
+  #     - type: swap_free
+  #     - type: load_1m
+  #     - type: load_5m
+  #     - type: load_15m
+  #     - type: network_in
+  #       arg: eth0
+  #     - type: network_out
+  #       arg: eth0
+  #     - type: throughput_network_in
+  #       arg: eth0
+  #     - type: throughput_network_out
+  #       arg: eth0
+  #     - type: packets_in
+  #       arg: eth0
+  #     - type: packets_out
+  #       arg: eth0
+  #     - type: ipv4_address
+  #       arg: eth0
+  #     - type: ipv6_address
+  #       arg: eth0
+  #     - type: processor_use
+  #     - type: processor_temperature
+  #     - type: last_boot
+
+# Example configuration.yaml entry
+utility_meter:
+  gesamt_leistung_kwd:
+    source: sensor.gesamt_leistung_kwh
+    cycle: daily
+    name: Gesamt Leistung kwd
+
+# ZHA Zigbee
+
+zha:
+  zigpy_config:
+    ota:
+      otau_directory: /config/zigpy_ota
+      ikea_provider: true
+      ledvance_provider: true
+      salus_provider: true
+      inovelli_provider: true
+      thirdreality_provider: true
+
+logger:
+  default: warning
+  # logs:
+  #  homeassistant.components.zha: debug
+  #  zigpy: debug
+
+luxtronik:
+  host: 192.168.1.5
+  port: 8889
+  safe: true
+
+knx:
+  #tunneling:
+  #host: "192.168.1.214"
+  #port: 3671
+  #   local_ip: "192.168.1.214"
+  cover:
+    - name: "Wohnzimmer left shutter"
+      move_long_address: "0/1/0"
+      move_short_address: "0/1/1"
+      #stop_address: "0/1/26"
+      #position_address: "0/1/27"
+      travelling_time_down: 65
+      travelling_time_up: 62
+
+    - name: "Wohnzimmer right shutter"
+      move_long_address: "0/1/4"
+      move_short_address: "0/1/5"
+      #stop_address: "0/1/26"
+      #position_address: "0/1/27"
+      travelling_time_down: 65
+      travelling_time_up: 62
+
+    - name: "Homeoffice left shutter"
+      move_long_address: "0/1/24"
+      move_short_address: "0/1/25"
+      #stop_address: "0/1/26"
+      #position_address: "0/1/27"
+      travelling_time_down: 72
+      travelling_time_up: 72
+
+    - name: "Homeoffice right shutter"
+      move_long_address: "0/1/20"
+      move_short_address: "0/1/21"
+      #stop_address: "0/1/26"
+      #position_address: "0/1/27"
+      travelling_time_down: 72
+      travelling_time_up: 72
+
+    - name: "Küche rechts"
+      move_long_address: "0/1/12"
+      move_short_address: "0/1/13"
+      #stop_address: "0/1/26"
+      #position_address: "0/1/27"
+      travelling_time_down: 30
+      travelling_time_up: 30
+
+    - name: "Küche links"
+      move_long_address: "0/1/8"
+      move_short_address: "0/1/9"
+      #stop_address: "0/1/26"
+      #position_address: "0/1/27"
+      travelling_time_down: 30
+      travelling_time_up: 30
+
+    - name: "Toilette EG shutter"
+      move_long_address: "0/1/16"
+      move_short_address: "0/1/17"
+
+    - name: "Schlafzimmer Shutter"
+      move_long_address: "0/1/28"
+      move_short_address: "0/1/29"
+      travelling_time_down: 30
+      travelling_time_up: 30
+
+    - name: "Atelier Shutter"
+      move_long_address: "0/2/24"
+      move_short_address: "0/1/25"
+      travelling_time_down: 30
+      travelling_time_up: 30
+
+    - name: "Media Shutter"
+      move_long_address: "0/2/20"
+      move_short_address: "0/1/21"
+      travelling_time_down: 30
+      travelling_time_up: 30
+
+    - name: "Paul Shutter"
+      move_long_address: "0/2/16"
+      move_short_address: "0/1/17"
+      travelling_time_down: 30
+      travelling_time_up: 30
+
+    - name: "Ben Main Shutter"
+      move_long_address: "0/2/4"
+      move_short_address: "0/1/5"
+      travelling_time_down: 30
+      travelling_time_up: 30
+
+    - name: "Ben Door Shutter"
+      move_long_address: "0/2/0"
+      move_short_address: "0/1/1"
+      travelling_time_down: 30
+      travelling_time_up: 30
+
+    - name: "Flur rechts Shutter"
+      move_long_address: "0/2/8"
+      move_short_address: "0/1/9"
+      travelling_time_down: 30
+      travelling_time_up: 30
+
+    - name: "Flur Tür Links Shutter"
+      move_long_address: "0/2/12"
+      move_short_address: "0/1/13"
+      stop_address: "0/2/14"
+      travelling_time_down: 30
+      travelling_time_up: 30
+
+      #stop_address: "0/1/26"
+#position_address: "0/1/27"
+#travelling_time_down: 51
+#travelling_time_up: 61
+
+ifttt:
+  key: bl0GPx_6n-05LUN-_dqvoy
+
+aarlo:
+  username: tech@gorkel.de
+  password: TechGorkel555
+  tfa_type: email
+  tfa_source: imap
+  tfa_host: mx2e4e.netcup.net
+  tfa_username: tech@gorkel.de
+  tfa_password: 9Z@_nvowfCq
+  hide_deprecated_services: true
+  refresh_devices_every: 2
+  # stream_timeout: 120
+  reconnect_every: 90
+  backend: sse
+
+camera:
+  - platform: aarlo
+
+media_player:
+  - platform: aarlo
+  - platform: bluesound
+    hosts:
+      - host: 192.168.0.143
+        name: Node_Wohnzimmer
+      - host: 192.168.0.114
+        name: NAD_C700
+
+binary_sensor:
+  # - platform: workday
+  #   country: DE
+  #   province: BW
+  - platform: random
+    name: runwater-random
+  - platform: aarlo
+    monitored_conditions:
+      - motion
+      - connectivity
+
+# alexa_media:
+#   accounts:
+#     - email: christian@kirschniak.de
+#       password: Pica555o
+#       url: amazon.de
+
+# device_tracker:
+#   - platform: icloud3
+#     username: christian@kirschniak.de
+#     password: Pica55$o
+# modbus:
+#   - name: hub1
+#     type: tcp
+#     host: 192.168.1.7
+#     port: 502
+#     sensors:
+#       - name: Sensor1
+#         unit_of_measurement: W
+#         slave: 3
+#address: 100
+
+template:
+  - sensor:
+      - name: "Zählerstand"
+        unit_of_measurement: kWh
+        state_class: total_increasing
+        device_class: energy
+        state: >
+          {% if states('sensor.energyesp32_mt681_zahlerstand_total') == 'unavailable' or states('sensor.energyesp32_mt681_zahlerstand_total') < '1' %}
+            {{ states('sensor.zahlerstand') }}
+          {% else %}
+            {{ states('sensor.energyesp32_mt681_zahlerstand_total') }}
+          {% endif %}
+      - name: "Einspeisung"
+        unit_of_measurement: kWh
+        state_class: total_increasing
+        device_class: energy
+        state: >
+          {% if states('sensor.energyesp32_mt681_einspeisung') == 'unavailable' or states('sensor.energyesp32_mt681_einspeisung') < '1' %}
+            {{ states('sensor.einspeisung') }}
+          {% else %}
+            {{ states('sensor.energyesp32_mt681_einspeisung') }}
+          {% endif %}
+
+# allowlist_external_dirs:
+#   - "/usr/var/dumping-ground"
+#   - "/tmp"
+
+frontend:
+  themes: !include_dir_merge_named themes

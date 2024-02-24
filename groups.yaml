@@ -1,0 +1,18 @@
+familiy:
+  name: family
+  entities:
+    - person.ben_kirschniak
+    - person.christian_kirschniak
+    - person.paul_kirschniak
+    - person.isabell_kirschniak
+
+vacation_lights:
+  name: Vacation Lights
+    - light.eckleuchte
+    - light.eingang
+    - light.klavier
+    - light.schreibtischlampe
+    - light.tisch_links
+    - light.tisch_rechts
+    - light.toilette_eg_gu10
+    - light.hue_beyond_up_1

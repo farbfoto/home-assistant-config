@@ -1,0 +1,434 @@
+learn_switch_light:
+  sequence:
+  - service: remote.learn_command
+    target:
+      entity_id: remote.remote_one_remote
+    data:
+      device: schlafzimmer_light
+      command: toggle
+      command_type: rf
+test:
+  alias: Test
+  sequence:
+  - type: turn_off
+    device_id: fc835c0dbec94d7749be9186fc10937b
+    entity_id: switch.3d_drucker
+    domain: switch
+  mode: single
+learn_audio_power:
+  sequence:
+  - service: remote.learn_command
+    target:
+      entity_id: remote.remote_one_remote
+    data:
+      device: audio-stereo
+      command: power
+learn_tv_power:
+  sequence:
+  - service: remote.learn_command
+    target:
+      entity_id: remote.remote_one_remote
+    data:
+      device: television
+      command: power
+learn_tv_commands:
+  sequence:
+  - service: remote.learn_command
+    target:
+      entity_id: remote.remote_one_remote
+    data:
+      device: audio-stereo
+      command:
+      - turn on
+      - turn off
+      - volume up
+      - volume down
+audio_power:
+  sequence:
+  - service: remote.send_command
+    target:
+      entity_id: remote.remote_one_remote
+    data:
+      device: audio-stereo
+      command:
+      - turn on
+audio_power_off:
+  sequence:
+  - service: remote.send_command
+    target:
+      entity_id: remote.remote_one_remote
+    data:
+      device: audio-stereo
+      command:
+      - turn off
+turn_up_audio_volume_20:
+  sequence:
+  - service: remote.send_command
+    target:
+      entity_id: remote.remote_one_remote
+    data:
+      device: audio-stereo
+      command: volume up
+      num_repeats: 20
+turn_down_audio_volume_20:
+  sequence:
+  - service: remote.send_command
+    target:
+      entity_id: remote.remote_one_remote
+    data:
+      device: audio-stereo
+      command: volume down
+      num_repeats: 20
+turn_up_audio_volume_3:
+  sequence:
+  - service: remote.send_command
+    target:
+      entity_id: remote.remote_one_remote
+    data:
+      device: audio-stereo
+      command: volume up
+      num_repeats: 2
+  mode: single
+turn_down_audio_volume_3:
+  sequence:
+  - service: remote.send_command
+    target:
+      entity_id: remote.remote_one_remote
+    data:
+      device: audio-stereo
+      command: volume down
+      num_repeats: 3
+play_brain_food:
+  sequence:
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      media_content_type: music
+      media_content_id: Playlists/Brain Food
+  - service: media_player.shuffle_set
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      shuffle: true
+  - service: media_player.media_next_track
+    target:
+      entity_id: media_player.office_hifiberry
+  mode: single
+  alias: Play Concentration Music
+  icon: mdi:music
+audio_pause_roon:
+  sequence:
+  - service: media_player.media_pause
+    target:
+      entity_id: media_player.office_hifiberry
+  mode: single
+  alias: audio_pause_roon_hifiberry
+play_concentration_jazz:
+  alias: Play Concentration Jazz
+  sequence:
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      media_content_type: music
+      media_content_id: Playlists/Jazz in Focus
+  - service: media_player.shuffle_set
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      shuffle: true
+  - service: media_player.media_next_track
+    target:
+      entity_id: media_player.office_hifiberry
+  mode: single
+  icon: mdi:music
+play_concentration_in_the_loop:
+  alias: Play Concentration In the loop
+  sequence:
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      media_content_type: music
+      media_content_id: Playlists/In the Loop
+  - service: media_player.shuffle_set
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      shuffle: true
+  - service: media_player.media_next_track
+    target:
+      entity_id: media_player.office_hifiberry
+  mode: single
+  icon: mdi:music
+play_80s:
+  alias: Play 80s
+  sequence:
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      media_content_type: music
+      media_content_id: Playlists/The 80s
+  - service: media_player.shuffle_set
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      shuffle: true
+  - service: media_player.media_next_track
+    target:
+      entity_id: media_player.office_hifiberry
+  mode: single
+  icon: mdi:music
+play_slow_roast:
+  alias: Play Slow Roast
+  sequence:
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      media_content_type: music
+      media_content_id: Playlists/Slow Roast
+  - service: media_player.shuffle_set
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      shuffle: true
+  - service: media_player.media_next_track
+    target:
+      entity_id: media_player.office_hifiberry
+  mode: single
+  icon: mdi:music
+play_finest_fusion:
+  alias: Play Finest Fusion
+  sequence:
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      media_content_type: music
+      media_content_id: Playlists/Finest Fusion
+  - service: media_player.shuffle_set
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      shuffle: true
+  - service: media_player.media_next_track
+    target:
+      entity_id: media_player.office_hifiberry
+    data: {}
+  mode: single
+  icon: mdi:music
+play_myjazz:
+  alias: Play MyJazz
+  sequence:
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      media_content_type: music
+      media_content_id: Playlists/Own Jazz
+  - service: media_player.shuffle_set
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      shuffle: true
+  - service: media_player.media_next_track
+    target:
+      entity_id: media_player.office_hifiberry
+    data: {}
+  mode: single
+  icon: mdi:music
+play_concentration_decaf:
+  alias: Play Concentration Decaf
+  sequence:
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      media_content_type: music
+      media_content_id: Playlists/Decaf
+  - service: media_player.shuffle_set
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      shuffle: true
+  - service: media_player.media_next_track
+    target:
+      entity_id: media_player.office_hifiberry
+    data: {}
+  mode: single
+  icon: mdi:music
+play_concentration_my_mix_2:
+  alias: Play Concentration My Mix 2
+  sequence:
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      media_content_type: music
+      media_content_id: TIDAL/PLAYLIStS/Frühlingserwachen
+  - service: media_player.shuffle_set
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      shuffle: true
+  - service: media_player.media_next_track
+    target:
+      entity_id: media_player.office_hifiberry
+    data: {}
+  mode: single
+  icon: mdi:music
+play_autopilot:
+  alias: Play AutoPilot
+  sequence:
+  - service: media_player.play_media
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      media_content_type: music
+      media_content_id: Playlists/Autopilot
+  - service: media_player.shuffle_set
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      shuffle: true
+  - service: media_player.media_next_track
+    target:
+      entity_id: media_player.office_hifiberry
+    data: {}
+  mode: single
+  icon: mdi:music
+homeoffice_transit_evening_light:
+  alias: 'Homeoffice: Transit Evening Light'
+  sequence:
+  - repeat:
+      count: '10'
+      sequence:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.arbeiten_spat
+        data:
+          transition: 30
+      - service: scene.turn_on
+        data:
+          transition: 30
+        target:
+          entity_id: scene.homeoffice_light_nachtarbeit
+  mode: single
+pi_hole_umschalten:
+  alias: IT:Pi Hole 10min off
+  sequence:
+  - service: pi_hole.disable
+    data:
+      duration: 00:10:00
+    target:
+      device_id: 13da46adb941e3b884fe0da10e5c8fe9
+  mode: single
+  icon: mdi:close-network-outline
+homeoffice_meditation:
+  alias: Homeoffice Meditation an
+  sequence:
+  - service: input_boolean.turn_on
+    data: {}
+    target:
+      entity_id: input_boolean.mediatation_schalter
+  mode: single
+ankleide_bad_switch_scenes:
+  alias: Ankleide Bad Switch Scenes
+  sequence:
+  - service: input_select.select_next
+    data:
+      cycle: true
+    target:
+      entity_id: input_select.ankleide_bad_scenen
+  - service: scene.turn_on
+    target:
+      entity_id: '{{ states(''input_select.ankleide_bad_scenen'')}}'
+  mode: single
+  icon: mdi:ceiling-light-multiple-outline
+aa_blink_foto:
+  alias: Blink Snap Picture
+  sequence:
+  - service: blink.trigger_camera
+    target:
+      entity_id: camera.camblink1
+    data: {}
+  - delay: 00:00:05
+  - service: blink.trigger_camera
+    target:
+      entity_id: camera.camblink2
+    data: {}
+  - delay: 00:00:05
+  - service: camera.snapshot
+    data:
+      filename: /config/tmp/blink1Image.jpg
+    target:
+      entity_id: camera.camblink1
+  - delay: 00:00:05
+  - service: camera.snapshot
+    data:
+      filename: /config/tmp/blink2Image.jpg
+    target:
+      entity_id: camera.camblink2
+blink_ein_video:
+  alias: blink ein video
+  sequence:
+  - service: blink.save_video
+    data:
+      filename: /config/tmp/test1video.mp3
+      name: blink CamBlink1
+  mode: single
+blink_blinki:
+  alias: blink blinki
+  sequence:
+  - service: blink.save_recent_clips
+    data:
+      file_path: /config/tmp/videos/
+      name: blink CamBlink1
+  mode: single
+homeoffice_swr3_spielen:
+  alias: 'Homeoffice: SWR3 spielen'
+  sequence:
+  - service: media_player.play_media
+    target:
+      entity_id:
+      - media_player.nad_c700
+    data:
+      media_content_id: https://tunein.com/radio/SWR3-933-s57728/
+      media_content_type: music
+  mode: single
+homeoffice_roon_play_swr3:
+  alias: 'Homeoffice: Roon: Play SWR3'
+  sequence:
+  - service: media_player.play_media
+    target:
+      entity_id:
+      - media_player.c700
+    data:
+      media_content_type: music
+      media_content_id: My Live Radio/SWR3
+  - service: media_player.shuffle_set
+    target:
+      entity_id: media_player.office_hifiberry
+    data:
+      shuffle: true
+  - service: media_player.media_next_track
+    target:
+      entity_id: media_player.office_hifiberry
+    data: {}
+  mode: single
+  icon: mdi:music
+'1702734512584':
+  alias: 'Homeoffice: Roon: Play My Mix 1'
+  sequence:
+  - service: media_player.media_play
+    target:
+      entity_id:
+      - media_player.airplay_c700
+      device_id: []
+      area_id: []
+    data: {}
+  mode: single
+  icon: mdi:music
