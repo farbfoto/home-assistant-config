@@ -169,8 +169,8 @@
   trigger:
   - type: no_motion
     platform: device
-    device_id: c99dc896706cbfce5db366934c086872
-    entity_id: 769537c319115f6f4973db543bf6e89f
+    device_id: 399138bf6cb5d1972656e3d28c7f2a2b
+    entity_id: 9f9fe47b59a9f00768c05ac2282f5431
     domain: binary_sensor
     for:
       hours: 0
@@ -1315,7 +1315,7 @@
     path: Ultra9k/motion_switch_light.yaml
     input:
       no_motion_wait: 401
-      motion_entity: binary_sensor.lumi_lumi_sensor_motion_aq2_motion_3
+      motion_entity: binary_sensor.aqara_motion_sensor_3_neu_toilette_ug_motion
       light_target:
         device_id: b3f8cfc9564fcdee9fb0a8fc3aa8a750
 - id: '1682939867203'
@@ -2215,3 +2215,230 @@
       - 40
       - 240
       - 117
+- id: '1708796064787'
+  alias: 'Homeoffice: Motion detected: Light on'
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 399138bf6cb5d1972656e3d28c7f2a2b
+    entity_id: 9f9fe47b59a9f00768c05ac2282f5431
+    domain: binary_sensor
+  condition:
+  - type: is_illuminance
+    condition: device
+    device_id: 95d074ebb68cd67043359e45577e6b3a
+    entity_id: 27b7d50ba9a40cbb7fa8abf7f5bce0a6
+    domain: sensor
+    below: 65
+  action:
+  - service: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      area_id: homeoffice
+  mode: single
+- id: '1708938112554'
+  alias: 'Technik: Turn Lüftungsanlage off at 10:00'
+  description: ''
+  trigger:
+  - platform: time
+    at: '10:00:00'
+  condition: []
+  action:
+  - service: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id: 73a5716d2c66c14da19a34b34f1cb37d
+  mode: single
+- id: '1708938173290'
+  alias: 'Technik: Turn Lüftungsanlage on at 15:00'
+  description: ''
+  trigger:
+  - platform: time
+    at: '15:00:05'
+  condition: []
+  action:
+  - service: switch.turn_on
+    target:
+      device_id:
+      - 73a5716d2c66c14da19a34b34f1cb37d
+    data: {}
+  mode: single
+- id: '1709984545931'
+  alias: 'Wohnzimmer: Strahler Küche'
+  description: ''
+  use_blueprint:
+    path: damru/ikea-rodret_E2201_ZHA-Z2M_control-anything.yaml
+    input:
+      remote_device: 90053903227ed0ff3dfc21d160d59dce
+      on_press_action:
+      - service: light.turn_on
+        metadata: {}
+        data:
+          transition: 1
+          brightness: 191
+          kelvin: 3560
+        target:
+          entity_id: light.silicon_labs_ezsp_strahler_kuche_leiste_oben
+      off_press_action:
+      - service: light.turn_off
+        metadata: {}
+        data:
+          transition: 1
+        target:
+          entity_id: light.silicon_labs_ezsp_strahler_kuche_leiste_oben
+- id: '1709994989057'
+  alias: 'Garage: Switch: Licht an'
+  description: ''
+  trigger:
+  - device_id: d0c7d30461fc81a595a334c29e19c89a
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_on
+  condition: []
+  action:
+  - type: turn_on
+    device_id: c3cb16153255db5d9fb63c0dbe8a01ea
+    entity_id: 3db5e385ed247d58f476bafc050c10fc
+    domain: light
+  mode: single
+- id: '1709995030680'
+  alias: 'Garage: Switch: Licht aus'
+  description: ''
+  trigger:
+  - device_id: d0c7d30461fc81a595a334c29e19c89a
+    domain: zha
+    platform: device
+    type: remote_button_short_press
+    subtype: turn_off
+  condition: []
+  action:
+  - type: turn_off
+    device_id: c3cb16153255db5d9fb63c0dbe8a01ea
+    entity_id: 3db5e385ed247d58f476bafc050c10fc
+    domain: light
+  mode: single
+- id: '1710063022175'
+  alias: 'Atelier: Schalter: Licht hinten'
+  description: ''
+  use_blueprint:
+    path: damru/ikea-rodret_E2201_ZHA-Z2M_control-anything.yaml
+    input:
+      remote_device: c668cb7cb6319e3f5187b196aaa21d04
+      on_press_action:
+      - type: turn_on
+        device_id: e86b76c8e9c64b2291a7e2002a5a2cb4
+        entity_id: 76bf42f8df167e8543e51cedeab0f2bc
+        domain: light
+      off_press_action:
+      - type: turn_off
+        device_id: e86b76c8e9c64b2291a7e2002a5a2cb4
+        entity_id: 76bf42f8df167e8543e51cedeab0f2bc
+        domain: light
+- id: '1710093174055'
+  alias: Backup Daily 3:30am
+  description: ''
+  trigger:
+  - platform: time
+    at: 03:30:00
+  condition: []
+  action:
+  - service: hassio.backup_full
+    metadata: {}
+    data:
+      compressed: true
+  mode: single
+- id: '1710686620262'
+  alias: Wohnzimmer Licht aus bei Nichtbelegung
+  description: ''
+  trigger:
+  - type: not_occupied
+    platform: device
+    device_id: 7ae6ab1d75d033daf199dc232912e5a6
+    entity_id: 9d3cd2801ec447da9f011a8736a37edd
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+  condition: []
+  action:
+  - service: scene.turn_on
+    metadata: {}
+    target:
+      entity_id: scene.wohnzimmer_aus
+  mode: single
+- id: '1710686803513'
+  alias: 'Wohnzimmer: Licht an bei Bewegung '
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 7717fdd87c8a0a336fe13259c2762529
+    entity_id: c19fdecd1e71e60b93a93dec082a6c1a
+    domain: binary_sensor
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.aqara_motion_sensor_1_neu_wohnzimmer_beleuchtungsstarke
+    below: 85
+  - condition: time
+    after: 06:00:00
+    before: '23:00:00'
+  action:
+  - service: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      area_id: wohnzimmer
+  mode: single
+- id: '1710690266540'
+  alias: 'Technik: Pflanzenleuchte anschalten'
+  description: ''
+  trigger:
+  - platform: time
+    at: 09:00:00
+  condition: []
+  action:
+  - type: turn_on
+    device_id: a4cb10172bcc7bda59be44245b8ce7ab
+    entity_id: ce50571c3c47c657ed8036dde761e22b
+    domain: switch
+  mode: single
+- id: '1710690297679'
+  alias: 'Technik: Pflanzenleuchte ausschalten'
+  description: ''
+  trigger:
+  - platform: time
+    at: '16:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: a4cb10172bcc7bda59be44245b8ce7ab
+    entity_id: ce50571c3c47c657ed8036dde761e22b
+    domain: switch
+  mode: single
+- id: '1711288509975'
+  alias: Solcast update
+  description: ''
+  trigger:
+  - platform: template
+    value_template: "{% set nr = as_datetime(state_attr('sun.sun','next_rising'))
+      | as_local %} {% set ns = as_datetime(state_attr('sun.sun','next_setting'))
+      | as_local %} {% set api_request_limit = 10 %} {% if nr > ns %}\n  {% set nr
+      = nr - timedelta(hours = 24) %} \n{% endif %} {% set hours_difference = (ns
+      - nr) %} {% set interval_hours = hours_difference / api_request_limit %} {%
+      set ns = namespace(match = false) %} {% for i in range(api_request_limit) %}\n
+      \ {% set start_time = nr + (i * interval_hours) %}\n  {% if ((start_time - timedelta(seconds=30))
+      <= now()) and (now() <= (start_time + timedelta(seconds=30))) %}\n    {% set
+      ns.match = true %}\n  {% endif %}\n{% endfor %} {{ ns.match }}"
+  condition:
+  - condition: sun
+    before: sunset
+    after: sunrise
+  action:
+  - service: solcast_solar.update_forecasts
+    data: {}
+  mode: single

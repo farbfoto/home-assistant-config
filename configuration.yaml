@@ -29,6 +29,16 @@ scene: !include scenes.yaml
 # Example configuration.yaml entry
 # Configure a default setup of Home Assistant (frontend, api, etc)
 
+# InfluxDB Connect
+influxdb:
+  api_version: 2
+  host: 192.168.1.16 #IP Address of InfluxDB LXC
+  ssl: false #Needs to be set to false when using HTTP
+  port: 8086 #Default Port of InfluxDB LXC
+  token: CPfOaQ89jO57OmvYL6RXZFeZMIBlhiKEwAvOpmlVwQg9TRSBOPa3mEBIEZfnqQGlg2rz1Sha1A_BTcnHB3dmpQ== #Without Brackets
+  organization: Gorkel #Without Brackets
+  bucket: home_assistant #Bucket name, not ID
+
 # Recorder config
 
 recorder:
@@ -61,6 +71,23 @@ input_number:
     icon: mdi:water
 
 sensor:
+  # Power Fronius
+  - platform: integration
+    source: sensor.battery_power_charging
+    name: "Total Battery Energy Charged"
+
+    method: left
+  - platform: integration
+    source: sensor.battery_power_discharging
+    name: "Total Battery Energy Discharged"
+
+    method: left
+  - platform: integration
+    source: sensor.power_photovoltaics
+    name: "Total Photovoltaics Energy"
+
+    method: left
+
   - platform: mqtt_room
     device_id: "irk:0a97917f8cb8a775565f1300efcebe95"
     name: "AppleWatch Ultra CK ESPresence"
@@ -128,7 +155,14 @@ sensor:
         icon: mdi:thermometer
 
   - platform: template
+
     sensors:
+      # smart_meter_ts_65a_3_real_energy_consumed_kwh:
+      #   friendly_name: "Smart Meter 65A Energy real consumed kWh"
+      #   unit_of_measurement: "kWh"
+      #   device_class: energy
+      #   value_template: "{{ states('sensor.smart_smart_meter_ts_65a_3_real_energy_consumed') | float / 1000 }}"
+
       unifi_gateway_cpu:
         friendly_name: "CPU"
         value_template: "{{ states.sensor.unifi_gateway_wan.attributes['gw_system-stats']['cpu'] }}"
@@ -184,49 +218,6 @@ sensor:
               {{ minutes }}m
             {%- endif -%}
           {%- endif -%}
-
-  # - platform: mqtt_room
-  #   name: "Isa_iphone_11_BT"
-  #   state_topic: "espresense/rooms"
-  #   device_id: "apple:1006:10-5"
-  #   timeout: 5
-  #   away_timeout: 120
-
-  # - platform: mqtt_room
-  #   name: "room_presence_iphone_12_pro_ck"
-  #   state_topic: "espresense/rooms"
-  #   device_id: "4D2987C7-B18E-4AAE-B6FB-6E620EF69C73"
-  #   timeout: 5
-  #   away_timeout: 120
-
-  # - platform: mqtt_room
-  #   name: "room_presence_CK_Tile"
-  #   state_topic: "espresense/rooms"
-  #   device_id: "tile:f227e4553601"
-  #   timeout: 5
-  #   away_timeout: 120
-
-  # - platform: mqtt_room
-  #   name: "room_presence_ipad_pro_ck"
-  #   state_topic: "espresense/rooms"
-  #   device_id: "apple:1006:10-12"
-  #   timeout: 5
-  #   away_timeout: 120
-
-  # - platform: mqtt_room
-  #   name: "Test1_BT"
-  #   state_topic: "espresense/rooms"
-  #   device_id: "apple:1005:9"
-  #   timeout: 5
-  #   away_timeout: 120
-
-  # - platform: mqtt_room
-  #   name: "Test2_BT"
-  #   state_topic: "espresense/rooms"
-  #   device_id: "apple:1007:11-6"
-  #   timeout: 5
-  #   away_timeout: 120
-  #   #Fire Tablet
 
   - platform: rest
     name: kitchen_fire_tablet
@@ -324,6 +315,11 @@ zha:
       salus_provider: true
       inovelli_provider: true
       thirdreality_provider: true
+    ezsp_policies:
+      # WARNING: this effectively opens a permanent backdoor into your Zigbee network!!!
+      # While it won't allow an attacker to passively capture your network key, it will
+      # allow them to "rejoin" the network and the coordinator will blindly send it just the same.
+      TRUST_CENTER_POLICY: 0x0002 # ALLOW_UNSECURED_REJOINS
 
 logger:
   default: warning
@@ -531,6 +527,19 @@ template:
           {% else %}
             {{ states('sensor.energyesp32_mt681_einspeisung') }}
           {% endif %}
+      # Fronius &Battery
+      - name: "Battery Power Charging"
+        unit_of_measurement: kW
+        device_class: power
+        state: "{{ max(0, 0 - states('sensor.solarnet_power_battery') | float(default=0)) }}"
+      - name: "Battery Power Discharging"
+        unit_of_measurement: kW
+        device_class: power
+        state: "{{ max(0, states('sensor.solarnet_power_battery') | float(default=0)) }}"
+      - name: "Power Photovoltaics"
+        unit_of_measurement: kW
+        device_class: power
+        state: "{{ states('sensor.solarnet_power_photovoltaics') | float(default=0) }}"
 
 # allowlist_external_dirs:
 #   - "/usr/var/dumping-ground"
