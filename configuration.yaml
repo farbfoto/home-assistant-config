@@ -1,14 +1,5 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 homeassistant:
-  #  allowlist_external_urls:
-  #     - "http://images.com/image1.png"
-  # allowlist_external_dirs:
-  #   #  - "/usr/var/dumping-ground"
-  #   - /tmp/
-  #   - /config/tmp/
-  #   - /config/tmp/videos/
-  #   - /media/GorkelMedia
-
   customize:
     sensor.energyesp32_mt681_zahlerstand_total:
       unit_of_measurement: kwh
@@ -17,35 +8,26 @@ homeassistant:
 
 default_config:
 
-# folder_watcher:       # Removed due to Version upgrade to 2024.5
-#   - folder: /media/GorkelMedia/
-
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-# icloud: !include config_ic3.yaml
-
-# Example configuration.yaml entry
-# Configure a default setup of Home Assistant (frontend, api, etc)
 
 # InfluxDB Connect
 influxdb:
   api_version: 2
-  host: 192.168.1.16 #IP Address of InfluxDB LXC
-  ssl: false #Needs to be set to false when using HTTP
-  port: 8086 #Default Port of InfluxDB LXC
-  token: CPfOaQ89jO57OmvYL6RXZFeZMIBlhiKEwAvOpmlVwQg9TRSBOPa3mEBIEZfnqQGlg2rz1Sha1A_BTcnHB3dmpQ== #Without Brackets
-  organization: Gorkel #Without Brackets
-  bucket: home_assistant #Bucket name, not ID
+  host: 192.168.1.16
+  ssl: false
+  port: 8086
+  token: CPfOaQ89jO57OmvYL6RXZFeZMIBlhiKEwAvOpmlVwQg9TRSBOPa3mEBIEZfnqQGlg2rz1Sha1A_BTcnHB3dmpQ==
+  organization: Gorkel
+  bucket: home_assistant
 
 # Recorder config
-
 recorder:
   purge_keep_days: 45
 
 # Proxmox Integration
-
 proxmoxve:
   - host: 192.168.1.8
     username: hass@pve
@@ -64,7 +46,7 @@ proxmoxve:
 tts:
   - platform: google_translate
 
-# Trigger etc
+# Input booleans and numbers
 input_boolean:
   vacation_mode:
     name: Vacation Mode
@@ -86,14 +68,15 @@ input_number:
     mode: box
     icon: mdi:water
 
+# MQTT sensor
 mqtt:
   sensor:
     - name: "Wasserstand"
       state_topic: "Wasserstand"
       unit_of_measurement: "mm"
 
+# Sensors
 sensor:
-  # Regen Sensor
   - platform: statistics
     name: "Rain last day"
     entity_id: sensor.rain_last_hour
@@ -112,26 +95,6 @@ sensor:
     sampling_size: 48
     precision: 0
 
-  #   # Power others
-  # - platform: total_daily_energy
-  #   name: "Total Daily Energy"
-  #   power_id: my_power_daily
-  #   unit_of_measurement: "kWh"
-  #   state_class: total_increasing
-  #   device_class: energy
-  #   accuracy_decimals: 3
-  #   filters:
-  #     # Multiplication factor from W to kW is 0.001
-  #     - multiply: 0.001
-
-  # # The power sensor to convert, can be any power sensor
-  # - platform: solarnet_power_photovoltaics
-  #   # ...
-  #   power:
-  #     id: my_power_daily
-
-  # Power Fronius
-
   - platform: integration
     source: sensor.battery_power_charging
     name: "Total Battery Energy Charged"
@@ -145,7 +108,6 @@ sensor:
   - platform: integration
     source: sensor.power_photovoltaics
     name: "Total Photovoltaics Energy"
-
     method: left
 
   - platform: mqtt_room
@@ -163,15 +125,6 @@ sensor:
     start: >
       {{ as_timestamp(now()) - (7*86400) }}
     duration: 00:00:10
-
-  # - platform: aarlo
-  #   monitored_conditions:
-  #     - total_cameras
-  #     - last_capture
-  #     - recent_activity
-  #     - captured_today
-  #     - battery_level
-  #     - signal_strength
 
   - platform: integration
     source: sensor.power_consumption
@@ -192,37 +145,8 @@ sensor:
       - lan
       - firmware
 
-  # - platform: luxtronik2
-  #   sensors:
-  #     - group: calculations
-  #       id: ID_WEB_Temperatur_TVL
-  #       friendly_name: Temp Vorlauf
-  #       icon: mdi:thermometer
-
-  #     - group: calculations
-  #       id: ID_WEB_Temperatur_TRL
-  #       friendly_name: Temp Nachlauf
-  #       icon: mdi:thermometer
-
-  #     - group: calculations
-  #       id: ID_WEB_Einst_BWS_akt
-  #       friendly_name: Temp Warmwasser Soll
-  #       icon: mdi:thermometer
-
-  #     - group: calculations
-  #       id: ID_WEB_Temperatur_TBW
-  #       friendly_name: Temp Warmwasser Ist
-  #       icon: mdi:thermometer
-
   - platform: template
-
     sensors:
-      # smart_meter_ts_65a_3_real_energy_consumed_kwh:
-      #   friendly_name: "Smart Meter 65A Energy real consumed kWh"
-      #   unit_of_measurement: "kWh"
-      #   device_class: energy
-      #   value_template: "{{ states('sensor.smart_smart_meter_ts_65a_3_real_energy_consumed') | float / 1000 }}"
-
       unifi_gateway_cpu:
         friendly_name: "CPU"
         value_template: "{{ states.sensor.unifi_gateway_wan.attributes['gw_system-stats']['cpu'] }}"
@@ -261,7 +185,7 @@ sensor:
 
           {%- if time < 60 -%}
             Less than a minute
-            {%- else -%}
+          {%- else -%}
             {%- if days > 0 -%}
               {{ days }}d
             {%- endif -%}
@@ -270,7 +194,7 @@ sensor:
                 {{ ' ' }}
               {%- endif -%}
               {{ hours }}h
-          {%- endif -%}
+            {%- endif -%}
             {%- if minutes > 0 -%}
               {%- if days > 0 or hours > 0 -%}
                 {{ ' ' }}
@@ -279,98 +203,19 @@ sensor:
             {%- endif -%}
           {%- endif -%}
 
-    ##### spot ernergy sensors ###
+      epex_spot_price_ct_per_kwh:
+        friendly_name: "Aktueller Strompreis"
+        unit_of_measurement: "ct/kWh"
+        availability_template: '{{ states("sensor.epex_spot_at_price") != "unavailable" }}'
+        value_template: '{{ ((states("sensor.epex_spot_at_price") | float * 0.1) + 1.5)* 1.2 }}'
 
-    epex_spot_price_ct_per_kwh:
-      friendly_name: "Aktueller Strompreis"
-      unit_of_measurement: "ct/kWh"
-      availability_template: '{{ states("sensor.epex_spot_at_price") != "unavailable" }}'
-      value_template: '{{ ((states("sensor.epex_spot_at_price") | float * 0.1) + 1.5)* 1.2 }}'
-    epex_spot_price_eur_per_kwh:
-      friendly_name: "Aktueller Strompreis Euro"
-      unit_of_measurement: "eur/kWh"
-      availability_template: '{{ states("sensor.epex_spot_at_price") != "unavailable" }}'
-      value_template: '{{ ((states("sensor.epex_spot_at_price") | float * 0.001) + 0.015) * 1.2}}'
+      epex_spot_price_eur_per_kwh:
+        friendly_name: "Aktueller Strompreis Euro"
+        unit_of_measurement: "eur/kWh"
+        availability_template: '{{ states("sensor.epex_spot_at_price") != "unavailable" }}'
+        value_template: '{{ ((states("sensor.epex_spot_at_price") | float * 0.001) + 0.015) * 1.2}}'
 
-  # - platform: rest
-  #   name: kitchen_fire_tablet
-  #   json_attributes:
-  #     - ip4
-  #     - batteryLevel
-  #     - isPlugged
-  #     - plugged
-  #     - kioskMode
-  #     - screenBrightness
-  #     - motionDetectorState
-  #     - maintenanceMode
-  #     - appFreeMemory
-  #     - appUsedMemory
-  #     - totalFreeMemory
-  #     - totalUsedMemory
-  #     - mac
-  #     - startUrl
-  #     - currentPage
-  #     - screenOrientation
-  #     - screenBrightness
-  #     - screenLocked
-  #     - screenOn
-  #     - batteryTemperature
-
-  #   resource: !secret kitchen_fire_tablet_url
-  #   value_template: "{{ value_json.screenOn }}"
-
-  # - platform: rest
-  #   name: Kitchen Tablet Settings
-  #   json_attributes:
-  #     - timeToScreenOffV2
-  #     - screenBrightness
-  #     - microphoneAccess
-  #     - motionSensitivity
-  #     - motionDection
-  #     - motionDetectionAcoustic
-  #     - motionSensitivityAcoustic
-  #     - screenOffInDarkness
-  #     - darknessLevel
-  #   resource: !secret kitchen_fire_tablet_settings
-  #   value_template: "{{ value_json.startURL }}"
-  #   scan_interval: 10
-
-  # - platform: systemmonitor
-  #   resources:
-  #     - type: disk_use_percent
-  #       arg: /config
-  #     - type: disk_use
-  #     - type: disk_free
-  #     - type: memory_use_percent
-  #     - type: memory_use
-  #     - type: memory_free
-  #     - type: swap_use_percent
-  #     - type: swap_use
-  #     - type: swap_free
-  #     - type: load_1m
-  #     - type: load_5m
-  #     - type: load_15m
-  #     - type: network_in
-  #       arg: eth0
-  #     - type: network_out
-  #       arg: eth0
-  #     - type: throughput_network_in
-  #       arg: eth0
-  #     - type: throughput_network_out
-  #       arg: eth0
-  #     - type: packets_in
-  #       arg: eth0
-  #     - type: packets_out
-  #       arg: eth0
-  #     - type: ipv4_address
-  #       arg: eth0
-  #     - type: ipv6_address
-  #       arg: eth0
-  #     - type: processor_use
-  #     - type: processor_temperature
-  #     - type: last_boot
-
-# Example configuration.yaml entry
+# Utility meter
 utility_meter:
   gesamt_leistung_kwd:
     source: sensor.gesamt_leistung_kwh
@@ -378,7 +223,6 @@ utility_meter:
     name: Gesamt Leistung kwd
 
 # ZHA Zigbee
-
 zha:
   zigpy_config:
     ota:
@@ -389,73 +233,48 @@ zha:
       inovelli_provider: true
       thirdreality_provider: true
     ezsp_policies:
-      # WARNING: this effectively opens a permanent backdoor into your Zigbee network!!!
-      # While it won't allow an attacker to passively capture your network key, it will
-      # allow them to "rejoin" the network and the coordinator will blindly send it just the same.
       TRUST_CENTER_POLICY: 0x0002 # ALLOW_UNSECURED_REJOINS
 
+# Logger
 logger:
   default: warning
-  # logs:
-  #  homeassistant.components.zha: debug
-  #  zigpy: debug
 
-# luxtronik:
-#   host: 192.168.1.5
-#   port: 8889
-#   safe: true
-
+# KNX
 knx:
-  #tunneling:
-  #host: "192.168.1.214"
-  #port: 3671
-  #   local_ip: "192.168.1.214"
   cover:
     - name: "Wohnzimmer left shutter"
       move_long_address: "0/1/0"
       move_short_address: "0/1/1"
-      #stop_address: "0/1/26"
-      #position_address: "0/1/27"
       travelling_time_down: 65
       travelling_time_up: 62
 
     - name: "Wohnzimmer right shutter"
       move_long_address: "0/1/4"
       move_short_address: "0/1/5"
-      #stop_address: "0/1/26"
-      #position_address: "0/1/27"
       travelling_time_down: 65
       travelling_time_up: 62
 
     - name: "Homeoffice left shutter"
       move_long_address: "0/1/24"
       move_short_address: "0/1/25"
-      #stop_address: "0/1/26"
-      #position_address: "0/1/27"
       travelling_time_down: 72
       travelling_time_up: 72
 
     - name: "Homeoffice right shutter"
       move_long_address: "0/1/20"
       move_short_address: "0/1/21"
-      #stop_address: "0/1/26"
-      #position_address: "0/1/27"
       travelling_time_down: 72
       travelling_time_up: 72
 
     - name: "Küche rechts"
       move_long_address: "0/1/12"
       move_short_address: "0/1/13"
-      #stop_address: "0/1/26"
-      #position_address: "0/1/27"
       travelling_time_down: 30
       travelling_time_up: 30
 
     - name: "Küche links"
       move_long_address: "0/1/8"
       move_short_address: "0/1/9"
-      #stop_address: "0/1/26"
-      #position_address: "0/1/27"
       travelling_time_down: 30
       travelling_time_up: 30
 
@@ -512,69 +331,16 @@ knx:
       travelling_time_down: 30
       travelling_time_up: 30
 
-      #stop_address: "0/1/26"
-#position_address: "0/1/27"
-#travelling_time_down: 51
-#travelling_time_up: 61
-
+# IFTTT
 ifttt:
   key: bl0GPx_6n-05LUN-_dqvoy
 
-# aarlo:
-#   username: tech@gorkel.de
-#   password: TechGorkel555
-#   tfa_type: email
-#   tfa_source: imap
-#   tfa_host: mx2e4e.netcup.net
-#   tfa_username: tech@gorkel.de
-#   tfa_password: 9Z@_nvowfCq
-#   hide_deprecated_services: true
-#   refresh_devices_every: 2
-#   # stream_timeout: 120
-#   reconnect_every: 90
-#   backend: sse
-
-# media_player:
-# - platform: aarlo
-# - platform: bluesound
-#   hosts:
-#     - host: 192.168.0.143
-#       name: Node_Wohnzimmer
-#     - host: 192.168.0.114
-#       name: NAD_C700
-
+# Binary sensor
 binary_sensor:
-  # - platform: workday
-  #   country: DE
-  #   province: BW
   - platform: random
     name: runwater-random
-  # - platform: aarlo
-  #   monitored_conditions:
-  #     - motion
-  #     - connectivity
 
-# alexa_media:
-#   accounts:
-#     - email: christian@kirschniak.de
-#       password: Pica555o
-#       url: amazon.de
-
-# device_tracker:
-#   - platform: icloud3
-#     username: christian@kirschniak.de
-#     password: Pica55$o
-# modbus:
-#   - name: hub1
-#     type: tcp
-#     host: 192.168.1.7
-#     port: 502
-#     sensors:
-#       - name: Sensor1
-#         unit_of_measurement: W
-#         slave: 3
-#address: 100
-
+# Template sensors
 template:
   - sensor:
       - name: "Zählerstand"
@@ -597,7 +363,6 @@ template:
           {% else %}
             {{ states('sensor.energyesp32_mt681_einspeisung') }}
           {% endif %}
-      # Fronius &Battery
       - name: "Battery Power Charging"
         unit_of_measurement: kW
         device_class: power
@@ -611,10 +376,6 @@ template:
         device_class: power
         state: "{{ states('sensor.solarnet_power_photovoltaics') | float(default=0) }}"
 
-        # Regen Sensor
-
-        # Regen Trigger
-
   - trigger:
       platform: time_pattern
       minutes: "0"
@@ -625,15 +386,13 @@ template:
         attributes:
           updated_at: "{{ now() }}"
 
-# allowlist_external_dirs:
-#   - "/usr/var/dumping-ground"
-#   - "/tmp"
-
+# Frontend
 frontend:
   themes: !include_dir_merge_named themes
   extra_module_url:
     - /local/card-mod.js
 
+# Number template
 number:
   - platform: template
     name: "$devicename brightness"
@@ -645,8 +404,3 @@ number:
     set_action:
       lambda: |-
         id(rgb8x32)->set_brightness(x);
-
-#### Time
-# time:
-#   - platform: homeassistant
-#     id: homeassistant_time
