@@ -206,14 +206,14 @@ sensor:
       epex_spot_price_ct_per_kwh:
         friendly_name: "Aktueller Strompreis"
         unit_of_measurement: "ct/kWh"
-        availability_template: '{{ states("sensor.epex_spot_data_price") != "unavailable" }}'
-        value_template: '{{ ((states("sensor.epex_spot_data_price") | float * 0.1) + 1.5)* 1.2 }}'
+        availability_template: '{{ states("sensor.epex_spot_data_net_price") != "unavailable" }}'
+        value_template: '{{ ((states("sensor.epex_spot_data_net_price") | float * 0.1) + 1.5)* 1.2 }}'
 
       epex_spot_price_eur_per_kwh:
         friendly_name: "Aktueller Strompreis Euro"
         unit_of_measurement: "eur/kWh"
-        availability_template: '{{ states("sensor.epex_spot_data_price") != "unavailable" }}'
-        value_template: '{{ ((states("sensor.epex_spot_data_price") | float * 0.001) + 0.015) * 1.2}}'
+        availability_template: '{{ states("sensor.epex_spot_data_net_price") != "unavailable" }}'
+        value_template: '{{ ((states("sensor.epex_spot_data_net_price") | float * 0.001) + 0.015) * 1.2}}'
 
 # Utility meter
 utility_meter:
