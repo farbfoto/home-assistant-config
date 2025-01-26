@@ -390,7 +390,7 @@
       - cover.homeoffice_left_shutter
       - cover.homeoffice_right_shutter
     data:
-      position: 60
+      position: 55
     action: cover.set_cover_position
   mode: single
 - id: '1636271756188'
@@ -1334,6 +1334,8 @@
       entity05_name: Rolladen
       outdoortemp: sensor.netatmo_gorkel_weather_innen_aussen_temperature
       climate_chip_always_visible: true
+      home_custom_button01: light.schlafzimmer_schranke
+      home_custom_button01_name: Schränke
 - id: '1691941368272'
   alias: Bad NSPANEL
   description: ''
@@ -1387,6 +1389,14 @@
       qrcode_enabled: true
       timezone: Europe/Berlin (CET-1CEST,M3.5.0,M10.5.0/3)
       climate_chip_always_visible: true
+      home_custom_button03: light.schlafzimmer_schranke
+      home_custom_button03_icon: mdi:spotlight-beam
+      entity04: light.schlafzimmer_schranke
+      entity04_name: Schränke
+      entity04_icon_color:
+      - 209
+      - 157
+      - 1
 - id: '1691942711258'
   alias: Low battery level detection & notification for all battery sensors
   description: ''
@@ -2077,7 +2087,13 @@
     entity_id: cbf90a663a38701aaadc0f116afd8ac0
     domain: binary_sensor
     trigger: device
-  conditions: []
+  conditions:
+  - type: is_illuminance
+    condition: device
+    device_id: 64257f13be14b9828c20103126ce8c44
+    entity_id: b467e0103e72b34376502bba9ce0b8c3
+    domain: sensor
+    below: 250
   actions:
   - metadata: {}
     data:
@@ -2748,12 +2764,15 @@
     domain: binary_sensor
     trigger: device
   conditions:
-  - type: is_occupied
-    condition: device
-    device_id: 88e59b875fc316cad16d0f22acb8c481
-    entity_id: c37af295d9a661c1e839a6e1d2d29ced
-    domain: binary_sensor
-    enabled: false
+  - condition: and
+    conditions:
+    - type: is_illuminance
+      condition: device
+      device_id: 64257f13be14b9828c20103126ce8c44
+      entity_id: b467e0103e72b34376502bba9ce0b8c3
+      domain: sensor
+      below: 250
+    alias: Homeoffice. Lightsensor is <250
   actions:
   - action: light.turn_on
     metadata: {}

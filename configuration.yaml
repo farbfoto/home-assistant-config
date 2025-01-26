@@ -5,6 +5,7 @@ homeassistant:
       unit_of_measurement: kwh
     sensor.sauna2_ho_indoor_air_quality:
       unit_of_measurement: ppm
+  packages: !include_dir_named packages
 
 default_config:
 
