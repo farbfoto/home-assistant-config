@@ -3136,3 +3136,49 @@
       object_type: []
       cooldown: 2
       duration: 7
+- id: '1737884131633'
+  alias: Update Unavailable Entities Group
+  description: Update unavailable entities group.
+  triggers:
+  - trigger: homeassistant
+    id: startup
+    event: start
+  - trigger: event
+    event_type: call_service
+    event_data:
+      domain: group
+      service: reload
+  - trigger: time_pattern
+    hours: /1
+  conditions: []
+  actions:
+  - action: group.set
+    data:
+      object_id: unavailable_entities
+      entities: "{{ states\n    | rejectattr('domain', 'in', ['button', 'conversation',
+        'event', 'group', 'image',\n      'input_button', 'input_text', 'remote',
+        'tts', 'scene', 'stt'])\n    | rejectattr('entity_id', 'in', state_attr('group.ignored_entities',
+        'entity_id'))\n    | rejectattr('entity_id', 'eq', 'group.unavailable_entities')\n
+        \   | selectattr('state', 'in', ['unknown', 'unavailable'])\n    | map(attribute='entity_id')
+        | list | sort }}\n"
+  mode: single
+  max_exceeded: silent
+- id: '1737902306056'
+  alias: Log Frigate Events
+  description: ''
+  triggers:
+  - topic: frigate/events
+    trigger: mqtt
+  conditions: []
+  actions:
+  - data:
+      title: Frigate Event
+      message: 'Event: {{ trigger.payload_json[''after''][''label''] }} detected at
+        {{ trigger.payload_json[''after''][''camera''] }}'
+    action: notify.persistent_notification
+  - data:
+      duration: 30
+      lookback: 5
+    action: camera.record
+    target:
+      device_id: efbaf59940a99396e24359dd3f79be3a
