@@ -1552,28 +1552,38 @@
       - None
       - candle
       - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
+      effect: None
+      color_mode: color_temp
+      brightness: 219
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 142
+      xy_color:
+      - 0.452
+      - 0.373
       mode: normal
       dynamics: none
       friendly_name: Ankleide hinten 1
       supported_features: 44
-      color_mode: color_temp
-      brightness: 255
-      hs_color:
-      - 26.721
-      - 28.311
-      rgb_color:
-      - 255
-      - 214
-      - 182
-      xy_color:
-      - 0.4
-      - 0.358
-      effect: None
-      color_temp_kelvin: 4385
-      color_temp: 228
       state: 'on'
     light.hue_argenta_color_spot_4:
       min_color_temp_kelvin: 2000
@@ -1584,28 +1594,38 @@
       - None
       - candle
       - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
+      effect: None
+      color_mode: color_temp
+      brightness: 181
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 142
+      xy_color:
+      - 0.452
+      - 0.373
       mode: normal
       dynamics: none
       friendly_name: Ankleide hinten 2
       supported_features: 44
-      color_mode: color_temp
-      brightness: 255
-      hs_color:
-      - 26.721
-      - 28.311
-      rgb_color:
-      - 255
-      - 214
-      - 182
-      xy_color:
-      - 0.4
-      - 0.358
-      effect: None
-      color_temp_kelvin: 4385
-      color_temp: 228
       state: 'on'
     light.hue_argenta_color_spot_3:
       min_color_temp_kelvin: 2000
@@ -1616,28 +1636,38 @@
       - None
       - candle
       - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
+      effect: None
+      color_mode: color_temp
+      brightness: 189
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 142
+      xy_color:
+      - 0.452
+      - 0.373
       mode: normal
       dynamics: none
       friendly_name: Ankleide vorne 1
       supported_features: 44
-      color_mode: color_temp
-      brightness: 255
-      hs_color:
-      - 26.721
-      - 28.617
-      rgb_color:
-      - 255
-      - 214
-      - 182
-      xy_color:
-      - 0.4
-      - 0.358
-      effect: None
-      color_temp_kelvin: 4366
-      color_temp: 229
       state: 'on'
     light.hue_argenta_color_spot_2:
       min_color_temp_kelvin: 2000
@@ -1648,49 +1678,45 @@
       - None
       - candle
       - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
+      effect: None
+      color_mode: color_temp
+      brightness: 217
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 142
+      xy_color:
+      - 0.452
+      - 0.373
       mode: normal
       dynamics: none
       friendly_name: Ankleide vorne 2
       supported_features: 44
-      color_mode: color_temp
-      brightness: 217
-      hs_color:
-      - 26.723
-      - 29.217
-      rgb_color:
-      - 255
-      - 213
-      - 180
-      xy_color:
-      - 0.403
-      - 0.359
-      effect: None
-      color_temp_kelvin: 4329
-      color_temp: 231
       state: 'on'
     light.aura:
       supported_color_modes:
       - xy
-      mode: normal
-      dynamics: none
       friendly_name: Aura
       supported_features: 40
-      color_mode: xy
-      brightness: 255
-      hs_color:
-      - 0
-      - 0.392
-      rgb_color:
-      - 255
-      - 254
-      - 254
-      xy_color:
-      - 0.323
-      - 0.329
-      state: 'on'
+      state: unavailable
   icon: mdi:bathtub-outline
   metadata: {}
 - id: '1677435189943'

@@ -1,18 +1,18 @@
 - id: '1631356682050'
   alias: 'Homeoffice: Printer Switch On'
   description: ''
-  trigger:
+  triggers:
   - device_id: c57aabdfad178ae324eb371e51796b94
     domain: hue
-    platform: device
     type: long_release
     subtype: 1
     unique_id: 42ebfba4-14fd-4cbf-b743-b9e796aaebc0
-  condition: []
-  action:
+    trigger: device
+  conditions: []
+  actions:
   - type: turn_on
-    device_id: 9c229b7c6f777b6ccc90d911ed0fe8cc
-    entity_id: switch.printer
+    device_id: f8249bdaee1838a0e44e14c2a2a3f93c
+    entity_id: 6ded9b58e18867f271531e7938279a2d
     domain: switch
   mode: single
 - id: '1632044721140'
@@ -1710,10 +1710,11 @@
     trigger: device
   conditions: []
   actions:
-  - data:
-      message: Es wurde Post zugestellt
-      title: POST IST DA
-    action: notify.notify
+  - action: notify.persistent_notification
+    metadata: {}
+    data:
+      message: POST IST DA
+      title: Vibration meldet Post ist da
   mode: single
 - id: '1693845433956'
   alias: Add on Air Conditioning restart every 20m
@@ -1888,7 +1889,7 @@
   use_blueprint:
     path: ehmtxv2/EHMTX_extended_state.yaml
     input:
-      ehmtx_device: 8824ec2eead09b7b119ea3dc09532f2b
+      ehmtx_device: 2f20668a2846438eb918290f863f7d0f
       trigger_sensor:
       - sensor.anniversary_paul_geburtstag
       default_color:
@@ -3182,3 +3183,83 @@
     action: camera.record
     target:
       device_id: efbaf59940a99396e24359dd3f79be3a
+- id: '1737974730113'
+  alias: 'Homeoffice: Printer Turn off nach 50m'
+  description: ''
+  triggers:
+  - type: turned_on
+    device_id: f8249bdaee1838a0e44e14c2a2a3f93c
+    entity_id: 6ded9b58e18867f271531e7938279a2d
+    domain: switch
+    trigger: device
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
+  conditions: []
+  actions:
+  - delay:
+      hours: 0
+      minutes: 50
+      seconds: 0
+  - type: turn_off
+    device_id: f8249bdaee1838a0e44e14c2a2a3f93c
+    entity_id: 6ded9b58e18867f271531e7938279a2d
+    domain: switch
+  mode: single
+- id: '1738265031974'
+  alias: 'Schlafzimmer: Schrank öffnen: Licht an 10m'
+  description: ''
+  triggers:
+  - type: opened
+    device_id: 2ae54b241184c9ddbec335569481f473
+    entity_id: 0ecc54bd86f8698386e5205917b175e3
+    domain: binary_sensor
+    metadata:
+      secondary: false
+    trigger: device
+  - type: opened
+    device_id: 2ae4e7686bb982c5abab75595dd98a6c
+    entity_id: 76963a55def59faffbed6371a5440041
+    domain: binary_sensor
+    trigger: device
+    enabled: false
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.schlafzimmer_schranke
+  - delay:
+      hours: 0
+      minutes: 10
+      seconds: 0
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.schlafzimmer_schranke
+  mode: restart
+- id: '1738265083479'
+  alias: 'Schlafzimmer: Schrank zu: Licht aus '
+  description: ''
+  triggers:
+  - type: not_opened
+    device_id: 2ae54b241184c9ddbec335569481f473
+    entity_id: 0ecc54bd86f8698386e5205917b175e3
+    domain: binary_sensor
+    trigger: device
+  - type: not_opened
+    device_id: 2ae4e7686bb982c5abab75595dd98a6c
+    entity_id: 76963a55def59faffbed6371a5440041
+    domain: binary_sensor
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.schlafzimmer_schranke
+  mode: single
