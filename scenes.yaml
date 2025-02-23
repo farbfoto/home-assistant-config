@@ -4841,46 +4841,8 @@
     light.kuche_leiste_hue_gruppe:
       entity_only: true
 - id: '1702243741205'
-  name: 'Schlafzimmer: All good'
+  name: 'Schlafzimmer: Alles aus'
   entities:
-    light.bad_strahler_dusche_licht:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      color_mode:
-      brightness:
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      rgb_color:
-      xy_color:
-      off_with_transition: false
-      off_brightness: 191
-      friendly_name: Bad Strahler Dusche Licht
-      supported_features: 40
-      state: 'off'
-    light.bad_strahler_eingang_licht:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      color_mode:
-      brightness:
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      rgb_color:
-      xy_color:
-      off_with_transition: false
-      off_brightness: 191
-      friendly_name: Bad Strahler Eingang Licht
-      supported_features: 40
-      state: 'off'
     light.hue_argenta_color_spot_1:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -4891,29 +4853,27 @@
       - candle
       - fire
       - prism
+      - sparkle
+      - opal
+      - glisten
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
-      color_mode: color_temp
-      brightness: 192
-      color_temp_kelvin: 3521
-      color_temp: 284
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
       hs_color:
-      - 27.152
-      - 44.32
       rgb_color:
-      - 255
-      - 193
-      - 141
       xy_color:
-      - 0.453
-      - 0.374
-      effect: None
       mode: normal
       dynamics: none
       friendly_name: Ankleide hinten 1
       supported_features: 44
-      state: 'on'
+      state: 'off'
     light.hue_argenta_color_spot_4:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -4924,29 +4884,27 @@
       - candle
       - fire
       - prism
+      - sparkle
+      - opal
+      - glisten
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
-      color_mode: color_temp
-      brightness: 192
-      color_temp_kelvin: 3521
-      color_temp: 284
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
       hs_color:
-      - 27.152
-      - 44.32
       rgb_color:
-      - 255
-      - 193
-      - 141
       xy_color:
-      - 0.453
-      - 0.374
-      effect: None
       mode: normal
       dynamics: none
       friendly_name: Ankleide hinten 2
       supported_features: 44
-      state: 'on'
+      state: 'off'
     light.hue_argenta_color_spot_3:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -4957,29 +4915,27 @@
       - candle
       - fire
       - prism
+      - sparkle
+      - opal
+      - glisten
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
-      color_mode: color_temp
-      brightness: 128
-      color_temp_kelvin: 3521
-      color_temp: 284
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
       hs_color:
-      - 27.152
-      - 44.32
       rgb_color:
-      - 255
-      - 193
-      - 141
       xy_color:
-      - 0.453
-      - 0.374
-      effect: None
       mode: normal
       dynamics: none
       friendly_name: Ankleide vorne 1
       supported_features: 44
-      state: 'on'
+      state: 'off'
     light.hue_argenta_color_spot_2:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -4990,46 +4946,80 @@
       - candle
       - fire
       - prism
+      - sparkle
+      - opal
+      - glisten
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
-      color_mode: color_temp
-      brightness: 128
-      color_temp_kelvin: 3521
-      color_temp: 284
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
       hs_color:
-      - 27.152
-      - 44.32
       rgb_color:
-      - 255
-      - 193
-      - 141
       xy_color:
-      - 0.453
-      - 0.374
-      effect: None
       mode: normal
       dynamics: none
       friendly_name: Ankleide vorne 2
       supported_features: 44
-      state: 'on'
+      state: 'off'
     fan.bedroom_fan:
       preset_modes:
-      percentage: 0
-      percentage_step: 33.333333333333336
-      preset_mode:
       friendly_name: Bedroom_Fan
-      supported_features: 1
-      state: 'off'
+      supported_features: 49
+      state: unavailable
     light.bedroom_fan:
       supported_color_modes:
       - onoff
-      color_mode:
       friendly_name: Bedroom_Fan
       supported_features: 0
+      state: unavailable
+    light.schlafzimmer_schrank_links_beleuchtung_ikea:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      friendly_name: 'Schlafzimmer: Schrank links: Beleuchtung: IKEA'
+      supported_features: 44
+      effect:
+      color_mode:
+      brightness:
       state: 'off'
+    light.schlafzimmer_schrank_rechts_beleuchtung_ikea:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      friendly_name: 'Schlafzimmer: Schrank rechts: Beleuchtung: IKEA'
+      supported_features: 44
+      effect:
+      color_mode:
+      brightness:
+      state: 'off'
+    cover.schlafzimmer_shutter:
+      device_class: blind
+      friendly_name: Schlafzimmer Shutter
+      supported_features: 127
+      current_position: 100
+      state: open
   icon: mdi:lightbulb-group
-  metadata: {}
+  metadata:
+    cover.schlafzimmer_shutter:
+      entity_only: true
 - id: '1702243750274'
   name: 'Schlafzimmer: All bright'
   entities:
@@ -6191,4 +6181,232 @@
   icon: mdi:weather-sunny
   metadata:
     light.kuche_leiste_hue_gruppe:
+      entity_only: true
+- id: '1740301795112'
+  name: 'Schlafzimmer: Sauna'
+  entities:
+    light.schlafzimmer_schrank_links_beleuchtung_ikea:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      friendly_name: 'Schlafzimmer: Schrank links: Beleuchtung: IKEA'
+      supported_features: 44
+      effect:
+      color_mode: brightness
+      brightness: 51
+      state: 'on'
+    light.schlafzimmer_schrank_rechts_beleuchtung_ikea:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      friendly_name: 'Schlafzimmer: Schrank rechts: Beleuchtung: IKEA'
+      supported_features: 44
+      effect:
+      color_mode: brightness
+      brightness: 51
+      state: 'on'
+    light.hue_argenta_color_spot_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: None
+      color_mode: xy
+      brightness: 133
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: None
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 276.923
+      - 40.784
+      rgb_color:
+      - 215
+      - 151
+      - 255
+      xy_color:
+      - 0.313
+      - 0.21
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 1
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_4:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: None
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide hinten 2
+      supported_features: 44
+      state: 'on'
+    light.hue_argenta_color_spot_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: None
+      color_mode: color_temp
+      brightness: 51
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 137
+      - 14
+      xy_color:
+      - 0.598
+      - 0.383
+      mode: normal
+      dynamics: none
+      friendly_name: Ankleide vorne 2
+      supported_features: 44
+      state: 'on'
+    light.hue_lightstrip_plus_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Schlafzimmer Bett
+      supported_features: 44
+      state: 'off'
+    cover.schlafzimmer_shutter:
+      device_class: blind
+      friendly_name: Schlafzimmer Shutter
+      supported_features: 127
+      current_position: 0
+      state: closed
+  icon: kuf:scene_sauna
+  metadata:
+    cover.schlafzimmer_shutter:
       entity_only: true

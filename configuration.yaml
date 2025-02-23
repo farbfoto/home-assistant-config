@@ -405,3 +405,41 @@ number:
     set_action:
       lambda: |-
         id(rgb8x32)->set_brightness(x);
+
+# Camera Platform
+# camera:
+#   # - platform: xiaomi_cloud_map_extractor
+#   #   host: <VACUUM_IP>
+#   #   token: <VACUUM_TOKEN>
+#   #   username: <ROBOROCK_ACCOUNT_EMAIL>
+#   #   password: <ROBOROCK_ACCOUNT_PASSWORD>
+#   #   draw: ["all"]
+#   #   attributes:
+#   #     - calibration_point
+#   - platform: local_file
+#     name: PostboxImg
+#     file_path: /config/www/snapshots/postbox.jpg
+#     scan_interval: 10 # Refresh every 10 seconds
+
+# Dashboard Erweiterung
+
+# lovelace:
+#   mode: "yaml"
+#   resources:
+#     - url: "/hacsfiles/button-card/button-card.js"
+#       type: "module"
+#     - url: "/hacsfiles/my-cards/my-cards.js"
+#       type: "module"
+#     - url: "/hacsfiles/lovelace-card-mod/card-mod.js"
+#       type: module
+#     - url: "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js"
+#       type: module
+#     - url: "https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900"
+#       type: css
+#   dashboards:
+#     hacasa-dashboard:
+#       mode: "yaml"
+#       title: HaCasa
+#       icon: mdi:home
+#       show_in_sidebar: true
+#       filename: "dashboard/HaCasa/main.yaml"

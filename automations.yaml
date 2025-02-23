@@ -1385,7 +1385,7 @@
       - 254
       chip_font_size: '8'
       chip01: light.bad
-      custom_buttons_font_size: '7'
+      custom_buttons_font_size: '8'
       qrcode_enabled: true
       timezone: Europe/Berlin (CET-1CEST,M3.5.0,M10.5.0/3)
       climate_chip_always_visible: true
@@ -1397,6 +1397,23 @@
       - 209
       - 157
       - 1
+      button_pages_icon_size: '10'
+      entity05: scene.schlafzimmer_sauna
+      entity05_name: Sauna
+      entity05_icon_color:
+      - 250
+      - 50
+      - 0
+      home_custom_button02_name: Alles aus
+      home_custom_button03_name: Schränke
+      home_custom_button01_name: Licht an
+      entity03_name: Licht BAd
+      entity08: scene.schlafzimmer_all_good
+      entity08_name: Alles aus
+      entity08_icon_color:
+      - 233
+      - 250
+      - 0
 - id: '1691942711258'
   alias: Low battery level detection & notification for all battery sensors
   description: ''
@@ -1698,23 +1715,6 @@
         entity_id: scene.sonnenschutzt_kuchenfront_100_offen
       metadata: {}
     alias: Rollos wieder hoch
-  mode: single
-- id: '1693833262951'
-  alias: Briefkasten Vibration
-  description: ''
-  triggers:
-  - type: vibration
-    device_id: 21bd8dbe8cbfd0a79c3ddf6c3bb496a9
-    entity_id: b20dcc1e3888b0afa889bb8eec396b05
-    domain: binary_sensor
-    trigger: device
-  conditions: []
-  actions:
-  - action: notify.persistent_notification
-    metadata: {}
-    data:
-      message: POST IST DA
-      title: Vibration meldet Post ist da
   mode: single
 - id: '1693845433956'
   alias: Add on Air Conditioning restart every 20m
@@ -2094,7 +2094,7 @@
     device_id: 64257f13be14b9828c20103126ce8c44
     entity_id: b467e0103e72b34376502bba9ce0b8c3
     domain: sensor
-    below: 250
+    below: 151
   actions:
   - metadata: {}
     data:
@@ -2613,7 +2613,11 @@
     entity_id: b467e0103e72b34376502bba9ce0b8c3
     domain: sensor
     trigger: device
-    below: 250
+    below: 130
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 25
   conditions:
   - type: is_present
     condition: device
@@ -2765,15 +2769,15 @@
     domain: binary_sensor
     trigger: device
   conditions:
-  - condition: and
+  - alias: Homeoffice. Lightsensor is <250
+    condition: and
     conditions:
     - type: is_illuminance
       condition: device
       device_id: 64257f13be14b9828c20103126ce8c44
       entity_id: b467e0103e72b34376502bba9ce0b8c3
       domain: sensor
-      below: 250
-    alias: Homeoffice. Lightsensor is <250
+      below: 150
   actions:
   - action: light.turn_on
     metadata: {}
@@ -2878,14 +2882,18 @@
       device_id: 9811403729746ea38eddb97c1ba0f62e
   mode: single
 - id: '1731791721647'
-  alias: 'Abstellraum: Bewegung anschalten'
+  alias: 'Abstellraum: Licht an wenn offen'
   description: ''
   triggers:
-  - type: occupied
-    device_id: a265f4640eaeff901711c12e93871ad2
-    entity_id: 0258188c089ba55b7003ff345392bf3f
+  - type: opened
+    device_id: b5bc89b7308d58e67a548fc3e3ff949a
+    entity_id: 5066223643927ac64d2d279e19651491
     domain: binary_sensor
     trigger: device
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 2
   conditions: []
   actions:
   - type: turn_on
@@ -2894,18 +2902,18 @@
     domain: light
   mode: single
 - id: '1731791784432'
-  alias: 'Abstellraum: Nach Bewergung abschalten'
+  alias: 'Abstellraum: Tür schliessen: Licht abschalten'
   description: ''
   triggers:
-  - type: not_occupied
-    device_id: a265f4640eaeff901711c12e93871ad2
-    entity_id: 0258188c089ba55b7003ff345392bf3f
+  - type: not_opened
+    device_id: b5bc89b7308d58e67a548fc3e3ff949a
+    entity_id: 5066223643927ac64d2d279e19651491
     domain: binary_sensor
     trigger: device
     for:
       hours: 0
-      minutes: 1
-      seconds: 0
+      minutes: 0
+      seconds: 5
   conditions: []
   actions:
   - type: turn_off
@@ -3124,11 +3132,12 @@
     input:
       mode: Frigate
       camera_entities:
-      - camera.eingang
+      - camera.reolink_eingang_flussig
       provider: 01JHTT8ZYR59313NHP1862Y4VW
       notify_device:
       - f744058481d56d356770555151af1d4f
       - a519f384f321cbea3ba25ddd3b78fbd1
+      - 826634dc91493dca3edae76f43abe5c5
       remember: true
       motion_sensors:
       - binary_sensor.eingang_motion
@@ -3137,6 +3146,7 @@
       object_type: []
       cooldown: 2
       duration: 7
+      input_mode: Camera
 - id: '1737884131633'
   alias: Update Unavailable Entities Group
   description: Update unavailable entities group.
@@ -3219,11 +3229,10 @@
       secondary: false
     trigger: device
   - type: opened
-    device_id: 2ae4e7686bb982c5abab75595dd98a6c
-    entity_id: 76963a55def59faffbed6371a5440041
+    device_id: f987fd702edbb385e3a17b957175e646
+    entity_id: e1b765b03a211a1ef71fe9814596bdcf
     domain: binary_sensor
     trigger: device
-    enabled: false
   conditions: []
   actions:
   - action: light.turn_on
@@ -3251,8 +3260,8 @@
     domain: binary_sensor
     trigger: device
   - type: not_opened
-    device_id: 2ae4e7686bb982c5abab75595dd98a6c
-    entity_id: 76963a55def59faffbed6371a5440041
+    device_id: f987fd702edbb385e3a17b957175e646
+    entity_id: e1b765b03a211a1ef71fe9814596bdcf
     domain: binary_sensor
     trigger: device
   conditions: []
@@ -3262,4 +3271,169 @@
     data: {}
     target:
       entity_id: light.schlafzimmer_schranke
+  mode: single
+- id: '1739095079040'
+  alias: 'Homeoffice: Licht > 150 LX: Main Licht aus'
+  description: ''
+  triggers:
+  - type: illuminance
+    device_id: 64257f13be14b9828c20103126ce8c44
+    entity_id: b467e0103e72b34376502bba9ce0b8c3
+    domain: sensor
+    trigger: device
+    above: 150
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 10
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id:
+      - bf4250da086ce5ce773e65c7813c0ed8
+      - 8fdde933d1ba53ffaf7a3a8b5d7c47f4
+      - 92bfc41fa0a8132b98a7b0591a0bba22
+      - 8193e639db6cc0608fbc3253a58f14bb
+      - 24856418ee4ddf5a5f9cea15c2599bf0
+  mode: single
+- id: '1739715900433'
+  alias: 'Homeoffice: Elgato Videobeleuchtung aus 22:00'
+  description: ''
+  triggers:
+  - trigger: time
+    at: '22:00:00'
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id:
+      - cd147063c79231802222d51558d2b9ae
+      - 8d2d6152957c34948526a8c129397c4e
+  mode: single
+- id: '1740072732475'
+  alias: 'Eingang: Post: geleert'
+  description: ''
+  triggers:
+  - type: opened
+    device_id: 897ed2ce27e27e609926725fcb11e391
+    entity_id: 6180d87fb7f3f3e4d3c7928eff08e81b
+    domain: binary_sensor
+    trigger: device
+  conditions: []
+  actions:
+  - action: input_boolean.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: input_boolean.post
+  - action: automation.turn_off
+    metadata: {}
+    data:
+      stop_actions: true
+    target:
+      entity_id: automation.eingang_snapshot_briefkasten
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
+  - action: automation.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: automation.eingang_snapshot_briefkasten
+  mode: single
+- id: '1740082484218'
+  alias: 'Eingang: Snapshot Briefkasten'
+  description: ''
+  triggers:
+  - entity_id:
+    - binary_sensor.briefkasten_vibrationssensor_vibration
+    from: 'off'
+    to: 'on'
+    trigger: state
+  actions:
+  - target:
+      device_id: 0df416b8af8624d41408b0cde7067818
+    data:
+      filename: /config/www/snapshots/postbox.jpg
+    action: camera.snapshot
+  - action: input_boolean.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: input_boolean.post
+  - delay: 00:00:02
+  - action: notify.persistent_notification
+    metadata: {}
+    data:
+      message: POST IST DA
+      title: Vibration meldet Post ist da
+  - target:
+      entity_id: camera.local_snapshot
+    action: homeassistant.update_entity
+    data:
+      entity_id:
+      - camera.eingang_camera_snapshot_local_file
+  mode: single
+- id: '1740306161474'
+  alias: 'Eingang: Tür öffnen: Licht an bei Sonnenuntergang'
+  description: ''
+  triggers:
+  - type: opened
+    device_id: 22c7a01541b67e4a002bc468badee829
+    entity_id: 84324bc6ff6c3baaca9c7bf6a78194fb
+    domain: binary_sensor
+    trigger: device
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  conditions:
+  - condition: sun
+    after: sunset
+    before: sunrise
+    after_offset: '-1'
+    before_offset: '+1'
+  actions:
+  - type: turn_on
+    device_id: 8baa017c5fce9840d661d31ecccdbf5a
+    entity_id: 7bc0f92524c6b21fa5bb248fc3b4f05e
+    domain: switch
+  mode: single
+- id: '1740312029840'
+  alias: 'Eingang: Last Entry'
+  description: ''
+  triggers:
+  - type: opened
+    device_id: 22c7a01541b67e4a002bc468badee829
+    entity_id: 84324bc6ff6c3baaca9c7bf6a78194fb
+    domain: binary_sensor
+    trigger: device
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  conditions: []
+  actions:
+  - data:
+      filename: /config/www/snapshots/lastentry.jpg
+    action: camera.snapshot
+    target:
+      device_id: 0df416b8af8624d41408b0cde7067818
+  - delay: 00:00:02
+  - target:
+      entity_id: camera.lastentry_camera
+    action: homeassistant.update_entity
+    data: {}
+  - action: timer.start
+    metadata: {}
+    data: {}
+    target:
+      entity_id: timer.timer_10_minute
   mode: single
