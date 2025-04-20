@@ -1,176 +1,3 @@
-- id: '1631368986901'
-  name: Garten Party
-  entities:
-    light.hue_outdoor_spot_1:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      effect_list:
-      - None
-      - candle
-      - fire
-      - prism
-      supported_color_modes:
-      - color_temp
-      - xy
-      effect: None
-      color_mode: xy
-      brightness: 128
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 135.342
-      - 85.882
-      rgb_color:
-      - 36
-      - 255
-      - 92
-      xy_color:
-      - 0.176
-      - 0.654
-      mode: normal
-      dynamics: none
-      friendly_name: Garten Spot Treppe
-      supported_features: 44
-      state: 'on'
-    light.garten_zentral:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 240
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 354.34
-      - 83.137
-      rgb_color:
-      - 255
-      - 43
-      - 63
-      xy_color:
-      - 0.6621
-      - 0.2941
-      mode: normal
-      dynamics: none
-      friendly_name: Garten Zentral
-      supported_features: 40
-      state: 'on'
-    light.gartenteich:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 171
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 195
-      - 84.706
-      rgb_color:
-      - 39
-      - 201
-      - 255
-      xy_color:
-      - 0.152
-      - 0.254
-      mode: normal
-      dynamics: none
-      friendly_name: Gartenteich
-      supported_features: 40
-      state: 'on'
-    light.theke:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 138
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 59.672
-      - 71.765
-      rgb_color:
-      - 255
-      - 254
-      - 72
-      xy_color:
-      - 0.432
-      - 0.497
-      mode: normal
-      dynamics: none
-      friendly_name: Theke
-      supported_features: 40
-      state: 'on'
-    light.hue_outdoor_spot_1_2:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      effect_list:
-      - None
-      - candle
-      - fire
-      - prism
-      supported_color_modes:
-      - color_temp
-      - xy
-      effect: None
-      color_mode: xy
-      brightness: 224
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 219.588
-      - 76.078
-      rgb_color:
-      - 61
-      - 127
-      - 255
-      xy_color:
-      - 0.1555
-      - 0.1366
-      mode: normal
-      dynamics: none
-      friendly_name: Garten Spot rechts
-      supported_features: 44
-      state: 'on'
-    switch.ledvance_outdoor_plug_blume_garten_switch:
-      icon: mdi:alarm-light
-      friendly_name: LEDVANCE Outdoor Plug (Blume Garten) Switch
-      state: 'on'
-    light.ledvance_outdoor_plug_blume_garten_switch:
-      supported_color_modes:
-      - onoff
-      color_mode: onoff
-      friendly_name: LEDVANCE Outdoor Plug (Blume Garten) Switch
-      supported_features: 0
-      state: 'on'
-    light.hue_white_lamp_1:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
-      brightness: 255
-      mode: normal
-      dynamics: none
-      friendly_name: Garten Blume Hue
-      supported_features: 40
-      state: 'on'
-  icon: mdi:party-popper
-  metadata: {}
 - id: '1631369310836'
   name: Garten Licht aus
   entities:
@@ -184,6 +11,15 @@
       - candle
       - fire
       - prism
+      - sparkle
+      - opal
+      - glisten
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
@@ -248,18 +84,9 @@
       supported_color_modes:
       - color_temp
       - xy
-      color_mode:
-      brightness:
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      rgb_color:
-      xy_color:
-      mode: normal
-      dynamics: none
       friendly_name: Theke
       supported_features: 40
-      state: 'off'
+      state: unavailable
     light.hue_outdoor_spot_1_2:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -270,6 +97,15 @@
       - candle
       - fire
       - prism
+      - sparkle
+      - opal
+      - glisten
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
       - xy
@@ -286,50 +122,44 @@
       friendly_name: Garten Spot rechts
       supported_features: 44
       state: 'off'
-    switch.ledvance_outdoor_plug_blume_garten_switch:
-      icon: mdi:alarm-light
-      friendly_name: LEDVANCE Outdoor Plug (Blume Garten) Switch
-      state: 'off'
-    light.ledvance_outdoor_plug_blume_garten_switch:
-      supported_color_modes:
-      - onoff
-      color_mode:
-      friendly_name: LEDVANCE Outdoor Plug (Blume Garten) Switch
-      supported_features: 0
-      state: 'off'
     light.hue_white_lamp_1:
+      effect_list:
+      - None
+      - candle
       supported_color_modes:
       - brightness
+      effect:
       color_mode:
       brightness:
       mode: normal
       dynamics: none
       friendly_name: Garten Blume Hue
-      supported_features: 40
+      supported_features: 44
       state: 'off'
   metadata: {}
+  icon: mdi:alarm-light
 - id: '1633270055911'
   name: 'Homeoffice: Energizer'
   entities:
     light.schreibtisch_links:
       supported_color_modes:
       - brightness
+      color_mode: brightness
+      brightness: 255
       mode: normal
       dynamics: none
       friendly_name: Schreibtisch links
       supported_features: 40
-      color_mode: brightness
-      brightness: 255
       state: 'on'
     light.schreibtisch_rechts:
       supported_color_modes:
       - brightness
+      color_mode: brightness
+      brightness: 255
       mode: normal
       dynamics: none
       friendly_name: Schreibtisch rechts
       supported_features: 40
-      color_mode: brightness
-      brightness: 255
       state: 'on'
     light.hue_p_schreibtisch_links:
       min_color_temp_kelvin: 2000
@@ -339,24 +169,24 @@
       supported_color_modes:
       - color_temp
       - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3278
+      color_temp: 305
+      hs_color:
+      - 27.423
+      - 49.825
+      rgb_color:
+      - 255
+      - 186
+      - 128
+      xy_color:
+      - 0.471
+      - 0.378
       mode: normal
       dynamics: none
       friendly_name: Hue P Schreibtisch links
       supported_features: 40
-      color_mode: color_temp
-      brightness: 255
-      color_temp_kelvin: 6410
-      color_temp: 156
-      hs_color:
-      - 41.14
-      - 2.841
-      rgb_color:
-      - 255
-      - 252
-      - 247
-      xy_color:
-      - 0.329
-      - 0.334
       state: 'on'
     light.hue_p_schreibtisch_rechts:
       min_color_temp_kelvin: 2000
@@ -366,80 +196,56 @@
       supported_color_modes:
       - color_temp
       - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3278
+      color_temp: 305
+      hs_color:
+      - 27.423
+      - 49.825
+      rgb_color:
+      - 255
+      - 186
+      - 128
+      xy_color:
+      - 0.471
+      - 0.378
       mode: normal
       dynamics: none
       friendly_name: Hue P Schreibtisch Rechts
       supported_features: 40
-      color_mode: color_temp
-      brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
-      hs_color:
-      - 54.768
-      - 1.6
-      rgb_color:
-      - 255
-      - 254
-      - 250
-      xy_color:
-      - 0.326
-      - 0.333
       state: 'on'
-    light.glide_hexa_homeoffice:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 9009
-      min_mireds: 111
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - hs
-      rate_limit_total: 100
-      rate_limit_remaining: -3291
-      rate_limit_reset_seconds: -1697433728.33
-      rate_limit_reset: '1970-01-01T01:00:00'
-      rate_limit_on: 5
-      manufacturer: Govee
-      model: H6061
-      friendly_name: Glide Hexa Homeoffice
-      supported_features: 19
-      color_mode: hs
-      brightness: 255
-      hs_color:
-      - 0
-      - 0
-      rgb_color:
-      - 255
-      - 255
-      - 255
-      xy_color:
-      - 0.323
-      - 0.329
-      state: 'on'
-    light.homeoffice_osram_surface_decke_light:
+    light.homeoffice_osram_surface_light:
       min_color_temp_kelvin: 2702
       max_color_temp_kelvin: 6535
       min_mireds: 153
       max_mireds: 370
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
       supported_color_modes:
       - color_temp
-      off_with_transition: false
-      off_brightness:
-      friendly_name: Homeoffice Osram Surface Decke Light
-      supported_features: 40
+      effect:
       color_mode: color_temp
-      brightness: 254
-      color_temp_kelvin: 6535
-      color_temp: 153
+      brightness: 255
+      color_temp_kelvin: 3278
+      color_temp: 305
       hs_color:
-      - 54.768
-      - 1.6
+      - 27.423
+      - 49.825
       rgb_color:
       - 255
-      - 254
-      - 250
+      - 186
+      - 128
       xy_color:
-      - 0.326
-      - 0.333
+      - 0.471
+      - 0.378
+      friendly_name: 'Homeoffice: Osram Surface Light'
+      supported_features: 44
       state: 'on'
   metadata: {}
 - id: '1633270142640'
@@ -686,106 +492,6 @@
       supported_features: 45
       state: 'off'
   icon: mdi:lightbulb
-- id: '1642268610035'
-  name: 'Homeoffice: Meditation (HA)'
-  entities:
-    light.hue_p_schreibtisch_rechts:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      mode: normal
-      dynamics: none
-      friendly_name: Hue P Schreibtisch Rechts
-      supported_features: 40
-      color_mode: xy
-      brightness: 145
-      hs_color:
-      - 38.634
-      - 80.392
-      rgb_color:
-      - 255
-      - 182
-      - 50
-      xy_color:
-      - 0.5283
-      - 0.4265
-      state: 'on'
-    light.hue_p_schreibtisch_links:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      mode: normal
-      dynamics: none
-      friendly_name: Hue P Schreibtisch links
-      supported_features: 40
-      color_mode: xy
-      brightness: 145
-      hs_color:
-      - 334.872
-      - 45.882
-      rgb_color:
-      - 255
-      - 138
-      - 187
-      xy_color:
-      - 0.4439
-      - 0.2689
-      state: 'on'
-    button.identify:
-      device_class: identify
-      friendly_name: Elgato Key Light Air Identifizieren
-      state: unknown
-    light.elgato_key_light_air:
-      min_color_temp_kelvin: 2906
-      max_color_temp_kelvin: 6993
-      min_mireds: 143
-      max_mireds: 344
-      supported_color_modes:
-      - color_temp
-      friendly_name: Elgato Key Light Air
-      supported_features: 0
-      state: 'off'
-    light.schreibtisch_links:
-      supported_color_modes:
-      - brightness
-      mode: normal
-      dynamics: none
-      friendly_name: Schreibtisch links
-      supported_features: 40
-      color_mode: brightness
-      brightness: 14
-      state: 'on'
-    light.schreibtisch_rechts:
-      supported_color_modes:
-      - brightness
-      mode: normal
-      dynamics: none
-      friendly_name: Schreibtisch rechts
-      supported_features: 40
-      color_mode: brightness
-      brightness: 14
-      state: 'on'
-    light.homeoffice_osram_surface_decke_light:
-      min_color_temp_kelvin: 2702
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 370
-      supported_color_modes:
-      - color_temp
-      off_with_transition: false
-      off_brightness: 254
-      friendly_name: Homeoffice Osram Surface Decke Light
-      supported_features: 40
-      state: 'off'
-  metadata: {}
 - id: '1650304827827'
   name: Arbeiten aus
   entities:
@@ -2830,25 +2536,25 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Tisch links
-      supported_features: 44
       effect: None
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 4098
+      color_temp: 244
       hs_color:
-      - 54.768
-      - 1.6
+      - 26.773
+      - 33.124
       rgb_color:
       - 255
-      - 255
-      - 251
+      - 208
+      - 171
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.414
+      - 0.362
       mode: normal
       dynamics: none
+      friendly_name: Tisch links
+      supported_features: 44
       state: 'on'
     light.tisch_rechts:
       min_color_temp_kelvin: 2000
@@ -2866,25 +2572,25 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Tisch rechts
-      supported_features: 44
       effect: None
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 6329
+      color_temp: 158
       hs_color:
-      - 54.768
-      - 1.6
+      - 37.231
+      - 3.66
       rgb_color:
       - 255
-      - 255
       - 251
+      - 246
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.33
+      - 0.334
       mode: normal
       dynamics: none
+      friendly_name: Tisch rechts
+      supported_features: 44
       state: 'on'
     light.blumenlampe:
       min_color_temp_kelvin: 2000
@@ -2899,34 +2605,34 @@
       - sparkle
       - opal
       - glisten
-      - unknown
-      - unknown
-      - unknown
-      - unknown
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Blumenlampe
-      supported_features: 44
       effect: None
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 4098
+      color_temp: 244
       hs_color:
-      - 54.768
-      - 1.6
+      - 26.773
+      - 33.124
       rgb_color:
       - 255
-      - 255
-      - 251
+      - 208
+      - 171
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.414
+      - 0.362
       mode: normal
       dynamics: none
+      friendly_name: Blumenlampe
+      supported_features: 44
       state: 'on'
     light.hue_beyond_up_1:
       min_color_temp_kelvin: 2000
@@ -2936,24 +2642,24 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond up 1
-      supported_features: 40
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 4098
+      color_temp: 244
       hs_color:
-      - 54.768
-      - 1.6
+      - 26.773
+      - 33.124
       rgb_color:
       - 255
-      - 255
-      - 251
+      - 208
+      - 171
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.414
+      - 0.362
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond up 1
+      supported_features: 40
       state: 'on'
     light.hue_beyond_down_1:
       min_color_temp_kelvin: 2000
@@ -2963,24 +2669,24 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond down 1
-      supported_features: 40
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 4098
+      color_temp: 244
       hs_color:
-      - 54.768
-      - 1.6
+      - 26.773
+      - 33.124
       rgb_color:
       - 255
-      - 255
-      - 251
+      - 208
+      - 171
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.414
+      - 0.362
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond down 1
+      supported_features: 40
       state: 'on'
     light.hue_beyond_down_2:
       min_color_temp_kelvin: 2000
@@ -2990,24 +2696,24 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond down 2
-      supported_features: 40
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 4098
+      color_temp: 244
       hs_color:
-      - 54.768
-      - 1.6
+      - 26.773
+      - 33.124
       rgb_color:
       - 255
-      - 255
-      - 251
+      - 208
+      - 171
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.414
+      - 0.362
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond down 2
+      supported_features: 40
       state: 'on'
     light.eckleuchte:
       min_color_temp_kelvin: 2000
@@ -3022,10 +2728,10 @@
       - sparkle
       - opal
       - glisten
-      - unknown
-      - unknown
-      - unknown
-      - unknown
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -3034,49 +2740,22 @@
       effect: None
       color_mode: color_temp
       brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
+      color_temp_kelvin: 4098
+      color_temp: 244
       hs_color:
-      - 54.768
-      - 1.6
+      - 26.773
+      - 33.124
       rgb_color:
       - 255
-      - 255
-      - 251
+      - 208
+      - 171
       xy_color:
-      - 0.325
-      - 0.333
+      - 0.414
+      - 0.362
       mode: normal
       dynamics: none
       friendly_name: Eckleuchte
       supported_features: 44
-      state: 'on'
-    light.hai:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: color_temp
-      brightness: 255
-      color_temp_kelvin: 6535
-      color_temp: 153
-      hs_color:
-      - 54.768
-      - 1.6
-      rgb_color:
-      - 255
-      - 255
-      - 251
-      xy_color:
-      - 0.325
-      - 0.333
-      mode: normal
-      dynamics: none
-      friendly_name: Hai
-      supported_features: 40
       state: 'on'
     light.klavier:
       min_color_temp_kelvin: 2000
@@ -3113,8 +2792,84 @@
       supported_color_modes:
       - color_temp
       - xy
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 4098
+      color_temp: 244
+      hs_color:
+      - 26.773
+      - 33.124
+      rgb_color:
+      - 255
+      - 208
+      - 171
+      xy_color:
+      - 0.414
+      - 0.362
+      mode: normal
+      dynamics: none
       friendly_name: Hue beyond down 3
       supported_features: 40
+      state: 'on'
+    light.hue_white_lamp_3:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      mode: normal
+      dynamics: none
+      friendly_name: 'Küche Leiste Aussen Links: Hue'
+      supported_features: 44
+      state: 'off'
+    light.hue_white_lamp_4:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      friendly_name: 'Küche Leiste Aussen Rechts: Hue'
+      supported_features: 44
+      state: unavailable
+    light.hue_white_lamp_2:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      mode: normal
+      dynamics: none
+      friendly_name: 'Küche Leiste Mitte Rechts: Hue'
+      supported_features: 44
+      state: 'off'
+    light.hue_white_lamp_1_2:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      mode: normal
+      dynamics: none
+      friendly_name: Kueche Leiste Mitte Links:Hue
+      supported_features: 44
+      state: 'off'
+    light.hue_lightstrip_plus_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
       color_mode: color_temp
       brightness: 255
       color_temp_kelvin: 6535
@@ -3131,62 +2886,35 @@
       - 0.333
       mode: normal
       dynamics: none
+      friendly_name: Hue lightstrip plus 1
+      supported_features: 40
       state: 'on'
-    light.hue_white_lamp_3:
-      effect_list:
-      - None
-      - candle
+    light.hue_color_spot_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
       supported_color_modes:
-      - brightness
-      effect: None
-      color_mode: brightness
+      - color_temp
+      - xy
+      color_mode: color_temp
       brightness: 255
+      color_temp_kelvin: 6535
+      color_temp: 153
+      hs_color:
+      - 54.768
+      - 1.6
+      rgb_color:
+      - 255
+      - 255
+      - 251
+      xy_color:
+      - 0.325
+      - 0.333
       mode: normal
       dynamics: none
-      friendly_name: 'Küche Leiste Aussen Links: Hue'
-      supported_features: 44
-      state: 'on'
-    light.hue_white_lamp_4:
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - brightness
-      effect: None
-      color_mode: brightness
-      brightness: 255
-      mode: normal
-      dynamics: none
-      friendly_name: 'Küche Leiste Aussen Rechts: Hue'
-      supported_features: 44
-      state: 'on'
-    light.hue_white_lamp_2:
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - brightness
-      effect: None
-      color_mode: brightness
-      brightness: 255
-      mode: normal
-      dynamics: none
-      friendly_name: 'Küche Leiste Mitte Rechts: Hue'
-      supported_features: 44
-      state: 'on'
-    light.hue_white_lamp_1_2:
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - brightness
-      effect: None
-      color_mode: brightness
-      brightness: 255
-      mode: normal
-      dynamics: none
-      friendly_name: Kueche Leiste Mitte Links:Hue
-      supported_features: 44
+      friendly_name: Hai
+      supported_features: 40
       state: 'on'
   icon: mdi:sun-snowflake-variant
   metadata: {}
@@ -3209,8 +2937,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Tisch links
-      supported_features: 44
       effect:
       color_mode:
       brightness:
@@ -3221,6 +2947,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Tisch links
+      supported_features: 44
       state: 'off'
     light.tisch_rechts:
       min_color_temp_kelvin: 2000
@@ -3238,8 +2966,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Tisch rechts
-      supported_features: 44
       effect:
       color_mode:
       brightness:
@@ -3250,6 +2976,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Tisch rechts
+      supported_features: 44
       state: 'off'
     light.blumenlampe:
       min_color_temp_kelvin: 2000
@@ -3264,17 +2992,15 @@
       - sparkle
       - opal
       - glisten
-      - unknown
-      - unknown
-      - unknown
-      - unknown
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Blumenlampe
-      supported_features: 44
       effect:
       color_mode:
       brightness:
@@ -3285,6 +3011,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Blumenlampe
+      supported_features: 44
       state: 'off'
     light.hue_beyond_up_1:
       min_color_temp_kelvin: 2000
@@ -3294,8 +3022,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond up 1
-      supported_features: 40
       color_mode:
       brightness:
       color_temp_kelvin:
@@ -3305,6 +3031,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond up 1
+      supported_features: 40
       state: 'off'
     light.hue_beyond_down_1:
       min_color_temp_kelvin: 2000
@@ -3314,8 +3042,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond down 1
-      supported_features: 40
       color_mode:
       brightness:
       color_temp_kelvin:
@@ -3325,6 +3051,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond down 1
+      supported_features: 40
       state: 'off'
     light.hue_beyond_down_2:
       min_color_temp_kelvin: 2000
@@ -3334,8 +3062,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond down 2
-      supported_features: 40
       color_mode:
       brightness:
       color_temp_kelvin:
@@ -3345,6 +3071,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond down 2
+      supported_features: 40
       state: 'off'
     light.eckleuchte:
       min_color_temp_kelvin: 2000
@@ -3359,10 +3087,10 @@
       - sparkle
       - opal
       - glisten
-      - unknown
-      - unknown
-      - unknown
-      - unknown
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -3381,26 +3109,6 @@
       friendly_name: Eckleuchte
       supported_features: 44
       state: 'off'
-    light.hai:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode:
-      brightness:
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      rgb_color:
-      xy_color:
-      mode: normal
-      dynamics: none
-      friendly_name: Hai
-      supported_features: 40
-      state: 'off'
     light.hue_beyond_down_3:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -3409,8 +3117,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond down 3
-      supported_features: 40
       color_mode:
       brightness:
       color_temp_kelvin:
@@ -3420,6 +3126,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond down 3
+      supported_features: 40
       state: 'off'
     light.klavier:
       min_color_temp_kelvin: 2000
@@ -3459,113 +3167,7 @@
       friendly_name: 'Küche Leiste: Hue Gruppe'
       supported_features: 44
       state: 'off'
-  icon: mdi:close-circle-outline
-  metadata:
-    light.kuche_leiste_hue_gruppe:
-      entity_only: true
-- id: '1702123418905'
-  name: 'Wohnzimmer: Color Mood'
-  entities:
-    light.tisch_links:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      effect_list:
-      - None
-      - candle
-      - fire
-      - prism
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 128
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 219.048
-      - 49.412
-      rgb_color:
-      - 129
-      - 173
-      - 255
-      xy_color:
-      - 0.208
-      - 0.217
-      effect: None
-      mode: normal
-      dynamics: none
-      friendly_name: Tisch links
-      supported_features: 44
-      state: 'on'
-    light.tisch_rechts:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      effect_list:
-      - None
-      - candle
-      - fire
-      - prism
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 128
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 135.529
-      - 100
-      rgb_color:
-      - 0
-      - 255
-      - 66
-      xy_color:
-      - 0.17
-      - 0.7
-      effect: None
-      mode: normal
-      dynamics: none
-      friendly_name: Tisch rechts
-      supported_features: 44
-      state: 'on'
-    light.blumenlampe:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      effect_list:
-      - None
-      - candle
-      - fire
-      - prism
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: color_temp
-      brightness: 76
-      color_temp_kelvin: 3521
-      color_temp: 284
-      hs_color:
-      - 27.152
-      - 44.32
-      rgb_color:
-      - 255
-      - 193
-      - 141
-      xy_color:
-      - 0.453
-      - 0.374
-      effect: None
-      mode: normal
-      dynamics: none
-      friendly_name: Blumenlampe
-      supported_features: 44
-      state: 'on'
-    light.hue_beyond_up_1:
+    light.hue_lightstrip_plus_1:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
       min_mireds: 153
@@ -3573,119 +3175,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      color_mode: xy
-      brightness: 63
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 276.923
-      - 40.784
-      rgb_color:
-      - 215
-      - 151
-      - 255
-      xy_color:
-      - 0.313
-      - 0.21
-      mode: normal
-      dynamics: none
-      friendly_name: Hue beyond up 1
-      supported_features: 40
-      state: 'on'
-    light.hue_beyond_down_1:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 102
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 245.294
-      - 40
-      rgb_color:
-      - 162
-      - 153
-      - 255
-      xy_color:
-      - 0.2467
-      - 0.1974
-      mode: normal
-      dynamics: none
-      friendly_name: Hue beyond down 1
-      supported_features: 40
-      state: 'on'
-    light.hue_beyond_down_2:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: color_temp
-      brightness: 102
-      color_temp_kelvin: 3521
-      color_temp: 284
-      hs_color:
-      - 27.152
-      - 44.32
-      rgb_color:
-      - 255
-      - 193
-      - 141
-      xy_color:
-      - 0.453
-      - 0.374
-      mode: normal
-      dynamics: none
-      friendly_name: Hue beyond down 2
-      supported_features: 40
-      state: 'on'
-    light.eckleuchte:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      effect_list:
-      - None
-      - candle
-      - fire
-      - prism
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 63
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 325.647
-      - 100
-      rgb_color:
-      - 255
-      - 0
-      - 146
-      xy_color:
-      - 0.554
-      - 0.232
-      effect: None
-      mode: normal
-      dynamics: none
-      friendly_name: Eckleuchte
-      supported_features: 44
-      state: 'on'
-    light.prios_strahler_kuche_links_aussen_licht:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
       color_mode:
       brightness:
       color_temp_kelvin:
@@ -3693,69 +3182,12 @@
       hs_color:
       rgb_color:
       xy_color:
-      off_with_transition: false
-      off_brightness: 252
-      friendly_name: Prios Strahler Küche links aussen Licht
+      mode: normal
+      dynamics: none
+      friendly_name: Hue lightstrip plus 1
       supported_features: 40
       state: 'off'
-    light.prios_schiene_kuche_rechts_aussen_licht:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      color_mode:
-      brightness:
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      rgb_color:
-      xy_color:
-      off_with_transition: false
-      off_brightness: 252
-      friendly_name: Prios Schiene Küche rechts aussen Licht
-      supported_features: 40
-      state: 'off'
-    light.prios_strahler_kuche_links_innen_licht:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      color_mode:
-      brightness:
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      rgb_color:
-      xy_color:
-      off_with_transition: false
-      off_brightness: 252
-      friendly_name: Prios Strahler Küche links innen Licht
-      supported_features: 40
-      state: 'off'
-    light.prios_strahler_kuche_rechts_innen_licht:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      color_mode:
-      brightness:
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      rgb_color:
-      xy_color:
-      off_with_transition: false
-      off_brightness: 252
-      friendly_name: Prios Strahler Küche rechts innen Licht
-      supported_features: 40
-      state: 'off'
-    light.hai:
+    light.hue_color_spot_1_2:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
       min_mireds: 153
@@ -3763,81 +3195,22 @@
       supported_color_modes:
       - color_temp
       - xy
-      color_mode: xy
-      brightness: 63
+      color_mode:
+      brightness:
       color_temp_kelvin:
       color_temp:
       hs_color:
-      - 9.231
-      - 66.275
       rgb_color:
-      - 255
-      - 112
-      - 86
       xy_color:
-      - 0.589
-      - 0.329
       mode: normal
       dynamics: none
       friendly_name: Hai
       supported_features: 40
-      state: 'on'
-    light.klavier:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 63
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 245.294
-      - 40
-      rgb_color:
-      - 162
-      - 153
-      - 255
-      xy_color:
-      - 0.2467
-      - 0.1974
-      mode: normal
-      dynamics: none
-      friendly_name: Klavier
-      supported_features: 40
-      state: 'on'
-    light.hue_beyond_down_3:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 102
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 308.125
-      - 37.647
-      rgb_color:
-      - 255
-      - 159
-      - 242
-      xy_color:
-      - 0.371
-      - 0.239
-      mode: normal
-      dynamics: none
-      friendly_name: Hue beyond down 3
-      supported_features: 40
-      state: 'on'
-  icon: mdi:lightbulb-night
-  metadata: {}
+      state: 'off'
+  icon: mdi:close-circle-outline
+  metadata:
+    light.kuche_leiste_hue_gruppe:
+      entity_only: true
 - id: '1702123992017'
   name: 'Wohnzimmer: Indirekt'
   entities:
@@ -3857,8 +3230,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Tisch links
-      supported_features: 44
       effect:
       color_mode:
       brightness:
@@ -3869,6 +3240,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Tisch links
+      supported_features: 44
       state: 'off'
     light.tisch_rechts:
       min_color_temp_kelvin: 2000
@@ -3886,8 +3259,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Tisch rechts
-      supported_features: 44
       effect:
       color_mode:
       brightness:
@@ -3898,6 +3269,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Tisch rechts
+      supported_features: 44
       state: 'off'
     light.blumenlampe:
       min_color_temp_kelvin: 2000
@@ -3912,17 +3285,15 @@
       - sparkle
       - opal
       - glisten
-      - unknown
-      - unknown
-      - unknown
-      - unknown
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Blumenlampe
-      supported_features: 44
       effect:
       color_mode:
       brightness:
@@ -3933,6 +3304,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Blumenlampe
+      supported_features: 44
       state: 'off'
     light.hue_beyond_up_1:
       min_color_temp_kelvin: 2000
@@ -3942,24 +3315,24 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond up 1
-      supported_features: 40
       color_mode: color_temp
-      brightness: 120
-      color_temp_kelvin: 2000
-      color_temp: 500
+      brightness: 255
+      color_temp_kelvin: 4048
+      color_temp: 247
       hs_color:
-      - 30.601
-      - 94.547
+      - 26.792
+      - 34.008
       rgb_color:
       - 255
-      - 137
-      - 14
+      - 207
+      - 168
       xy_color:
-      - 0.598
-      - 0.383
+      - 0.417
+      - 0.364
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond up 1
+      supported_features: 40
       state: 'on'
     light.hue_beyond_down_1:
       min_color_temp_kelvin: 2000
@@ -3969,8 +3342,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond down 1
-      supported_features: 40
       color_mode:
       brightness:
       color_temp_kelvin:
@@ -3980,6 +3351,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond down 1
+      supported_features: 40
       state: 'off'
     light.hue_beyond_down_2:
       min_color_temp_kelvin: 2000
@@ -3989,8 +3362,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond down 2
-      supported_features: 40
       color_mode:
       brightness:
       color_temp_kelvin:
@@ -4000,6 +3371,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond down 2
+      supported_features: 40
       state: 'off'
     light.eckleuchte:
       min_color_temp_kelvin: 2000
@@ -4014,10 +3387,10 @@
       - sparkle
       - opal
       - glisten
-      - unknown
-      - unknown
-      - unknown
-      - unknown
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -4043,33 +3416,6 @@
       friendly_name: Eckleuchte
       supported_features: 44
       state: 'on'
-    light.hai:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 189
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 1.295
-      - 54.51
-      rgb_color:
-      - 255
-      - 119
-      - 116
-      xy_color:
-      - 0.549
-      - 0.314
-      mode: normal
-      dynamics: none
-      friendly_name: Hai
-      supported_features: 40
-      state: 'on'
     light.klavier:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -4105,8 +3451,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond down 3
-      supported_features: 40
       color_mode:
       brightness:
       color_temp_kelvin:
@@ -4116,6 +3460,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond down 3
+      supported_features: 40
       state: 'off'
     light.kuche_leiste_hue_gruppe:
       effect_list:
@@ -4135,6 +3481,60 @@
       friendly_name: 'Küche Leiste: Hue Gruppe'
       supported_features: 44
       state: 'off'
+    light.hue_lightstrip_plus_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 137
+      - 14
+      xy_color:
+      - 0.598
+      - 0.383
+      mode: normal
+      dynamics: none
+      friendly_name: Hue lightstrip plus 1
+      supported_features: 40
+      state: 'on'
+    light.hue_color_spot_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 8.824
+      - 80
+      rgb_color:
+      - 255
+      - 81
+      - 51
+      xy_color:
+      - 0.648
+      - 0.32
+      mode: normal
+      dynamics: none
+      friendly_name: Hai
+      supported_features: 40
+      state: 'on'
   icon: mdi:lightbulb-night
   metadata:
     light.kuche_leiste_hue_gruppe:
@@ -4160,7 +3560,7 @@
       - xy
       effect: None
       color_mode: color_temp
-      brightness: 153
+      brightness: 176
       color_temp_kelvin: 3521
       color_temp: 284
       hs_color:
@@ -4196,19 +3596,19 @@
       - xy
       effect: None
       color_mode: color_temp
-      brightness: 153
-      color_temp_kelvin: 3521
-      color_temp: 284
+      brightness: 168
+      color_temp_kelvin: 2000
+      color_temp: 500
       hs_color:
-      - 27.152
-      - 44.32
+      - 30.601
+      - 94.547
       rgb_color:
       - 255
-      - 193
-      - 142
+      - 137
+      - 14
       xy_color:
-      - 0.452
-      - 0.373
+      - 0.598
+      - 0.383
       mode: normal
       dynamics: none
       friendly_name: Tisch rechts
@@ -4227,10 +3627,10 @@
       - sparkle
       - opal
       - glisten
-      - unknown
-      - unknown
-      - unknown
-      - unknown
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -4238,7 +3638,7 @@
       - xy
       effect: None
       color_mode: color_temp
-      brightness: 153
+      brightness: 166
       color_temp_kelvin: 2000
       color_temp: 500
       hs_color:
@@ -4264,20 +3664,20 @@
       supported_color_modes:
       - color_temp
       - xy
-      color_mode: xy
-      brightness: 178
-      color_temp_kelvin:
-      color_temp:
+      color_mode: color_temp
+      brightness: 171
+      color_temp_kelvin: 2000
+      color_temp: 500
       hs_color:
-      - 9.231
-      - 66.275
+      - 30.601
+      - 94.547
       rgb_color:
       - 255
-      - 112
-      - 86
+      - 137
+      - 14
       xy_color:
-      - 0.589
-      - 0.329
+      - 0.598
+      - 0.383
       mode: normal
       dynamics: none
       friendly_name: Hue beyond up 1
@@ -4291,25 +3691,18 @@
       supported_color_modes:
       - color_temp
       - xy
-      color_mode: color_temp
-      brightness: 128
-      color_temp_kelvin: 2000
-      color_temp: 500
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
       hs_color:
-      - 30.601
-      - 94.547
       rgb_color:
-      - 255
-      - 137
-      - 14
       xy_color:
-      - 0.598
-      - 0.383
       mode: normal
       dynamics: none
       friendly_name: Hue beyond down 1
       supported_features: 40
-      state: 'on'
+      state: 'off'
     light.hue_beyond_down_2:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -4318,25 +3711,18 @@
       supported_color_modes:
       - color_temp
       - xy
-      color_mode: color_temp
-      brightness: 128
-      color_temp_kelvin: 2000
-      color_temp: 500
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
       hs_color:
-      - 30.601
-      - 94.547
       rgb_color:
-      - 255
-      - 137
-      - 14
       xy_color:
-      - 0.598
-      - 0.383
       mode: normal
       dynamics: none
       friendly_name: Hue beyond down 2
       supported_features: 40
-      state: 'on'
+      state: 'off'
     light.eckleuchte:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -4350,99 +3736,18 @@
       - sparkle
       - opal
       - glisten
-      - unknown
-      - unknown
-      - unknown
-      - unknown
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
       - color_temp
       - xy
       effect: None
-      color_mode: xy
-      brightness: 76
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 9.231
-      - 66.275
-      rgb_color:
-      - 255
-      - 112
-      - 86
-      xy_color:
-      - 0.589
-      - 0.329
-      mode: normal
-      dynamics: none
-      friendly_name: Eckleuchte
-      supported_features: 44
-      state: 'on'
-    light.hai:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 128
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 245.294
-      - 40
-      rgb_color:
-      - 162
-      - 153
-      - 255
-      xy_color:
-      - 0.2467
-      - 0.1974
-      mode: normal
-      dynamics: none
-      friendly_name: Hai
-      supported_features: 40
-      state: 'on'
-    light.klavier:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 76
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 9.231
-      - 66.275
-      rgb_color:
-      - 255
-      - 112
-      - 86
-      xy_color:
-      - 0.589
-      - 0.329
-      mode: normal
-      dynamics: none
-      friendly_name: Klavier
-      supported_features: 40
-      state: 'on'
-    light.hue_beyond_down_3:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
       color_mode: color_temp
-      brightness: 128
+      brightness: 115
       color_temp_kelvin: 2000
       color_temp: 500
       hs_color:
@@ -4457,9 +3762,56 @@
       - 0.383
       mode: normal
       dynamics: none
-      friendly_name: Hue beyond down 3
+      friendly_name: Eckleuchte
+      supported_features: 44
+      state: 'on'
+    light.klavier:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 199
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 137
+      - 14
+      xy_color:
+      - 0.598
+      - 0.383
+      mode: normal
+      dynamics: none
+      friendly_name: Klavier
       supported_features: 40
       state: 'on'
+    light.hue_beyond_down_3:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      mode: normal
+      dynamics: none
+      friendly_name: Hue beyond down 3
+      supported_features: 40
+      state: 'off'
     light.hue_white_lamp_2:
       effect_list:
       - None
@@ -4468,7 +3820,7 @@
       - brightness
       effect: None
       color_mode: brightness
-      brightness: 38
+      brightness: 82
       mode: normal
       dynamics: none
       friendly_name: 'Küche Leiste Mitte Rechts: Hue'
@@ -4502,19 +3854,68 @@
       friendly_name: Kueche Leiste Mitte Links:Hue
       supported_features: 44
       state: 'off'
+    light.hue_lightstrip_plus_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 156
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      mode: normal
+      dynamics: none
+      friendly_name: Hue lightstrip plus 1
+      supported_features: 40
+      state: 'on'
     light.hue_white_lamp_4:
       effect_list:
       - None
       - candle
       supported_color_modes:
       - brightness
-      effect: None
-      color_mode: brightness
-      brightness: 38
-      mode: normal
-      dynamics: none
       friendly_name: 'Küche Leiste Aussen Rechts: Hue'
       supported_features: 44
+      state: unavailable
+    light.hue_color_spot_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 117
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 38.222
+      - 52.941
+      rgb_color:
+      - 255
+      - 206
+      - 120
+      xy_color:
+      - 0.4577
+      - 0.41
+      mode: normal
+      dynamics: none
+      friendly_name: Hai
+      supported_features: 40
       state: 'on'
   icon: mdi:table-furniture
   metadata: {}
@@ -4538,20 +3939,20 @@
       - color_temp
       - xy
       effect: None
-      color_mode: xy
-      brightness: 56
-      color_temp_kelvin:
-      color_temp:
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 2000
+      color_temp: 500
       hs_color:
-      - 4.167
-      - 84.706
+      - 30.601
+      - 94.547
       rgb_color:
       - 255
-      - 54
-      - 39
+      - 137
+      - 14
       xy_color:
-      - 0.674
-      - 0.307
+      - 0.598
+      - 0.383
       mode: normal
       dynamics: none
       friendly_name: Tisch links
@@ -4573,26 +3974,19 @@
       supported_color_modes:
       - color_temp
       - xy
-      effect: None
-      color_mode: xy
-      brightness: 74
+      effect:
+      color_mode:
+      brightness:
       color_temp_kelvin:
       color_temp:
       hs_color:
-      - 38.222
-      - 52.941
       rgb_color:
-      - 255
-      - 206
-      - 120
       xy_color:
-      - 0.4577
-      - 0.41
       mode: normal
       dynamics: none
       friendly_name: Tisch rechts
       supported_features: 44
-      state: 'on'
+      state: 'off'
     light.blumenlampe:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -4606,10 +4000,10 @@
       - sparkle
       - opal
       - glisten
-      - unknown
-      - unknown
-      - unknown
-      - unknown
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -4617,19 +4011,19 @@
       - xy
       effect: None
       color_mode: xy
-      brightness: 20
+      brightness: 82
       color_temp_kelvin:
       color_temp:
       hs_color:
-      - 352.075
-      - 83.137
+      - 18.224
+      - 83.922
       rgb_color:
       - 255
-      - 43
-      - 71
+      - 106
+      - 41
       xy_color:
-      - 0.6544
-      - 0.2903
+      - 0.63
+      - 0.344
       mode: normal
       dynamics: none
       friendly_name: Blumenlampe
@@ -4644,19 +4038,19 @@
       - color_temp
       - xy
       color_mode: xy
-      brightness: 136
+      brightness: 130
       color_temp_kelvin:
       color_temp:
       hs_color:
-      - 357.611
-      - 88.627
+      - 252.766
+      - 73.725
       rgb_color:
+      - 107
+      - 67
       - 255
-      - 29
-      - 38
       xy_color:
-      - 0.685
-      - 0.298
+      - 0.19
+      - 0.086
       mode: normal
       dynamics: none
       friendly_name: Hue beyond up 1
@@ -4715,10 +4109,10 @@
       - sparkle
       - opal
       - glisten
-      - unknown
-      - unknown
-      - unknown
-      - unknown
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -4730,46 +4124,19 @@
       color_temp_kelvin:
       color_temp:
       hs_color:
-      - 9.231
-      - 66.275
+      - 10.118
+      - 100
       rgb_color:
       - 255
-      - 112
-      - 86
+      - 43
+      - 0
       xy_color:
-      - 0.589
-      - 0.329
+      - 0.6915
+      - 0.3083
       mode: normal
       dynamics: none
       friendly_name: Eckleuchte
       supported_features: 44
-      state: 'on'
-    light.hai:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: xy
-      brightness: 128
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      - 245.294
-      - 40
-      rgb_color:
-      - 162
-      - 153
-      - 255
-      xy_color:
-      - 0.2467
-      - 0.1974
-      mode: normal
-      dynamics: none
-      friendly_name: Hai
-      supported_features: 40
       state: 'on'
     light.klavier:
       min_color_temp_kelvin: 2000
@@ -4836,6 +4203,60 @@
       friendly_name: 'Küche Leiste: Hue Gruppe'
       supported_features: 44
       state: 'off'
+    light.hue_lightstrip_plus_1:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 9.231
+      - 66.275
+      rgb_color:
+      - 255
+      - 112
+      - 86
+      xy_color:
+      - 0.589
+      - 0.329
+      mode: normal
+      dynamics: none
+      friendly_name: Hue lightstrip plus 1
+      supported_features: 40
+      state: 'on'
+    light.hue_color_spot_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 128
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 276.923
+      - 40.784
+      rgb_color:
+      - 215
+      - 151
+      - 255
+      xy_color:
+      - 0.313
+      - 0.21
+      mode: normal
+      dynamics: none
+      friendly_name: Hai
+      supported_features: 40
+      state: 'on'
   icon: mdi:table-furniture
   metadata:
     light.kuche_leiste_hue_gruppe:
@@ -4856,6 +4277,10 @@
       - sparkle
       - opal
       - glisten
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -4887,6 +4312,10 @@
       - sparkle
       - opal
       - glisten
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -4918,6 +4347,10 @@
       - sparkle
       - opal
       - glisten
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -4949,6 +4382,10 @@
       - sparkle
       - opal
       - glisten
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -4978,47 +4415,33 @@
       friendly_name: Bedroom_Fan
       supported_features: 0
       state: unavailable
-    light.schlafzimmer_schrank_links_beleuchtung_ikea:
-      effect_list:
-      - blink
-      - breathe
-      - okay
-      - channel_change
-      - finish_effect
-      - stop_effect
-      supported_color_modes:
-      - brightness
-      friendly_name: 'Schlafzimmer: Schrank links: Beleuchtung: IKEA'
-      supported_features: 44
-      effect:
-      color_mode:
-      brightness:
-      state: 'off'
-    light.schlafzimmer_schrank_rechts_beleuchtung_ikea:
-      effect_list:
-      - blink
-      - breathe
-      - okay
-      - channel_change
-      - finish_effect
-      - stop_effect
-      supported_color_modes:
-      - brightness
-      friendly_name: 'Schlafzimmer: Schrank rechts: Beleuchtung: IKEA'
-      supported_features: 44
-      effect:
-      color_mode:
-      brightness:
-      state: 'off'
     cover.schlafzimmer_shutter:
+      current_position: 100
       device_class: blind
       friendly_name: Schlafzimmer Shutter
       supported_features: 127
-      current_position: 100
       state: open
+    light.schlafzimmer_schrankbeleuchtung:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      friendly_name: 'Schlafzimmer: Schrankbeleuchtung'
+      supported_features: 44
+      effect:
+      color_mode:
+      brightness:
+      state: 'off'
   icon: mdi:lightbulb-group
   metadata:
     cover.schlafzimmer_shutter:
+      entity_only: true
+    light.schlafzimmer_schrankbeleuchtung:
       entity_only: true
 - id: '1702243750274'
   name: 'Schlafzimmer: All bright'
@@ -5765,7 +5188,7 @@
       supported_color_modes:
       - brightness
       color_mode: brightness
-      brightness: 255
+      brightness: 180
       mode: normal
       dynamics: none
       friendly_name: Schreibtisch rechts
@@ -5780,7 +5203,7 @@
       - color_temp
       - xy
       color_mode: color_temp
-      brightness: 255
+      brightness: 230
       color_temp_kelvin: 4484
       color_temp: 223
       hs_color:
@@ -5789,10 +5212,10 @@
       rgb_color:
       - 255
       - 217
-      - 186
+      - 187
       xy_color:
-      - 0.395
-      - 0.358
+      - 0.394
+      - 0.357
       mode: normal
       dynamics: none
       friendly_name: Hue P Schreibtisch links
@@ -5807,7 +5230,7 @@
       - color_temp
       - xy
       color_mode: color_temp
-      brightness: 255
+      brightness: 230
       color_temp_kelvin: 4273
       color_temp: 234
       hs_color:
@@ -5825,25 +5248,6 @@
       friendly_name: Hue P Schreibtisch Rechts
       supported_features: 40
       state: 'on'
-    light.homeoffice_osram_surface_decke_light:
-      min_color_temp_kelvin: 2702
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 370
-      supported_color_modes:
-      - color_temp
-      color_mode:
-      brightness:
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      rgb_color:
-      xy_color:
-      off_with_transition: false
-      off_brightness: 64
-      friendly_name: Homeoffice Osram Surface Decke Licht
-      supported_features: 40
-      state: 'off'
   icon: mdi:lightbulb-night
   metadata: {}
 - id: '1732568475420'
@@ -5865,8 +5269,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Tisch links
-      supported_features: 44
       effect: None
       color_mode: color_temp
       brightness: 192
@@ -5884,6 +5286,8 @@
       - 0.373
       mode: normal
       dynamics: none
+      friendly_name: Tisch links
+      supported_features: 44
       state: 'on'
     light.tisch_rechts:
       min_color_temp_kelvin: 2000
@@ -5901,8 +5305,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Tisch rechts
-      supported_features: 44
       effect: None
       color_mode: color_temp
       brightness: 192
@@ -5920,6 +5322,8 @@
       - 0.373
       mode: normal
       dynamics: none
+      friendly_name: Tisch rechts
+      supported_features: 44
       state: 'on'
     light.blumenlampe:
       min_color_temp_kelvin: 2000
@@ -5934,17 +5338,15 @@
       - sparkle
       - opal
       - glisten
-      - unknown
-      - unknown
-      - unknown
-      - unknown
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Blumenlampe
-      supported_features: 44
       effect: None
       color_mode: color_temp
       brightness: 192
@@ -5962,6 +5364,8 @@
       - 0.373
       mode: normal
       dynamics: none
+      friendly_name: Blumenlampe
+      supported_features: 44
       state: 'on'
     light.hue_beyond_up_1:
       min_color_temp_kelvin: 2000
@@ -5971,8 +5375,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond up 1
-      supported_features: 40
       color_mode: color_temp
       brightness: 192
       color_temp_kelvin: 3521
@@ -5989,6 +5391,8 @@
       - 0.373
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond up 1
+      supported_features: 40
       state: 'on'
     light.hue_beyond_down_1:
       min_color_temp_kelvin: 2000
@@ -5998,8 +5402,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond down 1
-      supported_features: 40
       color_mode: color_temp
       brightness: 204
       color_temp_kelvin: 3521
@@ -6016,6 +5418,8 @@
       - 0.373
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond down 1
+      supported_features: 40
       state: 'on'
     light.hue_beyond_down_2:
       min_color_temp_kelvin: 2000
@@ -6025,8 +5429,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond down 2
-      supported_features: 40
       color_mode: color_temp
       brightness: 192
       color_temp_kelvin: 3521
@@ -6043,6 +5445,8 @@
       - 0.373
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond down 2
+      supported_features: 40
       state: 'on'
     light.eckleuchte:
       min_color_temp_kelvin: 2000
@@ -6057,10 +5461,10 @@
       - sparkle
       - opal
       - glisten
-      - unknown
-      - unknown
-      - unknown
-      - unknown
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -6085,33 +5489,6 @@
       dynamics: none
       friendly_name: Eckleuchte
       supported_features: 44
-      state: 'on'
-    light.hai:
-      min_color_temp_kelvin: 2000
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 500
-      supported_color_modes:
-      - color_temp
-      - xy
-      color_mode: color_temp
-      brightness: 192
-      color_temp_kelvin: 3521
-      color_temp: 284
-      hs_color:
-      - 27.152
-      - 44.32
-      rgb_color:
-      - 255
-      - 193
-      - 142
-      xy_color:
-      - 0.452
-      - 0.373
-      mode: normal
-      dynamics: none
-      friendly_name: Hai
-      supported_features: 40
       state: 'on'
     light.klavier:
       min_color_temp_kelvin: 2000
@@ -6148,8 +5525,6 @@
       supported_color_modes:
       - color_temp
       - xy
-      friendly_name: Hue beyond down 3
-      supported_features: 40
       color_mode:
       brightness:
       color_temp_kelvin:
@@ -6159,6 +5534,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Hue beyond down 3
+      supported_features: 40
       state: 'off'
     light.kuche_leiste_hue_gruppe:
       effect_list:
@@ -6168,7 +5545,7 @@
       - brightness
       effect: None
       color_mode: brightness
-      brightness: 51
+      brightness: 82
       entity_id:
       - light.hue_white_lamp_3
       - light.hue_white_lamp_4
@@ -6178,6 +5555,33 @@
       friendly_name: 'Küche Leiste: Hue Gruppe'
       supported_features: 44
       state: 'on'
+    light.hue_color_spot_1_2:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 38.222
+      - 52.941
+      rgb_color:
+      - 255
+      - 206
+      - 120
+      xy_color:
+      - 0.4577
+      - 0.41
+      mode: normal
+      dynamics: none
+      friendly_name: Hai
+      supported_features: 40
+      state: 'on'
   icon: mdi:weather-sunny
   metadata:
     light.kuche_leiste_hue_gruppe:
@@ -6185,38 +5589,6 @@
 - id: '1740301795112'
   name: 'Schlafzimmer: Sauna'
   entities:
-    light.schlafzimmer_schrank_links_beleuchtung_ikea:
-      effect_list:
-      - blink
-      - breathe
-      - okay
-      - channel_change
-      - finish_effect
-      - stop_effect
-      supported_color_modes:
-      - brightness
-      friendly_name: 'Schlafzimmer: Schrank links: Beleuchtung: IKEA'
-      supported_features: 44
-      effect:
-      color_mode: brightness
-      brightness: 51
-      state: 'on'
-    light.schlafzimmer_schrank_rechts_beleuchtung_ikea:
-      effect_list:
-      - blink
-      - breathe
-      - okay
-      - channel_change
-      - finish_effect
-      - stop_effect
-      supported_color_modes:
-      - brightness
-      friendly_name: 'Schlafzimmer: Schrank rechts: Beleuchtung: IKEA'
-      supported_features: 44
-      effect:
-      color_mode: brightness
-      brightness: 51
-      state: 'on'
     light.hue_argenta_color_spot_3:
       min_color_temp_kelvin: 2000
       max_color_temp_kelvin: 6535
@@ -6230,6 +5602,10 @@
       - sparkle
       - opal
       - glisten
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -6268,6 +5644,10 @@
       - sparkle
       - opal
       - glisten
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -6306,6 +5686,10 @@
       - sparkle
       - opal
       - glisten
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -6344,6 +5728,10 @@
       - sparkle
       - opal
       - glisten
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -6382,6 +5770,10 @@
       - sparkle
       - opal
       - glisten
+      - underwater
+      - cosmos
+      - sunbeam
+      - enchant
       - sunrise
       - sunset
       supported_color_modes:
@@ -6401,12 +5793,30 @@
       supported_features: 44
       state: 'off'
     cover.schlafzimmer_shutter:
+      current_position: 20
       device_class: blind
       friendly_name: Schlafzimmer Shutter
       supported_features: 127
-      current_position: 0
-      state: closed
+      state: closing
+    light.schlafzimmer_schrankbeleuchtung:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      friendly_name: 'Schlafzimmer: Schrankbeleuchtung'
+      supported_features: 44
+      effect:
+      color_mode: brightness
+      brightness: 51
+      state: 'on'
   icon: kuf:scene_sauna
   metadata:
     cover.schlafzimmer_shutter:
+      entity_only: true
+    light.schlafzimmer_schrankbeleuchtung:
       entity_only: true

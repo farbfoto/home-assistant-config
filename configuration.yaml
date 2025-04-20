@@ -387,6 +387,14 @@ template:
         attributes:
           updated_at: "{{ now() }}"
 
+  # - sensor:
+  #     - name: "Offene Fenster und Türen"
+  #       state: >
+  #         {% set offene_sensoren = states.binary_sensor | selectattr('state', 'eq', 'on')
+  #         | selectattr('attributes.device_class', 'in', ['window', 'door'])
+  #         | map(attribute='name') | list %}
+  #         {{ offene_sensoren | join(', ') if offene_sensoren else 'Alle geschlossen' }}
+
 # Frontend
 frontend:
   themes: !include_dir_merge_named themes
@@ -443,3 +451,96 @@ number:
 #       icon: mdi:home
 #       show_in_sidebar: true
 #       filename: "dashboard/HaCasa/main.yaml"
+
+# Modbus Integration Fronius inverter
+
+# modbus:
+#   - name: fronius
+#     type: tcp
+#     host: 192.168.1.240 # your inverter IP
+#     port: 502
+#     sensors:
+#       # - name: Battery SoC
+#       #   unit_of_measurement: "%"
+#       #   slave: 200 # > hier muss die Slave Nummer mit der Einstellungd es WR übereinstimmen (Zähleradresse)
+#       #   address: 36867
+#       #   input_type: holding
+#       #   data_type: uint32
+
+#       # - name: Battery Discharge Power
+#       #   unit_of_measurement: "W"
+#       #   slave: 200
+#       #   address: 37083
+#       #   input_type: holding
+#       #   data_type: int32
+
+#       # - name: PV Total Power
+#       #   unit_of_measurement: "W"
+#       #   slave: 200
+#       #   address: 30775
+#       #   input_type: holding
+#       #   data_type: uint32
+
+#       # - name: Grid Power
+#       #   unit_of_measurement: "W"
+#       #   slave: 200
+#       #   address: 30771
+#       #   input_type: holding
+#       #   data_type: int32
+
+#       # - name: House Load
+#       #   unit_of_measurement: "W"
+#       #   slave: 200
+#       #   address: 30865
+#       #   input_type: holding
+#       #   data_type: int32
+#       - name: AC Power Total
+#         unit_of_measurement: "W"
+#         slave: 200
+#         address: 40083 # Model 103, AC Power register
+#         input_type: holding
+#         data_type: int16
+
+#       - name: Grid Frequency
+#         unit_of_measurement: "Hz"
+#         slave: 200
+#         address: 40070 # Model 103, Frequency
+#         input_type: holding
+#         data_type: uint16
+#         scale: 0.01
+
+#       - name: PV Voltage
+#         unit_of_measurement: "V"
+#         slave: 200
+#         address: 40003 # Model 101, DC Voltage
+#         input_type: holding
+#         data_type: uint16
+#         scale: 0.1
+
+#       - name: PV Current
+#         unit_of_measurement: "A"
+#         slave: 200
+#         address: 40002 # Model 101, DC Current
+#         input_type: holding
+#         data_type: uint16
+#         scale: 0.1
+
+#       - name: Battery SoC
+#         unit_of_measurement: "%"
+#         slave: 1
+#         address: 36867 # Model 124, SoC
+#         input_type: holding
+#         data_type: uint16
+
+#       - name: Battery Charge Power
+#         unit_of_measurement: "W"
+#         slave: 200
+#         address: 40189 # Model 124, Charge Power
+#         input_type: holding
+#         data_type: int16
+
+#       - name: Battery Discharge Power
+#         unit_of_measurement: "W"
+#         slave: 200
+#         address: 40190 # Model 124, Discharge Power
+#         input_type: holding

@@ -15,77 +15,23 @@ learn_tv_power:
     action: remote.learn_command
     target:
       device_id: 13f4fb14a203eebb23f538da3f735e39
-audio_power:
-  sequence:
-  - service: remote.send_command
-    target:
-      entity_id: remote.remote_one_remote
-    data:
-      device: audio-stereo
-      command:
-      - turn on
-audio_power_off:
-  sequence:
-  - service: remote.send_command
-    target:
-      entity_id: remote.remote_one_remote
-    data:
-      device: audio-stereo
-      command:
-      - turn off
-turn_up_audio_volume_20:
-  sequence:
-  - service: remote.send_command
-    target:
-      entity_id: remote.remote_one_remote
-    data:
-      device: audio-stereo
-      command: volume up
-      num_repeats: 20
-turn_down_audio_volume_20:
-  sequence:
-  - service: remote.send_command
-    target:
-      entity_id: remote.remote_one_remote
-    data:
-      device: audio-stereo
-      command: volume down
-      num_repeats: 20
-turn_up_audio_volume_3:
-  sequence:
-  - service: remote.send_command
-    target:
-      entity_id: remote.remote_one_remote
-    data:
-      device: audio-stereo
-      command: volume up
-      num_repeats: 2
-  mode: single
-turn_down_audio_volume_3:
-  sequence:
-  - service: remote.send_command
-    target:
-      entity_id: remote.remote_one_remote
-    data:
-      device: audio-stereo
-      command: volume down
-      num_repeats: 3
 play_brain_food:
   sequence:
-  - service: media_player.play_media
-    target:
-      entity_id: media_player.office_hifiberry
-    data:
+  - data:
       media_content_type: music
       media_content_id: Playlists/Brain Food
-  - service: media_player.shuffle_set
+    action: media_player.play_media
     target:
-      entity_id: media_player.office_hifiberry
-    data:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - data:
       shuffle: true
-  - service: media_player.media_next_track
+    action: media_player.shuffle_set
     target:
-      entity_id: media_player.office_hifiberry
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - action: media_player.media_next_track
+    data: {}
+    target:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
   mode: single
   alias: Play Concentration Music
   icon: mdi:music
@@ -119,98 +65,101 @@ play_concentration_jazz:
 play_concentration_in_the_loop:
   alias: Play Concentration In the loop
   sequence:
-  - service: media_player.play_media
-    target:
-      entity_id: media_player.office_hifiberry
-    data:
+  - data:
       media_content_type: music
       media_content_id: Playlists/In the Loop
-  - service: media_player.shuffle_set
+    action: media_player.play_media
     target:
-      entity_id: media_player.office_hifiberry
-    data:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - data:
       shuffle: true
-  - service: media_player.media_next_track
+    action: media_player.shuffle_set
     target:
-      entity_id: media_player.office_hifiberry
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - action: media_player.media_next_track
+    data: {}
+    target:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
   mode: single
   icon: mdi:music
 play_80s:
   alias: Play 80s
   sequence:
-  - service: media_player.play_media
-    target:
-      entity_id: media_player.office_hifiberry
-    data:
+  - data:
       media_content_type: music
       media_content_id: Playlists/The 80s
-  - service: media_player.shuffle_set
+    action: media_player.play_media
     target:
-      entity_id: media_player.office_hifiberry
-    data:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - data:
       shuffle: true
-  - service: media_player.media_next_track
+    action: media_player.shuffle_set
     target:
-      entity_id: media_player.office_hifiberry
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - action: media_player.media_next_track
+    data: {}
+    target:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
   mode: single
   icon: mdi:music
 play_slow_roast:
   alias: Play Slow Roast
   sequence:
-  - service: media_player.play_media
-    target:
-      entity_id: media_player.office_hifiberry
-    data:
+  - data:
       media_content_type: music
       media_content_id: Playlists/Slow Roast
-  - service: media_player.shuffle_set
+    action: media_player.play_media
     target:
-      entity_id: media_player.office_hifiberry
-    data:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - data:
       shuffle: true
-  - service: media_player.media_next_track
+    action: media_player.shuffle_set
     target:
-      entity_id: media_player.office_hifiberry
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - action: media_player.media_next_track
+    data: {}
+    target:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
   mode: single
   icon: mdi:music
 play_finest_fusion:
   alias: Play Finest Fusion
   sequence:
-  - service: media_player.play_media
-    target:
-      entity_id: media_player.office_hifiberry
-    data:
+  - data:
       media_content_type: music
       media_content_id: Playlists/Finest Fusion
-  - service: media_player.shuffle_set
+    action: media_player.play_media
     target:
-      entity_id: media_player.office_hifiberry
-    data:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - data:
       shuffle: true
-  - service: media_player.media_next_track
+    action: media_player.shuffle_set
     target:
-      entity_id: media_player.office_hifiberry
-    data: {}
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - data: {}
+    action: media_player.media_next_track
+    target:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
   mode: single
   icon: mdi:music
 play_myjazz:
   alias: Play MyJazz
   sequence:
-  - service: media_player.play_media
-    target:
-      entity_id: media_player.office_hifiberry
-    data:
+  - data:
       media_content_type: music
       media_content_id: Playlists/Own Jazz
-  - service: media_player.shuffle_set
+    action: media_player.play_media
     target:
-      entity_id: media_player.office_hifiberry
-    data:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - data:
       shuffle: true
-  - service: media_player.media_next_track
+    action: media_player.shuffle_set
     target:
-      entity_id: media_player.office_hifiberry
-    data: {}
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - data: {}
+    action: media_player.media_next_track
+    target:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
   mode: single
   icon: mdi:music
 play_concentration_decaf:
@@ -256,21 +205,21 @@ play_concentration_my_mix_2:
 play_autopilot:
   alias: Play AutoPilot
   sequence:
-  - service: media_player.play_media
-    target:
-      entity_id: media_player.office_hifiberry
-    data:
+  - data:
       media_content_type: music
       media_content_id: Playlists/Autopilot
-  - service: media_player.shuffle_set
+    action: media_player.play_media
     target:
-      entity_id: media_player.office_hifiberry
-    data:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - data:
       shuffle: true
-  - service: media_player.media_next_track
+    action: media_player.shuffle_set
     target:
-      entity_id: media_player.office_hifiberry
-    data: {}
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - data: {}
+    action: media_player.media_next_track
+    target:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
   mode: single
   icon: mdi:music
 homeoffice_transit_evening_light:
@@ -290,16 +239,6 @@ homeoffice_transit_evening_light:
         target:
           entity_id: scene.homeoffice_light_nachtarbeit
   mode: single
-pi_hole_umschalten:
-  alias: IT:Pi Hole 10min off
-  sequence:
-  - service: pi_hole.disable
-    data:
-      duration: 00:10:00
-    target:
-      device_id: 13da46adb941e3b884fe0da10e5c8fe9
-  mode: single
-  icon: mdi:close-network-outline
 homeoffice_meditation:
   alias: Homeoffice Meditation an
   sequence:
@@ -375,22 +314,21 @@ homeoffice_swr3_spielen:
 homeoffice_roon_play_swr3:
   alias: 'Homeoffice: Roon: Play SWR3'
   sequence:
-  - service: media_player.play_media
-    target:
-      entity_id:
-      - media_player.c700
-    data:
+  - data:
       media_content_type: music
       media_content_id: My Live Radio/SWR3
-  - service: media_player.shuffle_set
+    action: media_player.play_media
     target:
-      entity_id: media_player.office_hifiberry
-    data:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - data:
       shuffle: true
-  - service: media_player.media_next_track
+    action: media_player.shuffle_set
     target:
-      entity_id: media_player.office_hifiberry
-    data: {}
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
+  - data: {}
+    action: media_player.media_next_track
+    target:
+      device_id: 1114dade8e13e06556e37d1f1db30b1c
   mode: single
   icon: mdi:music
 '1702734512584':
@@ -656,3 +594,56 @@ wohnzimmer_music_indirect:
       entity_id: scene.wohnzimmer_indirekt
   description: ''
   icon: mdi:account-music-outline
+roborock_clean_office:
+  sequence:
+  - action: vacuum.send_command
+    target:
+      entity_id: vacuum.roborock_s8_pro_ultra
+    data:
+      command: app_segment_clean
+      params:
+      - segments:
+        - 19
+        repeat: 2
+  alias: 'Roborock: Clean Office'
+  description: ''
+roborock_clean_wohnen:
+  sequence:
+  - action: vacuum.send_command
+    target:
+      entity_id: vacuum.roborock_s8_pro_ultra
+    data:
+      command: app_segment_clean
+      params:
+      - segments:
+        - 17
+        - 18
+        - 16
+        repeat: 2
+  alias: 'Roborock: Clean Wohnen'
+  description: ''
+schlafzimmer_bett_licht_zeitabhangig:
+  sequence:
+  - choose:
+    - conditions:
+      - condition: sun
+        before: sunrise
+        after: sunset
+      sequence:
+      - type: turn_on
+        device_id: 8af6370fbb7883d2e1398defada0f0d6
+        entity_id: 56cdccbd165fcce2a4556bec5d52eae9
+        domain: light
+        brightness_pct: 10
+    - conditions:
+      - condition: sun
+        before: sunset
+        after: sunrise
+      sequence:
+      - type: turn_on
+        device_id: 8af6370fbb7883d2e1398defada0f0d6
+        entity_id: 56cdccbd165fcce2a4556bec5d52eae9
+        domain: light
+        brightness_pct: 65
+  alias: 'Schlafzimmer: Bett: Licht-Zeitabhängig'
+  description: ''
